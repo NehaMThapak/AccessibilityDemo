@@ -1,0 +1,169 @@
+<%
+// Configurable via querystring: ?cols=3x3&count=3x3
+// "cols" possible values: 1x5, 2x4, 3x3, 4x2, 5x1 (total 6 columns in large breakpoint)
+// "count" possible values: axb, where the total of a + b = 12
+var cols = (param('cols') || '3x3').toLowerCase().split('x');
+var count = (param('count') || '3x3').toLowerCase().split('x');
+cols.forEach(function (val, idx) {
+	var num = Number(val);
+	var col = {};
+
+	if (idx === 0) {
+		switch (num) {
+			case (1):
+				col.sm = 4;
+				col.md = 3;
+				col.lg = 3;
+				break;
+			case (2):
+				col.sm = 5;
+				col.md = 5;
+				col.lg = 4;
+				break;
+			case (3):
+				col.sm = 6;
+				col.md = 6;
+				col.lg = 6;
+				break;
+			case (4):
+				col.sm = 7;
+				col.md = 7;
+				col.lg = 8;
+				break;
+			case (5):
+				col.sm = 8;
+				col.md = 9;
+				col.lg = 9;
+				break;
+		}
+	}
+	else {
+		// Enforce bootstrap 12 col layout
+		col.sm = 12 - cols[0].sm;
+		col.md = 12 - cols[0].md;
+		col.lg = 12 - cols[0].lg;
+	}
+
+	cols[idx] = col;
+});
+count.forEach(function (val, idx) {
+	count[idx] = [];
+	for (var i = 0, len = Number(val); i < len; i++) {
+		count[idx].push(i + 1);
+	}
+});
+
+var content = [
+	[
+		{
+			title: 'Company Information',
+			titleId: uuid(),
+			titleColor: 'orange',
+			desc: 'Find press releases, media kits and more. Find press releases, media kits and more. Find press releases, media kits and more. Find press releases, media kits and more. Find press releases, media kits and more. Find press releases, media kits and more. Find press releases, media kits and more. Find press releases, media kits and more. Find press releases, media kits and more.',
+			href: '/about/company-information',
+			label: 'Go'
+		},
+		{
+			title: 'How to Become Appointed',
+			titleId: uuid(),
+			titleColor: 'aqua',
+			desc: 'Here are the steps you\'ll need to take.',
+			href: '/about/newsroom',
+			label: 'Go'
+		},
+		{
+			title: 'How to Become Appointed',
+			titleId: uuid(),
+			titleColor: 'blue',
+			desc: 'Here are the steps you\'ll need to take.',
+			href: '/about/privacy-legal',
+			label: 'Go'
+		}
+	],
+	[
+		{
+			title: 'Contact Us',
+			titleId: uuid(),
+			titleColor: 'teal',
+			desc: 'Find the right person to answer your question.',
+			href: '/about/contact',
+			label: 'Find It'
+		},
+		{
+			title: 'Guides',
+			titleId: uuid(),
+			titleColor: 'purple',
+			desc: 'First time buyer and Veterans buyer guide.',
+			href: '/about/guides',
+			label: 'Get Involved'
+		},
+		{
+			title: 'Careers',
+			titleId: uuid(),
+			titleColor: 'green',
+			desc: 'Start your career with RealEstate.',
+			href: '/about/careers',
+			label: 'Join Us'
+		}
+	]
+];
+
+%>
+<div class="things-to-flexbox">
+	<div class="row">
+		<div class="col-xs-12 col-sm-<%= cols[0].sm %><% if (cols[0].md !== cols[0].sm) {%> col-md-<%= cols[0].md %><% } %><% if (cols[0].lg !== cols[0].md) {%> col-lg-<%= cols[0].lg %><% } %> two">
+			<h2 class="heading-things-to-two">Things to Know</h2>
+
+			<div class="items">
+				<%
+				count[0].forEach(function (num, idx) {
+					while (idx >= 3) { idx -= 3; }
+					var contentItem = content[0][idx];
+				%>
+				<div class="item">
+					<div class="image">
+						<img role="presentation" src="<%= config.assetPath %>img/icon-segment-two.png" alt="" />
+					</div>
+					<h3 id="<%= contentItem.titleId %>" class="heading-<%= contentItem.titleColor %>"><%- contentItem.title %></h3>
+					<p><%= contentItem.desc %></p>
+
+					<div class="action">
+						<a href="<%= contentItem.href %>" class="btn btn-lg btn-things-to-two" aria-describedby="<%= contentItem.titleId %>"><%= contentItem.label %></a>
+					</div>
+				</div>
+				<%
+				});
+				%>
+			</div>
+
+		</div>
+
+		<div class="col-xs-12 col-sm-<%= cols[1].sm %><% if (cols[1].md !== cols[1].sm) {%> col-md-<%= cols[1].md %><% } %><% if (cols[1].lg !== cols[1].md) {%> col-lg-<%= cols[1].lg %><% } %> one">
+			<h2 class="heading-things-to-one">Things to Do</h2>
+
+			<div class="items">
+				<%
+				count[1].forEach(function (num, idx) {
+					while (idx >= 3) { idx -= 3; }
+					var contentItem = content[1][idx];
+				%>
+				<div class="item">
+					<div class="image">
+						<img role="presentation" src="<%= config.assetPath %>img/icon-segment-one.png" alt="" />
+					</div>
+					<h3 id="<%= contentItem.titleId %>" class="heading-<%= contentItem.titleColor %>"><%- contentItem.title %></h3>
+					<p><%= contentItem.desc %></p>
+
+					<div class="action">
+						<a href="<%= contentItem.href %>" class="btn btn-lg btn-things-to-one" aria-describedby="<%= contentItem.titleId %>"><%= contentItem.label %></a>
+					</div>
+				</div>
+				<%
+				});
+				%>
+			</div>
+
+		</div>
+	</div>
+
+</div>

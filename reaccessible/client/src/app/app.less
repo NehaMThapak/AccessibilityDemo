@@ -1,0 +1,111 @@
+// Main LESS file.  Import boostrap source first in same order as
+//	bootstrap.less then override defaults in project files. Changes
+//	to Bootstrap defaults should be done using files with the same
+//	naming convention for easier maintainability.
+//
+// Use forward slashes '/' for imports for cross platform compatibility
+//	between Windows and *nix.
+
+// Bootstrap Core variables and mixins
+@import "bootstrap/variables.less";
+@import "bootstrap/mixins.less";
+
+// Bootstrap Reset
+@import "../../../bower_components/bootstrap/less/normalize.less";
+@import "../../../bower_components/bootstrap/less/print.less";
+
+// JCF
+@import (inline) "../../../bower_components/jcf/css/theme-minimal/jcf.css";
+
+// ACCDC Bootstrap
+@import "accdc-bootstrap/calendar.less";
+
+// Bootstrap Core CSS
+@import "bootstrap/scaffolding.less";
+@import "bootstrap/type.less";
+@import "../../../bower_components/bootstrap/less/code.less";
+@import "bootstrap/grid.less";
+@import "bootstrap/tables.less";
+@import "bootstrap/forms.less";
+@import "bootstrap/buttons.less";
+
+// Bootstrap Components
+// NOTE: Unused components are commented out to minimize file size,
+// feel free to uncomment if needed or desired
+@import "../../../bower_components/bootstrap/less/component-animations.less";
+@import "../../../bower_components/bootstrap/less/glyphicons.less";
+@import "bootstrap/dropdowns.less";
+@import "../../../bower_components/bootstrap/less/button-groups.less";
+@import "../../../bower_components/bootstrap/less/input-groups.less";
+@import "bootstrap/navs.less";
+@import "bootstrap/navbar.less";
+@import "../../../bower_components/bootstrap/less/breadcrumbs.less";
+@import "bootstrap/pagination.less";
+@import "../../../bower_components/bootstrap/less/pager.less";
+@import "../../../bower_components/bootstrap/less/labels.less";
+@import "../../../bower_components/bootstrap/less/badges.less";
+@import "../../../bower_components/bootstrap/less/jumbotron.less";
+@import "../../../bower_components/bootstrap/less/thumbnails.less";
+@import "bootstrap/alerts.less";
+@import "bootstrap/progress-bars.less";
+@import "../../../bower_components/bootstrap/less/media.less";
+@import "../../../bower_components/bootstrap/less/list-group.less";
+@import "../../../bower_components/bootstrap/less/panels.less";
+@import "../../../bower_components/bootstrap/less/wells.less";
+@import "../../../bower_components/bootstrap/less/close.less";
+
+// Bootstrap Components w/ JavaScript
+@import "/bootstrap/modals.less";
+@import "bootstrap/tooltip.less";
+@import "bootstrap/popovers.less";
+@import "bootstrap/carousel.less";
+@import "bootstrap/collapse.less";
+
+// Bootstrap Utility classes
+@import "../../../bower_components/bootstrap/less/utilities.less";
+@import "../../../bower_components/bootstrap/less/responsive-embed.less";
+@import "bootstrap/responsive-utilities.less";
+
+// Bootstrap Slider
+//@import (inline) "../../../bower_components/bootstrap-slider/dist/css/bootstrap-slider.css";
+@import "bootstrap/slider.less";
+
+
+//
+// Application Specific Styles
+// --------------------------------------------------
+
+// Global App Styles
+@import "fonts.less";
+@import "font-icons.less";
+@import "messages.less";
+@import "global.less";
+//@import "global-header.less";
+@import "global-footer.less";
+@import "preloader-page.less";
+@import "login-form.less";
+@import "register.less";
+@import "address.less";
+@import "content-tile.less";
+@import "content-rich-text-tile.less";
+@import "content-preview-tile.less";
+@import "content-image-full-tile.less";
+@import "content-image-padded-tile.less";
+@import "content-large-image-tile.less";
+@import "content-tile-accreditation.less";
+@import "content-article-group-tile.less";
+@import "content-media-kits-tile.less";
+@import "back-to-top-row.less";
+@import "about-next.less";
+@import "segment-menu.less";
+@import "segment-nav.less";//@import "about-nav.less";
+@import "things-to-flexbox.less";
+@import "video-opener.less";
+@import "person-contact-info.less";
+@import "social-links.less";
+
+// Modal Styles
+@import "modals/global-navigation-modal.less";
+@import "modals/login-modal.less";
+@import "modals/search-modal.less";
+@import "modals/leave-modal.less";

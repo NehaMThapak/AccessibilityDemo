@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1 class="sr-only">This is a hidden heading</h1>
+
+					<div id="about-carousel" class="carousel slide default about"
+						data-pause="false" data-interval="5000">
+
+						<!-- Controls -->
+						<div>
+
+							<button type="button" class="left carousel-control"
+								aria-controls="about-carousel"
+								data-target="#about-carousel" data-slide="prev">
+								<span class="icon-prev icon-wmkCarouselArrowLeft" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</button>
+
+							<button type="button"  class="right carousel-control"
+								aria-controls="about-carousel"
+								data-target="#about-carousel" data-slide="next">
+								<span class="icon-next icon-wmkCarouselArrowRight" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</button>
+
+							<div class="carousel-indicators-container">
+								<!-- Indicators -->
+								<div class="carousel-indicators">
+									<button type="button" id="about-carousel-slide-button-1" class="active"
+										aria-controls="about-carousel-slide-1"
+										data-target="#about-carousel" data-slide-to="0">
+										<span class="sr-only">Slide 1</span></button>
+									<button type="button" id="about-carousel-slide-button-2"
+										aria-controls="about-carousel-slide-2"
+										data-target="#about-carousel" data-slide-to="1">
+										<span class="sr-only">Slide 2</span></button>
+								</div>
+
+								<!-- Pause -->
+								<button class="btn carousel-pause" type="button"
+									aria-controls="about-carousel"
+									data-target="#about-carousel" data-play-text="Play Button" data-pause-text="Pause Button">
+									<span class="sr-only">Pause</span><span
+										class="icon-pause" aria-hidden="true"></span></button>
+							</div>
+						</div>
+
+						<!-- Wrapper for slides -->
+						<ol class="carousel-inner">
+
+							<li id="about-carousel-slide-1" class="item active">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-xs-12 col-sm-6">
+											<div class="description">
+												<h2>
+													<small>About RealEstate</small>
+													RealEstate.com serves as the ultimate resource for first-time home buyers, offering easy-to-understand tools and expert advice at every stage in the process.
+
+Why'd we decide to focus on first timers? To start, you represent 42 percent of all home buyers out there. That's a pretty big hunk of the pie. And, truth be told, you're underserved. Solid information - specific to your age, stage and needs - is hard to come by.
+
+Why trust us? We represent some of Zillow Group's most talented and knowledgeable developers, designers and writers, gathered together - think-tank style - to create a custom experience just for you. But maybe even more important, we understand your struggle. We've been there (or are there) and think it stinks to make one of life's biggest decisions without a roadmap.
+
+We've worked hard to make sure your experience is next-level. Here's what makes us a bit different from the rest:
+												</h2>
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-6">
+											<div class="image">
+												<img src="<%= config.assetPath %>img/aboutus.png" alt="" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li id="about-carousel-slide-2" class="item">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-xs-12 col-sm-6">
+											<div class="description">
+												<h2>
+													<small>Guidance You Need</small>
+													What's the best way to stash away cash for a down payment? How should you go about finding a home loan? We're here to strip the fear out of home buying and arm you with the confidence you need to make decisions and communicate with loan and real estate agents, home inspectors and more.
+												</h2>
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-6">
+											<div class="image">
+												<img src="<%= config.assetPath %>img/aboutus.png" alt="" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
+						</ol>
+
+					</div>
+				</div>
+
+			</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<% include ../includes/things-to-flexbox.html.ejs %>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

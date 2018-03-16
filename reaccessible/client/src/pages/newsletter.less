@@ -1,0 +1,841 @@
+@import "../app/bootstrap/variables.less";
+@import "../app/bootstrap/mixins.less";
+
+// Navigation Overrides
+.navbar.navbar-fixed-top {
+	position: static;
+	margin-bottom: 0;
+	border-bottom: 0;
+}
+
+html {
+	// Fixes double scrollbar issue with extra large screens
+	overflow-x: visible;
+
+	&.modal-open {
+		overflow: hidden;
+		width: inherit;
+		height: inherit;	 
+
+		body,
+		#page {
+			overflow: inherit;
+			width: inherit;
+			height: inherit;
+		}
+	}
+}
+
+body {
+	padding-top: 0;
+}
+
+h3 {
+	text-transform: none;
+}
+
+p {
+	line-height: 1.8;
+}
+
+/* Old shadow dom for hiding play button */
+*::--webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+/* New shadow dom for hiding play button */
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+
+// Override BS padding for fluid containers - mobile only
+.container-fluid {
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.text-condensed {
+	font-weight: 600;
+}
+
+.text-condensed-bold {
+	font-weight: 700;
+}
+
+.newsletter-container {
+	font-size: 18px;
+
+	a,
+	button,
+	.btn {
+		font-size: 18px;
+
+		&.light,
+		&.light:hover,
+		&.light:focus {
+			color: #fff;
+		}
+	}
+
+	.learn-more {
+		font-size: 16px;
+		font-weight: 600;
+		text-transform: uppercase;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+.no-side-pad {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.newsletter-container {
+	> div {
+		position: relative;
+	}
+}
+
+.arrow-down {
+	display: none;
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	.custom-font();
+
+	font-size: 30px;
+	width: 30px;
+	color: #fff;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	margin-left: -15px;
+	transform: rotate(-90deg);
+
+	&:before {
+		content: "\e901";
+	}
+
+	&.gray {
+		color: #999999;
+	}
+} 
+
+.stretch {
+	margin-left: -20px;
+	margin-right: -20px;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+
+
+
+.infographic {
+	.btn {
+		margin: 40px 0 20px 0;
+		text-decoration: underline;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+// HD/Retina Images (@2x size)
+.img-hd {
+	width: 100%;
+	height: auto;
+
+	&.iconography {
+		max-width: 180px;
+	}
+
+	&.signature {
+		max-width: 204px;
+	}
+
+	&.logo-bdc,
+	&.logo-bdc-plus {
+		max-width: 110px;
+	}
+
+	&.logo-realestate-vhp,
+	&.logo-realestate-sh {
+		max-width: 195px;
+	}
+
+	&.logo-healthy-hometown {
+		max-width: 301px;
+	}
+
+	&.foundation-chart {
+		max-width: 575px;
+	}
+
+	&.ambulance {
+		max-width: 164px;
+	}
+
+	&.hospital {
+		max-width: 140px;
+	}
+
+	&.wallet {
+		max-width: 117px;
+	}
+
+	&.laptop {
+		max-width: 650px;
+	}
+
+	&.donut-chart {
+		max-width: 650px;
+	}
+
+	&.clock {
+		max-width: 141px;
+	}
+
+	&.donate {
+		max-width: 137px;
+	}
+}
+
+.section-title {
+	font-size: 24px;
+	line-height: 1;
+	margin-top: 0;
+	color: @brand-primary;
+
+	&.alt {
+		color: #fff;
+	}
+
+	.ability {
+		color: #000;
+	}
+}
+
+.section-subtitle {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 1.4;
+	margin-bottom: 30px;
+}
+
+.card {
+	padding: 40px 20px;
+	background: #fff;
+
+	.section-title {
+		font-size: 24px;
+		color: #000;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.text-lg,
+.percent-lower {
+	font-size: 34px;
+	font-weight: 700;
+
+	&.blue {
+		color: #105c8c;
+	}
+
+	&.green {
+		color: #60740f;
+	}
+
+	&.green-light {
+		color: #788e1e;
+	}
+
+	&.orange {
+		color: #de5f10;
+	}
+
+	&.coral {
+		color: #e05137;
+	}
+}
+
+.byline {
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+
+// Newsletter Sections
+.section-hero {
+	position: relative;
+	text-align: center;
+	color: #fff;
+	padding: 0;
+	overflow: hidden;
+
+	.title-container {
+		position: absolute;
+  		top: 50%;
+  		left: 50%;
+		z-index: 1;
+		transform: translate(-50%, -50%);
+	}
+
+	.section-hero-title {
+		visibility: hidden;
+		margin: 0;
+		font-size: 38px;
+		font-weight: 700;
+		.ability {
+			color: #bce6fd;
+		}
+	}
+
+	.section-hero-subtitle {
+		visibility: hidden;
+		font-size: 20px;
+		font-weight: 700;
+	}
+
+	video {
+		width: 100%;
+		height: auto;
+		margin-bottom: -5px;
+	}
+}
+
+.section-content-container {
+	padding: 30px 0;
+}
+
+.section-sustainability {
+	color: #fff;
+	background: @brand-primary;
+
+	p:last-child {
+		margin-bottom: 0;
+	}
+
+	img {
+		width: 50%;
+		float: left;
+	}
+}
+
+.section-ceo {
+	background: #fff;
+
+	blockquote {
+		border: 0;
+		padding: 40px 0 0 0;
+		margin: 0 0 25px 0;
+		color: #005b8b;
+		font-size: 24px;
+		line-height: 1.8;
+		position: relative;
+		font-weight: 600;
+		.begin-quotemark {
+			position: absolute;
+			top: 0;
+			left: -4px;
+			line-height: .7;
+			font-size: 100px;
+			display: block;
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	.signature {
+		margin: 0 0 10px 0;
+	}
+
+	.learn-more {
+		margin-top: 10px;
+	}
+}
+
+.section-inside-hc {
+	img {
+		width: 100%;
+		height: auto;
+	}
+	.section-title {
+		margin: 0;
+	}
+}
+
+.section-deliverability {
+	color: #fff;
+	background: @brand-primary;
+	
+	.center-block {
+		width: 225px;
+		margin-bottom: 60px;
+
+		&.last {
+			margin-bottom: 0;
+		}
+	}
+	.iconography {
+		margin-bottom: 20px;
+	}
+	.row {
+		margin-top: 40px;
+	}
+}
+
+.section-manageability {
+	background: #fff;
+
+	img {
+		width: 100%;
+		height: auto;
+	}
+
+	.center-block {
+		margin: 45px 0 0 0;
+
+		p:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.section-measureability {
+	background: #f0f0f0;
+	.infographic {
+		margin-top: 15px;
+	}
+}
+
+.section-accountability {
+	background: #fff;
+	.infographic {
+		margin-top: 45px;
+	}
+}
+
+.section-predictability {
+	color: #fff;
+	background: @brand-primary;
+
+	.center-block {
+		margin-bottom: 60px;
+
+		&.last {
+			margin-bottom: 0;
+		}
+	}
+	.content-guesswork {
+		max-width: 290px;
+	}
+	.content-shop-compare {
+		max-width: 240px;
+	}
+	.iconography {
+		margin-bottom: 20px;
+	}
+	.row {
+		margin-top: 40px;
+	}
+}
+
+.section-outside-hc {
+	img {
+		width: 100%;
+		height: auto;
+	}
+	.section-title {
+		margin: 0;
+	}
+}
+
+.section-improvability {
+	background: #f0f0f0;
+
+	.logo-healthy-hometown {
+		margin-top: 45px;
+	}
+}
+
+.section-remarkability {
+	color: #fff;
+	background: @brand-primary;
+	.infographic {
+		margin-top: 45px;
+	}
+	.infographic-decscription {
+		text-align: left;
+		max-width: 575px;
+		margin: 0 auto;
+	}
+}
+
+.section-honorability {
+	background: #f0f0f0;
+
+	img {
+		margin-bottom: 20px;
+	}
+
+	p {
+		line-height: 1.4;
+	}
+
+	.center-block {
+		margin-top: 60px;
+		max-width: 333px;
+	}
+}
+
+.section-outro {
+	img {
+		width: 100%;
+		height: auto;
+	}
+	.section-title {
+		margin: 0 0 15px 0;
+	}
+}
+
+
+// Newsletter Modals
+.newsletter-modal {
+	top: 0;
+
+	ul {
+		li {
+			margin-bottom: 10px;
+		}	
+	}
+
+	~ .modal-backdrop {
+		top: 0;
+		background: rgba(0,0,0,0.7);
+	}
+
+	.modal-content {
+		border-radius: 0;
+		font-size: 18px;
+
+		p, ul {
+			margin-bottom: 30px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		.two-column-list ul {
+			margin-bottom: 0;
+		}
+	}
+
+	.modal-body {
+		padding: 20px;
+	}
+
+	.close {
+		color: @brand-primary;
+		font-size: 40px;
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		z-index: 1;
+		opacity: 1;
+	}
+
+	.modal-heading {
+		font-size: 24px;
+		padding-right: 70px;
+		margin-bottom: 30px;
+	}
+
+	.iconography {
+		width: 90px;
+		height: 90px;
+		margin: 0 auto;
+	}
+
+	.logo-bdc,
+	.logo-bdc-plus,
+	.logo-realestate-vhp,
+	.logo-realestate-sh {	
+		margin-bottom: 20px;
+	}
+
+	.logo-bdc,
+	.logo-realestate-vhp {
+		margin-right: 60px;
+	}
+
+}
+
+.two-column-list {
+	margin-bottom: 30px;
+	ul {
+		margin-bottom: 0;
+	}
+}
+
+@media (min-width: @screen-sm-min) {
+	.newsletter-modal {
+		.modal-body {
+			padding: 30px;
+		}
+	}
+}
+
+@media (min-width: @screen-md-min) {
+
+	ul.two-columns-lg {
+		.clearfix();
+
+		li {
+			float: left;
+			width: 50%;
+		}
+	}
+
+	.two-column-list {
+		.clearfix();
+		ul {
+			float: left;
+			width: 50%;
+		}
+	}
+	
+	// Set fluid container padding back to BS defaults
+	.container-fluid {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	.newsletter-container {
+		> div {
+
+		}
+	}
+
+	.arrow-down {
+		display: block;
+		bottom: 30px;
+	}
+
+	.stretch {
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+
+	.section-title {
+		font-size: 48px;
+	}
+
+	.section-subtitle {
+		font-size: 24px;
+		margin-bottom: 40px;
+	}
+
+	.section-content-container {
+		padding: 50px 45px 50px 45px;
+	}
+
+	.card {
+		padding: 50px;
+		position: absolute;
+		bottom: 70px;
+		left: 60px;
+
+		.section-title {
+			font-size: 36px;
+		}
+	}
+
+	.section-hero {
+		.section-hero-title {
+			font-size: 90px;
+		}
+		.section-hero-subtitle {
+			font-size: 36px;
+		}
+	}
+
+	.section-sustainability {
+		img {
+			width: 100%;
+			float: none;
+		}
+		.arrow-down {
+			left: 25%;
+		}
+	}
+
+	.section-ceo {
+		overflow: hidden;
+
+		blockquote {
+			font-size: 30px;
+		}
+		.arrow-down {
+			left: 75%;
+		}
+	}
+
+	.section-inside-hc {
+
+		br {
+			display: block;
+		}
+	}
+
+	.section-deliverability {
+		.row {
+			margin-top: 60px;
+			margin-bottom: 80px;
+		}
+		
+	}
+
+	.section-manageability {
+		.ambulance {
+			margin-top: 23px;
+		}
+		.hospital {
+			margin-top: 8px;
+		}
+		.center-block {
+			margin-bottom: 100px;
+		}
+	}
+
+	.section-measureability {
+		.infographic {
+			margin-top: 80px;
+		}
+		.row {
+			margin-bottom: 80px;
+		}
+	}
+
+	.section-accountability {
+		.row {
+			margin-bottom: 80px;
+		}
+	}
+
+	.section-predictability {
+		.section-title {
+			margin-bottom: 70px;
+		}
+		.iconography {
+			margin-bottom: 20px;
+		}
+		.row {
+			margin-bottom: 80px;
+		}
+	}
+
+	.section-outside-hc {
+		br {
+			display: block;
+		}
+	}
+
+	.section-improvability {
+		p {
+			margin-bottom: 30px;
+		}
+		.logo-healthy-hometown {
+			margin-top: 100px;
+		}
+	}
+
+	.section-remarkability {
+		.row {
+			margin-bottom: 80px;
+		}
+		.infographic {
+			margin-top: 70px;
+		}
+	}
+
+	.section-honorability {
+		.donate {
+			margin-top: 11px;
+		}
+		.row {
+			margin-bottom: 80px;
+		}
+	}
+
+	.section-outro {
+
+		.section-title {
+			font-size: 26px;
+		}
+		.card {
+			width: 470px;
+		}
+	}
+	
+	// Newsletter Modals
+	.newsletter-modal {
+
+		.modal-dialog {
+			width: 90%;
+			max-width: 965px;
+		}
+
+		.modal-body {
+			padding: 50px 50px 50px 160px;
+		}
+
+		.modal-heading {
+			font-size: 36px;
+		}
+
+		.iconography {
+			margin: 0;
+			position: absolute;
+			top: 50px;
+			left: 45px;
+		}
+
+		.logo-realestate-vhp {
+			margin-right: 60px;
+		}
+
+		&.newsletter-modal-letter {
+			.modal-body {
+				padding: 50px;
+			}
+		}
+
+	}
+
+}
+
+@media (min-width: @screen-lg-min) {
+	.section-hero {
+		.section-hero-title {
+			font-size: 120px;
+		}
+		.section-hero-subtitle {
+			font-size: 56px;
+		}
+	}
+}

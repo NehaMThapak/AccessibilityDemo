@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/mag/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/mag/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content">
+		<% include ../includes/mag/magMainHeading.html.ejs %>
+
+		<div tabindex="-1" id="skip-to-content"></div>
+
+		<div class="container-fluid">
+
+			<% rowType = 'primary'; %>
+			<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+				<div class="col-xs-12 col-md-4 col-xl-3">
+					<h1>Search Results</h1>
+				</div>
+				<div class="col-xs-12 col-md-8 col-lg-7">
+					<form name="searchForm" action="/blue/search" method="get">
+						<div class="form-group">
+							<label class="sr-only" for="searchHeaderInput">Search</label>
+							<span class="icon-search" aria-hidden="true"></span>
+							<input id="searchHeaderInput" name="q" type="search" class="form-control input-lg"
+								value="<%= query %>"
+								placeholder="Search by City, Address, or Zip"
+								data-autofocus />
+						</div>
+						<input type="submit" value="Search" class="btn btn-search-form btn-xl hidden-xs hidden-sm" />
+					</form>
+				</div>
+			</div>
+
+			<% rowType = 'default'; %>
+			<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+				<div class="col-xs-12">
+					<div class="search-content">
+						THIS IS WHERE GOOGLE SEARCH RESULTS WILL GO
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/mag/footer.html.ejs %>
+
+</div>
+
+<% include ../includes/mag/foot.html.ejs %>
+
+</body>
+</html>

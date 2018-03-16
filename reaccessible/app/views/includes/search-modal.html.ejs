@@ -1,0 +1,25 @@
+<div id="search-modal" class="modal fade" tabindex="-1" role="dialog"
+	aria-labelledby="search-modal-label" aria-describedby="search-modal-description" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="sr-only" id="search-modal-description">Beginning of dialog</div>
+		<div class="modal-content">
+			<div class="modal-body">
+				<form name="searchForm" action="/search" method="get">
+					<div class="form-group">
+						<label id="search-modal-label" class="sr-only" for="globalSearchInput">Search</label>
+						<span class="icon-search" aria-hidden="true"></span>
+    				<input id="globalSearchInput" name="q" type="search" class="form-control input-lg"
+							placeholder="Search by City, Address, or Zip"
+							data-autofocus />
+					</div>
+					<input type="submit" value="Search" class="btn btn-search-form btn-xl hidden-xs" />
+					<button type="button" class="btn btn-close"
+						data-dismiss="modal" aria-label="Close">
+						<span class="sr-only">Close</span><span
+							class="icon-wmkCircleClose" aria-hidden="true"></span></button>
+				</form>
+			</div>
+		</div>
+		<span class="sr-only">End of dialog</span>
+	</div>
+</div>

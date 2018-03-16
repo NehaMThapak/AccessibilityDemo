@@ -1,0 +1,61 @@
+<div id="login-modal" class="modal fade hidden-xs" tabindex="-1" role="dialog"
+	aria-labelledby="login-modal-label" aria-describedby="login-modal-description">
+	<div class="modal-dialog" role="document">
+		<div class="sr-only" id="login-modal-description">Beginning of dialog</div>
+		<div class="modal-content">
+			<button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close">
+				<span class="sr-only">Close</span><span class="icon-wmkCircleClose" aria-hidden="true"></span>
+			</button>
+			<div class="modal-body">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-8">
+							<form id="lm-loginForm" name="loginForm" class="form-inline login" action="?TODO" method="POST"
+								data-validator data-disable="false" data-focus="false">
+								<div class="clearfix">
+									<h2 id="login-modal-label" class="pull-left">Already a RealEstate member?</h2>
+
+									<span class="pull-right required-info">
+										All fields are required
+									</span>
+								</div>
+
+								<div class="errors" aria-hidden="true" role="alert" aria-live="assertive" aria-atomic="true"><div class="errors-focus" tabindex="-1">
+									<span class="icon-warning pull-left" aria-hidden="true"></span>
+									<div class="h4">Please correct the following error(s):</div>
+									<div class="list-unstyled"></div>
+								</div></div>
+
+								<div class="fields">
+									<div class="form-group">
+										<label for="lm-login-user-input">User ID or Email</label>
+										<input id="lm-login-user-input" name="userid" type="text" class="form-control input-lg"
+											required data-native-error="User ID or Email cannot be empty" />
+										<div class="help-block with-errors" aria-hidden="true"></div>
+									</div>
+									<div class="form-group">
+										<label for="lm-login-password-input">Password</label>
+										<input id="lm-login-password-input" name="password" type="password" class="form-control input-lg"
+											required data-native-error="Password cannot be empty" />
+										<div class="help-block with-errors" aria-hidden="true"></div>
+									</div>
+									<div class="actions">
+										<button type="submit" form="lm-loginForm" class="btn btn-nav-primary btn-xl">Log In</button>
+									</div>
+								</div>
+
+								<div class="forgot">
+									<a href="/login-help">Forgot ID or Password?</a>
+								</div>
+							</form>
+						</div>
+						<div class="col-sm-4">
+							<% include ../includes/register.html.ejs %>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<span class="sr-only">End of dialog</span>
+	</div>
+</div>

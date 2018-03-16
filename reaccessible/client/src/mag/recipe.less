@@ -1,0 +1,199 @@
+@import "../appmag/bootstrap/variables.less";
+@import "../app/bootstrap/mixins.less";
+@import "../app/bootstrap/type.less";
+@import "../app/bootstrap/grid.less";
+
+.mag-feat-1.recipe-feat-1 {
+	.txt-block {
+		background: @bluemag-lite-bg;
+		p {
+			font-weight: @font-weight-sans-serif-condensed-heavy;
+			font-size: 16px;
+			line-height: 1.1;
+		}
+		.serves {
+			margin: 0 0 0 5px;
+		}
+	}
+	@media (min-width: @screen-md-min) {
+		.row:first-child {margin-bottom: 48px;}
+		.txt-block p {font-size: 18px;}
+		.title {
+			font-size: 60px;
+		}
+	}
+}
+
+.mag-content.recipe-content {
+	h2 {
+		text-transform: none;
+		font-size: 30px;
+	}
+	ul {
+		padding:0;
+		padding-left: 1.25em;
+		margin-bottom: 24px;
+		li {
+			margin-bottom: 18px;
+			line-height: 1.42857143;
+			padding: 0 30px 0 10px
+		}
+	}
+	ol {
+		padding:0;
+		counter-reset: recipe;
+		display: table;
+		li {
+			list-style: none;
+			counter-increment: recipe;
+			display: table-row;
+			margin-bottom: 18px;
+			&:before {
+				content: counter(recipe) ".";
+				display: table-cell;
+				text-align: right;
+				padding-right: .3em;
+			}
+			&:after {
+				content: '';
+				height: 18px;
+				width: 1px;
+				display: block;
+			}
+		}
+	}
+
+	.cnd-row .content-block {
+
+		blockquote.callout,
+		div.callout {
+			border-left: none;
+			&.closing {
+				clear: both;
+			}
+			&.callout-nutrition {
+				background-color: @bluemag-lite-bg;
+				color: @text-color;
+				margin-bottom: 20px;
+				font-size: 16px;
+
+				h2 {
+					margin: 0 0 10px 0;
+					font-size: 16px;
+				}
+				ul {
+					font-weight: @font-weight-sans-serif-bold;
+					list-style: none;
+					text-align: left;
+					padding:0;
+					margin: 0 10px 15px;
+					.clearfix();
+
+					li {
+						border-bottom: 1px solid rgba(0,0,0,0.25);;
+						margin:0;
+						margin-top: 10px;
+						padding: 0 0 10px 0;
+					}
+					em {
+						font-style: normal;
+						font-weight: @font-weight-sans-serif-normal;
+					}
+				}
+			}
+		}
+
+		.vid-row {
+			.row();
+			.clearfix();
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+
+		.tip-box > div {
+			background-color: @brand-primary;
+			padding: 10px 32px;
+			margin-bottom: 12px;
+			color: @bluemag-lite-txt;
+			font-size: 24px;
+			text-align: center;
+			h3 {
+				font-size: 18px;
+				margin: 15px;
+				text-transform: uppercase;
+			}
+			p {
+				font-size: 18px;
+				line-height: 1.42857143;
+			}
+		}
+		.video-box {
+			img {
+				margin:0;
+				width: 100%;
+				height: auto;
+			}
+			p {
+				text-align: center;
+				font-size: 18px;
+			}
+			.video-opener {
+				margin: 0;
+				.btn {
+					width: 100%;
+				}
+			}
+		}
+
+		@media (min-width: @screen-md-min) {
+			.content-l {
+				float: left;
+				margin-right: 0;
+				width: 350px;
+			}
+			blockquote.callout,
+			div.callout {
+				&.closing {
+					clear: both;
+					margin: 6px 0 40px;
+					&.ctr {margin: 6px 112px 20px;}
+				}
+				&.callout-nutrition {
+					width: 466px;
+					padding: 44px 40px;
+
+					ul {
+						margin-left: 0;
+						margin-right: 0;
+						>li {
+							float: left;
+							width: 177px;
+							&:nth-child(2n+1){
+								margin-right: 24px;
+							}
+						}
+					}
+				}
+			}
+			.vid-row {
+				margin-left: 97px;
+				margin-right: 97px;
+			}
+			.tip-box {
+				margin-bottom: 0;
+				>div {
+					min-height: 199px;
+				}
+			}
+		}
+
+	}
+}
+
+//found a hole in the less rendering engine - so this must set separately
+@media (min-width: @screen-md-min) {
+	.mag-content.recipe-content .cnd-row .content-block blockquote.callout.callout-nutrition,
+	.mag-content.recipe-content .cnd-row .content-block div.callout.callout-nutrition {
+		margin-bottom: 50px;
+	}
+}

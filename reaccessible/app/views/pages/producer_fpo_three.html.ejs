@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'Producer FPO';
+		var backLinkUrl = '/producer/producer-fpo';
+		var pageTitle = 'Producer FPO Three';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+							</h1>
+
+							<p>
+								Producer FPO Three copy.
+							</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

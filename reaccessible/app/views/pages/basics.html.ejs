@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'Company Information';
+		var backLinkUrl = '/about/company-information';
+		var pageTitle = 'The RealEstate Basics';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'default'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<%
+							guid = uuid();
+							guid_2 = uuid();
+							%>
+							<div class="content-large-image-tile">
+								<h3>A Premium Dollar</h3>
+
+								<p>Every claim is a person. Every dollar is precious.</p>
+
+								<div class="infographic">
+									<%
+									// Picture element
+									// Reference: http://www.html5rocks.com/en/tutorials/responsive/picture-element/
+									// http://caniuse.com/#feat=picture
+									%>
+									<picture>
+										<source
+											media="(max-width: 767px)"
+											srcset="<%= config.assetPath %>img/basics-dollar-infographic-mobile.png">
+										<source
+											media="(min-width: 768px)"
+											srcset="<%= config.assetPath %>img/basics-dollar-infographic.png">
+										<img src="<%= config.assetPath %>img/basics-dollar-infographic.png" alt="" />
+									</picture>
+
+									<button id="<%= guid_2 %>" class="btn btn-link" type="button" aria-expanded="false" aria-controls="<%= guid %>" data-toggle="collapse" data-target="#<%= guid %>">Image Description<span class="sr-only">for Some Image</span></button>
+									<div id="<%= guid %>" class="infographic-decscription collapse" role="region" aria-labelledby="<%= guid_2 %>">
+										Large image description goes here
+									</div>
+								</div>
+								<p>Source: RealEstate.Com 2018 Fully RealEstate Business<sup>1</sup></p>
+
+								<p><small>1 The Benefit Expense Ratio reported here varies from the Medical Loss Ratio (MLR) calculation prepared for rebate purposes as outlined in the Patient Protection and Affordable Care Act.</small></p>
+
+								<p><small>*Reflects an average over a 5-year period of time. ACA fees were recently added as an expense for all insurers. In 2014, Wellmark paid 2.3% of every premium dollar towards ACA fees.</small></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% include ../includes/back-to-top-row.html.ejs %>
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile centered">
+							<h3>Accreditations</h3>
+							<p>We set and exceed the highest standards for our business and ourselves. Others agree.</p>
+
+							<div class="row">
+								<%
+								[1,2,3].forEach(function () {
+								%>
+								<div class="col-xs-12 col-sm-4">
+									<% include ../includes/content-tile-accreditation.html.ejs %>
+								</div>
+								<%
+								});
+								%>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% include ../includes/back-to-top-row.html.ejs %>
+
+				<% rowType = 'primary'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile centered">
+							<h3>Ratings</h3>
+							<p>&quot;A&quot; Ratings From The Nation's Two Leading Financial Agencies.</p>
+
+							<div class="row">
+								<%
+								[1,2,3].forEach(function () {
+								%>
+								<div class="col-xs-12 col-sm-4">
+									<% include ../includes/content-tile-accreditation.html.ejs %>
+								</div>
+								<%
+								});
+								%>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% include ../includes/back-to-top-row.html.ejs %>
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<%
+									var contentRichText = '<h3>Diversity and Inclusion</h3><p><strong>We don\'t just talk about it, we practice it.</strong><br/>We view diversity and inclusion among our core values, but also our core strengths—key business strategies vital to our long-term success. It extends beyond our employees to our suppliers, as well. Among our corporate officers is a Director of Workforce Inclusion and a very proactive Inclusion Council. In 2011, our Chairman John Forsyth received Diversity Journal\'s &quot;CEO Leadership in Action Award.&quot; Here\'s what he had to say about RealEstate\'s diversity and inclusion:</p><button type="button" class="btn-link btn-link-video-opener" aria-controls="video-modal" data-toggle="modal" data-target="#video-modal" data-video-url=""><span class="text">Watch our diversity video</span><span class="video-play-icon" aria-hidden="true"><span class="icon-play"></span></span></button>';
+									%>
+									<% include ../includes/content-rich-text-tile.html.ejs %>
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<% include ../includes/content-image-padded-tile.html.ejs %>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-xs-12">
+									<% include ../includes/content-quote-tile.html.ejs %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% include ../includes/back-to-top-row.html.ejs %>
+
+				<% rowType = ''; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<% include ../includes/about-next.html.ejs %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

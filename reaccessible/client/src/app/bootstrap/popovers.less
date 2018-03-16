@@ -1,0 +1,118 @@
+@import "bower_components/bootstrap/less/popovers.less";
+
+//
+// Bootstrap Popovers Overrides
+// --------------------------------------------------
+
+.popover {
+	width: 320px; max-width: none; overflow: hidden;
+	border: 0 none; padding: 0;
+	background-color: @gray-dark;
+	color: #fff;
+
+	>header {
+		.clearfix();
+		.border-radius(4px 4px 0 0);
+		background-color: @brand-glossary-light;
+
+		a:not(.btn) {
+			display: inline-block; .pull-left();
+			padding: 10px 15px 10px 10px;
+			color: #fff;
+			font-weight: @font-weight-sans-serif-condensed-bold; font-size: @font-size-semilarge;
+			text-decoration: none; text-transform: uppercase;
+			position: relative;
+			
+			>span{
+				font-size: 21px;
+				vertical-align: sub;
+			}
+			
+			&:focus{
+				outline: none;
+			}
+			&:focus:before{
+				border: 3px solid #f5833c;
+				content: "";
+				position: absolute;
+				top: 0; right: -1px; bottom: -1px; left: 0;
+			}
+		}
+
+		.btn {
+			.pull-right();
+			padding: 8px 10px 7px 15px;
+			background-color: transparent;
+			color: #fff;
+			font-size: @font-size-semilarge; font-family: @font-family-sans-serif; text-transform: uppercase;
+			position: relative;
+			
+			&:focus{
+				outline: none;
+			}
+			&:focus:before{
+				border: 3px solid #f5833c;
+				content: "";
+				position: absolute;
+				top: 0; right: 0; bottom: -1px; left: -1px;
+				z-index: 1;
+			}
+
+			>span {
+				display: inline-block;
+				vertical-align: middle;
+				position: relative;
+				z-index: 2;
+			}
+
+			.icon-wmkCircleClose {
+				margin-left: 5px;
+				font-size: 28px;
+			}
+		}
+	}
+
+	.popover-container {
+		height: 135px; overflow: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch;
+		padding: 0 30px;
+
+		&::-webkit-scrollbar {
+			width: 10px;
+		}
+		&::-webkit-scrollbar-track-piece {
+			background-color: @gray-lighter;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			.border-radius(10px);
+			background-color: @gray-light;
+		}
+
+		&::-webkit-scrollbar-button:start:decrement,
+		&::-webkit-scrollbar-button:end:increment {
+			display: none;
+		}
+	}
+
+	h3.popover-title {
+		margin: 0; border: 0 none; padding: 25px 0 10px 0;
+		background-color: transparent;
+		font-weight: @font-weight-sans-serif-bold; font-size: 26px; text-transform: none;
+	}
+
+	.popover-content {
+		//max-height: 140px; overflow: hidden; overflow-y: auto; -webkit-overflow-scrolling: touch;
+		//padding: 0 30px;
+		padding: 0;
+		font-size: @font-size-semilarge; line-height: 1.6;
+	}
+
+	// Small devices (tablets, 768px and up)
+	@media (min-width: @screen-sm-min) {
+		//height: 275px;
+
+		.popover-container {
+			height: 231px;
+		}
+	}
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content">
+		<div class="container-fluid">
+
+			<% rowType = 'primary'; %>
+			<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+				<div class="col-xs-12 col-md-4 col-xl-3">
+					<h1>Search Results</h1>
+				</div>
+				<div class="col-xs-12 col-md-8 col-lg-7">
+					<form name="searchForm" action="/search" method="get">
+						<div class="form-group">
+							<label class="sr-only" for="searchHeaderInput">Search</label>
+							<span class="icon-search" aria-hidden="true"></span>
+							<input id="searchHeaderInput" name="q" type="search" class="form-control input-lg"
+								value="<%= query %>"
+								placeholder="Search by City, Address, or Zip"
+								data-autofocus />
+						</div>
+						<input type="submit" value="Search" class="btn btn-search-form btn-xl hidden-xs hidden-sm" />
+					</form>
+				</div>
+			</div>
+
+			<% rowType = 'default'; %>
+			<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+				<div class="col-xs-12">
+					<div class="content-tile">
+						THIS IS WHERE GOOGLE SEARCH RESULTS WILL GO
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

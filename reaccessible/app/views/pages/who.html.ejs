@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'Company Information';
+		var backLinkUrl = '/about/company-information';
+		var pageTitle = 'Who we are, what we do &amp; why we do it.';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+							</h1>
+
+							<p>
+								A sentence here about what content comes below like &quot;Here, you will learn about who we are, what we do and why, where we are located and when our important milestones happened in our company history&quot;.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'primary'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<% include ../includes/content-image-padded-tile.html.ejs %>
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<%
+									var contentRichText = '<h3>Who</h3><p>We\'re RealEstate.Com, an independent licensee of the Blue Cross Blue Shield Association. We\'re also a mutual insurance company—owned by our members, not investors. Those members demand exceptional value. We deliver by carefully managing premiums, providing outstanding customer service and empowering our members to stay healthy.</p>';
+									%>
+									<% include ../includes/content-rich-text-tile.html.ejs %>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% include ../includes/back-to-top-row.html.ejs %>
+
+				<% rowType = ''; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<% include ../includes/content-image-full-tile.html.ejs %>
+					</div>
+				</div>
+
+				<% rowType = 'default'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<%
+							var contentRichText = '<h3>What: We do what we say we\'re going to do.</h3><p>We know trust is earned. For more than 75 years, we\'ve worked to maintain trust, one member at a time.  We also know health insurance costs too much. In fact, many people believe health insurance companies, fueled by the profit motive, are the main cause of health care\'s cost problems. At Wellmark, the reality is different. We are member-owned, so we aren\'t driven by profits. We\'re driven by service.</p><p>A modest operating margin target of 2-3% covers administrative expenses, including claims processing, customer service, health care provider contracting, network access, and more. We keep these costs as low as possible, so everyone in Iowa and South Dakota can have exceptional, affordable coverage, provided to them by a friendly, ethical company. That\'s our promise to you.</p><a href="#" class="btn btn-primary btn-lg">See Why Promises Matter</a>';
+							%>
+							<% include ../includes/content-rich-text-tile.html.ejs %>
+						</div>
+					</div>
+				</div>
+				<% include ../includes/back-to-top-row.html.ejs %>
+
+				<% rowType = 'primary'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<%
+							var contentRichText = '<h3>Why: Transforming the Health Care System</h3><p>We want a healthy future for you—you our neighbors, friends, family and communities. To achieve that future, we\'re working to create a more sustainable health care system. It\'s a moral imperative, really. We need to reduce the rate of health care cost increases to equal the rate of inflation, so our members can afford the healthcare they deserve.</p><p>We\'re tackling the problem:</p><dl><dt>Inside the system.</dt><dd>We\'re working to fix how health care is financed and delivered, all while improving quality and reducing costs.</dd><dt>Outside the system.</dt><dd>We focused on the well-being of our members and their communities, offering programs that reduce the rate of chronic illnesses and help people live healthier, happier lives.</dd><dt>Inside Wellmark.</dt><dd>We\'re hiring and developing the right workforce. We\'re watching every dollar spent. We\'re retaining current members and attracting new ones. We\'re giving members the tools they need to take control of their health care. We\'re planning to participate in the public exchange when open enrollment starts October 1, 2016.</dd></dl><p>Quality health insurance should be available and affordable to everyone. It\'s absolutely achievable. At Wellmark, it\'s why we get up every morning.</p>';
+							%>
+							<% include ../includes/content-rich-text-tile.html.ejs %>
+						</div>
+					</div>
+				</div>
+				<% isRowPrimary = true; %>
+				<% include ../includes/back-to-top-row.html.ejs %>
+
+				<% rowType = 'default'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<h3>Where</h3>
+
+							<div class="row">
+								<%
+								[1,2,3].forEach(function () {
+								%>
+								<div class="col-xs-12 col-sm-4">
+									<% include ../includes/address.html.ejs %>
+								</div>
+								<%
+								});
+								%>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% include ../includes/back-to-top-row.html.ejs %>
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile centered">
+							<% include ../includes/content-large-image-tile.html.ejs %>
+						</div>
+					</div>
+				</div>
+				<% include ../includes/back-to-top-row.html.ejs %>
+
+				<% rowType = ''; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<% include ../includes/about-next.html.ejs %>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

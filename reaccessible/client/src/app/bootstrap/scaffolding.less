@@ -1,0 +1,56 @@
+//
+// Scaffolding
+// --------------------------------------------------
+@import "bower_components/bootstrap/less/scaffolding.less";
+
+// Links
+
+a {
+	text-decoration: @link-hover-decoration;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+
+	&:disabled,
+	&[disabled],
+	&.disabled {
+		&,
+		&:active,
+		&:focus,
+		&:hover {
+			outline: none;
+			text-decoration: none !important;
+			cursor: @cursor-disabled !important;
+		}
+	}
+
+	&[target="_blank"],
+	&.link-external {
+		position: relative;
+		&.has-icon {
+			padding-right: 22px;
+		}
+		
+		.icon-wmkExternalLinkSmall {
+			position: absolute;
+			top: -0.3333em;
+			color: inherit;
+			font-size: 24px;
+			text-decoration: none;
+		}
+	}
+
+	&[download],
+	&.link-download {
+		padding-right: 22px;
+
+		.icon-file-pdf {
+			position: absolute;
+			margin-top: 4px;
+			color: inherit;
+			font-size: inherit;
+		}
+	}
+}

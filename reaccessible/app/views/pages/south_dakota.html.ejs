@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'Forms';
+		var backLinkUrl = '/about/forms';
+		var pageTitle = 'Forms';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = ''; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								Forms for South Dakota
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = ''; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+
+							<%
+							guid = uuid();
+							%>
+							<div class="collapse-content-tile">
+								<button type="button" class="btn"
+									aria-expanded="false" aria-controls="<%= guid %>"
+									data-toggle="collapse" data-target="#<%= guid %>">
+									<span class="text">Claims</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+
+								<div id="<%= guid %>" class="collapse" aria-hidden="true">
+									<ul class="list-unstyled">
+										<li>
+											<a href="#" download>
+												<span class="text">Member Claim Form #C-5321 – South Dakota</span>
+												<span class="icon-file-pdf" aria-hidden="true"></span></a></li>
+										<li>
+											<a href="#" download>
+												<span class="text">Member Claim Form #C-5321 – South Dakota</span>
+												<span class="icon-file-pdf" aria-hidden="true"></span></a></li>
+										<li>
+											<a href="#" download>
+												<span class="text">Member Claim Form #C-5321 – South Dakota</span>
+												<span class="icon-file-pdf" aria-hidden="true"></span></a></li>
+										<li>
+											<a href="#" download>
+												<span class="text">Member Claim Form #C-5321 – South Dakota</span>
+												<span class="icon-file-pdf" aria-hidden="true"></span></a></li>
+										<li>
+											<a href="#" download>
+												<span class="text">Member Claim Form #C-5321 – South Dakota</span>
+												<span class="icon-file-pdf" aria-hidden="true"></span></a></li>
+										<li>
+											<a href="#" download>
+												<span class="text">Member Claim Form #C-5321 – South Dakota</span>
+												<span class="icon-file-pdf" aria-hidden="true"></span></a></li>
+										<li>
+											<a href="#" download>
+												<span class="text">Member Claim Form #C-5321 – South Dakota</span>
+												<span class="icon-file-pdf" aria-hidden="true"></span></a></li>
+										<li>
+											<a href="#" download>
+												<span class="text">Member Claim Form #C-5321 – South Dakota</span>
+												<span class="icon-file-pdf" aria-hidden="true"></span></a></li>
+										<li>
+											<a href="#" download>
+												<span class="text">Member Claim Form #C-5321 – South Dakota</span>
+												<span class="icon-file-pdf" aria-hidden="true"></span></a></li>
+										<li>
+											<a href="#" download>
+												<span class="text">Member Claim Form #C-5321 – South Dakota</span>
+												<span class="icon-file-pdf" aria-hidden="true"></span></a></li>
+									</ul>
+
+									<div style="margin: 30px 0 15px 0;">BlueCard Worldwide&reg; International Claim Form</div>
+
+									<ul class="list-unstyled">
+										<li>
+											<a href="#" download>
+												<span class="text">English Version</span>
+												<span class="icon-file-pdf" aria-hidden="true"></span></a></li>
+										<li>
+											<a href="#" download>
+												<span class="text">Spanish Version</span>
+												<span class="icon-file-pdf" aria-hidden="true"></span></a></li>
+									</ul>
+								</div>
+							</div>
+
+							<%
+							guid = uuid();
+							%>
+							<div class="collapse-content-tile">
+								<button type="button" class="btn"
+									aria-expanded="false" aria-controls="<%= guid %>"
+									data-toggle="collapse" data-target="#<%= guid %>">
+									<span class="text">Individual Health Plans</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+
+								<div id="<%= guid %>" class="collapse" aria-hidden="true">
+									TODO
+								</div>
+							</div>
+
+							<%
+							guid = uuid();
+							%>
+							<div class="collapse-content-tile">
+								<button type="button" class="btn"
+									aria-expanded="false" aria-controls="<%= guid %>"
+									data-toggle="collapse" data-target="#<%= guid %>">
+									<span class="text">Medical Supplement</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+
+								<div id="<%= guid %>" class="collapse" aria-hidden="true">
+									TODO
+								</div>
+							</div>
+
+							<%
+							guid = uuid();
+							%>
+							<div class="collapse-content-tile">
+								<button type="button" class="btn"
+									aria-expanded="false" aria-controls="<%= guid %>"
+									data-toggle="collapse" data-target="#<%= guid %>">
+									<span class="text">Pharmacy</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+
+								<div id="<%= guid %>" class="collapse" aria-hidden="true">
+									TODO
+								</div>
+							</div>
+
+							<%
+							guid = uuid();
+							%>
+							<div class="collapse-content-tile">
+								<button type="button" class="btn"
+									aria-expanded="false" aria-controls="<%= guid %>"
+									data-toggle="collapse" data-target="#<%= guid %>">
+									<span class="text">Miscellaneous</span>
+									<span class="icon" aria-hidden="true"></span>
+								</button>
+
+								<div id="<%= guid %>" class="collapse" aria-hidden="true">
+									TODO
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

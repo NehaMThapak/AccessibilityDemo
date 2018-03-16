@@ -1,0 +1,785 @@
+@import "bower_components/bootstrap/less/carousel.less";
+
+//
+// Bootstrap Carousel Overrides
+// --------------------------------------------------
+
+.carousel {
+
+	ol.carousel-inner,
+	ul.carousel-inner {
+		list-style-type: none;
+		margin: 0; padding: 0;
+	}
+
+	// DEFAULT (home, about, segments)
+	// ====================================
+
+	&.default {
+		// Default / Extra-Small devices (mobile, 320px and up)
+		height: 330px;
+		z-index: 1;
+
+		.carousel-inner,
+		.item {
+			height: inherit;
+		}
+
+		.item {
+			.row {
+				>[class^="col-"],
+				>[class*=" col-"] {
+					&:nth-child(1) {
+						z-index: 10;
+						height: 145px;
+						padding-right: 20px; padding-left: 20px;
+					}
+
+					&:nth-child(2) {
+						height: 185px;
+						text-align: center;
+					}
+				}
+			}
+
+			h2, .h2 {
+				margin-top: 40px;
+				font-size: 36px;
+
+				small {
+					display: block;
+					font-size: 24px;
+				}
+			}
+
+			.image {
+				position: relative;
+				height: inherit;
+				text-align: center;
+			}
+
+			img {
+				width: auto; height: 100%;
+				.image-rendering();
+
+				// IE only
+				// @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+				// }
+			}
+		}
+
+		.container-fluid {
+			height: inherit;
+		}
+
+		.carousel-control {
+			display: none;
+		}
+
+		.carousel-indicators-container {
+			position: absolute;
+			bottom: 15px; left: 50%; z-index: 15;
+			width: 60%;
+			margin-left: -30%;
+			text-align: center;
+		}
+
+		.carousel-indicators {
+			position: relative; display: inline-block;
+			bottom: auto; left: auto;
+			width: auto;
+			margin: 0; padding: 0;
+			vertical-align: top;
+
+			button {
+				display: block; display: inline-block;
+				width: 12px; height: 12px;
+				margin: 0 6px 0 0; border: 1px solid #aeb6be; padding: 0; .border-radius(50%);
+				background-color: #fff; .background-clip(border-box);
+				vertical-align: middle;
+				cursor: pointer; .user-select(none); touch-action: manipulation;
+
+				&.active {
+					border-color: @carousel-indicator-active-bg;
+					background-color: @carousel-indicator-active-bg;
+					border-width: 5px;
+				}
+
+				&:focus {
+					.tab-focus();
+				}
+			}
+		}
+
+		.carousel-pause {
+			display: inline-block;
+			margin: 0; border: 0 none; padding: 0;
+			background: transparent none;
+
+			&:focus {
+				.tab-focus();
+			}
+
+			.icon-pause {
+				position: relative; display: inline-block;
+
+				&:after {
+					position: relative; display: block; content: '';
+					width: 22px; height: 22px;
+					top: 1px; left: 1px; z-index: 0;
+					.border-radius(50%);
+					background-color: #fff;
+				}
+
+				&:before {
+					position: absolute !important;
+					top: -3px; left: 0; z-index: 1;
+					color: @brand-primary;
+					font-size: 30px;
+				}
+			}
+		}
+
+		&[data-state="cycle"] .carousel-pause .icon-pause {
+			.icon-wmkCirclePause();
+		}
+		&[data-state="paused"] .carousel-pause .icon-pause {
+			.icon-wmkCirclePlay();
+		}
+
+
+		// Overrides
+		// ---------------------------
+
+		&.home {
+			height: 520px;
+			background-color: #f0f0f0;
+
+			.carousel-indicators-container {
+				bottom: 165px;
+			}
+
+			.item {
+				color: @gray;
+
+				.row {
+					>[class^="col-"],
+					>[class*=" col-"] {
+						&:nth-child(1) {
+							height: 160px;
+						}
+
+						&:nth-child(2) {
+							height: 210px;
+						}
+
+						&:nth-child(3) {
+							height: 150px;
+							padding-right: 20px; padding-left: 20px;
+							background-color: #fff;
+						}
+					}
+				}
+
+				p {
+					margin-top: 25px;
+					font-size: 18px;
+				}
+
+				h2, .h2 {
+					margin-top: 40px;
+					font-size: 32px;
+
+					small {
+						margin-top: 10px;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+
+		&.about,
+		&[class^="segment-"],
+		&[class*=" segment-"] {
+			color: #fff;
+
+			.carousel-control {
+				color: rgba(255,255,255,0.5);
+			}
+		}
+		&.about {
+			background-color: @brand-about-light;
+		}
+		&.segment-one {
+			background-color: @brand-segment-one-light;
+		}
+		&.segment-two {
+			background-color: @brand-segment-two-light;
+		}
+		&.segment-three {
+			background-color: @brand-segment-three-light;
+		}
+		&.segment-four {
+			background-color: @brand-segment-four-light;
+		}
+
+		&.btnslides {
+			height: 410px;
+
+			.item {
+				.row {
+					>[class^="col-"],
+					>[class*=" col-"] {
+						&:nth-child(1) {
+							height: 180px;
+						}
+
+						&:nth-child(2) {
+							height: 230px;
+						}
+					}
+				}
+
+				h2, .h2 {
+					margin-top: 20px;
+					font-size: 36px;
+
+					small {
+						display: block;
+						font-size: 24px;
+					}
+				}
+			}
+		}
+
+		// Small devices (tablets, 768px and up)
+		@media (min-width: @screen-sm-min) {
+			height: 280px;
+
+			.item {
+				.row,
+				.image {
+					height: inherit;
+				}
+
+				.row {
+					>[class^="col-"],
+					>[class*=" col-"] {
+						&:nth-child(1),
+						&:nth-child(2) {
+							height: inherit;
+						}
+					}
+				}
+
+				img {
+					position: absolute;
+					bottom: 0; right: 0;
+					height: 90%;
+				}
+			}
+
+			.carousel-indicators {
+				bottom: auto;
+			}
+
+
+			// Overrides
+			// ---------------------------
+
+			&.home {
+				height: 456px;
+
+				.carousel-indicators-container {
+					bottom: 120px;
+				}
+
+				.item {
+					.row {
+						>[class^="col-"],
+						>[class*=" col-"] {
+							&:nth-child(1),
+							&:nth-child(2) {
+								height: 350px;
+							}
+
+							&:nth-child(1) {
+								padding-left: 35px;
+							}
+
+							&:nth-child(2) {
+								padding-right: 35px;
+							}
+
+							&:nth-child(3) {
+								height: 106px;
+							}
+						}
+					}
+
+					h2, .h2 {
+						margin-top: 50px;
+					}
+
+					p {
+						float: left;
+						margin-top: 38px;
+					}
+
+					.btn {
+						float: right;
+						margin-top: 25px;
+					}
+				}
+			}
+			//
+			&.btnslides {
+				height: 280px;
+
+				.item {
+					.row,
+					.image {
+						height: inherit;
+					}
+
+					.row {
+						>[class^="col-"],
+						>[class*=" col-"] {
+							&:nth-child(1),
+							&:nth-child(2) {
+								height: inherit;
+							}
+						}
+					}
+
+					img {
+						position: absolute;
+						bottom: 0; right: 0;
+						height: 90%;
+					}
+				}
+			}
+			//
+		}
+
+		// Medium devices (desktops, 992px and up)
+		@media (min-width: @screen-md-min) {
+			.item {
+				padding: 0 80px;
+
+				.row {
+					>[class^="col-"],
+					>[class*=" col-"] {
+						&:nth-child(1),
+						&:nth-child(2) {
+							padding-right: 0; padding-left: 0;
+						}
+						&:nth-child(2) {
+							position: relative;
+							overflow: hidden;
+						}
+					}
+				}
+
+				h2, .h2 {
+					margin-top: 75px;
+					font-size: 50px;
+
+					small {
+						font-size: 30px;
+					}
+				}
+			}
+
+			.carousel-control {
+				display: block;
+				z-index: 20;
+				width: 68px;
+				border: 0 none;
+
+				&:focus {
+					.tab-focus();
+				}
+
+				&.left,
+				&.right {
+					background: transparent none;
+				}
+
+				.icon-prev,
+				.icon-next {
+					width: 34px; height: 34px;
+					font-size: 34px;
+				}
+				.icon-next {
+					margin-right: -24px;
+				}
+				.icon-prev {
+					margin-left: -24px;
+				}
+			}
+
+			.carousel-indicators-container {
+				bottom: 25px;
+			}
+
+			// Overrides
+			// ---------------------------
+
+			&.home {
+				.carousel-indicators-container {
+					bottom: 20px;
+				}
+
+				.item {
+					.row {
+						>[class^="col-"],
+						>[class*=" col-"] {
+							height: inherit;
+
+							&:nth-child(1) {
+								height: inherit;
+								padding-left: 0; padding-right: (@grid-gutter-width / 2);
+							}
+
+							&:nth-child(2) {
+								height: inherit;
+							}
+
+							&:nth-child(3) {
+								height: inherit;
+								padding-right: 0; padding-left: (@grid-gutter-width / 2);
+								background-color: transparent;
+							}
+						}
+					}
+
+					h2, .h2 {
+						margin-top: 75px;
+						font-size: 36px;
+
+						small {
+							margin-top: 10px;
+							font-size: 24px;
+						}
+					}
+
+					p {
+						float: none;
+						margin-top: 80px; margin-left: 0;
+						font-size: 18px;
+					}
+
+					.btn {
+						float: none;
+						margin-top: 0;
+					}
+
+					img {
+						right: auto; left: 0;
+						max-width: 100%; height: auto; max-height: 90%;
+					}
+				}
+			}
+
+			&.about,
+			&[class^="segment-"],
+			&[class*=" segment-"] {
+				.description {
+					.flex-flow(column nowrap, center, flex-start, flex-start);
+					height: 100%;
+				}
+				h2, .h2 {
+					max-width: 450px;
+					margin-top: 0; margin-bottom: 0;
+				}
+			}
+			//
+			&.btnslides {
+				.item {
+					padding: 0 80px;
+
+					.row {
+						>[class^="col-"],
+						>[class*=" col-"] {
+							&:nth-child(1),
+							&:nth-child(2) {
+								padding-right: 0; padding-left: 0;
+							}
+							&:nth-child(2) {
+								position: relative;
+								overflow: hidden;
+							}
+						}
+					}
+
+					h2, .h2 {
+						margin-top: 0;
+						margin-bottom: 10px;
+						font-size: 50px;
+
+						small {
+							font-size: 30px;
+						}
+					}
+				}
+			}
+			//
+		}
+
+		//  Large devices (large desktops, 1200px and up)
+		@media (min-width: @screen-lg-min) {
+			.item {
+				padding: 0 100px;
+			}
+
+			// Overrides
+			// ---------------------------
+
+			&.home {
+				.item {
+					h2, .h2 {
+						margin-top: 95px;
+						font-size: 40px;
+
+						small {
+							margin-top: 15px;
+							font-size: 28px;
+						}
+					}
+
+					p {
+						margin-top: 100px;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+
+		//  Extra-Large devices (large desktops, 1300px and up)
+		@media (min-width: @screen-xl-min) {
+
+			// Overrides
+			// ---------------------------
+
+			&.home {
+				.item {
+					h2, .h2 {
+						margin-top: 125px;
+						font-size: 50px;
+
+						small {
+							font-size: 30px;
+						}
+					}
+
+					p {
+						margin-top: 135px;
+					}
+				}
+			}
+		}
+	}
+
+	// NEWS
+	// ====================================
+
+	&.news {
+		// Default / Extra-Small devices (mobile, 320px and up)
+		position: relative;
+		min-height: 82px; max-height: 82px; overflow: hidden;
+		padding-right: 80px; padding-left: 25px;
+		background-color: @gray-dark;
+
+		>strong {
+			display: none;
+		}
+
+		.carousel-inner {
+			position: relative;
+			z-index: 10;
+			width: 100%; min-height: inherit;
+
+			>.item {
+				min-height: inherit;
+				padding: 0;
+				// .transition(.6s ease-in-out top);
+
+				// &.next {
+				// 	top: -100%; left: 0;
+				// }
+
+				// &.active.left {
+				// 	top: 100%; left: 0;
+				// }
+
+				// &.next.left,
+				// &.active  {
+				// 	top: 0; left: 0;
+				// }
+				.transition-transform(~'0.6s ease-in-out');
+
+				@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+					.transition(~'none');
+				}
+
+				&.next {
+					.translate(0, -100%);
+					left: 0;
+				}
+
+				&.active.left {
+					.translate(0, 100%);
+					left: 0;
+				}
+
+				&.next.left,
+				&.active {
+					.translate(0, 0);
+					left: 0;
+				}
+
+				// WebKit CSS3 transforms for supported devices
+				@media all and (transform-3d), (-webkit-transform-3d) {
+					.backface-visibility(~'hidden');
+					.perspective(1000px);
+
+					&.next {
+						.translate3d(0, -100%, 0);
+					}
+
+					&.active.left {
+						.translate3d(0, 100%, 0);
+					}
+
+					&.next.left,
+					&.active {
+						.translate3d(0, 0, 0);
+					}
+				}
+
+				.content {
+					min-height: inherit;
+				}
+
+				a {
+					display: block;
+					min-height: inherit;
+					color: #fff;
+					line-height: inherit; text-decoration: none;
+
+					&:hover,
+				  &:focus {
+						text-decoration: @link-hover-decoration;
+					}
+				}
+
+				h2, .h2 {
+					.flex-flow(column wrap, center, center, flex-start);
+					// The following hack will work to center the content vertially IE,
+					// but if the content will not overflow for multiple lines.
+					height: 82px;
+					min-height: inherit;
+					margin: 0; padding: 15px 0;
+					font-weight: @font-weight-sans-serif-normal; font-size: @font-size-semilarge; line-height: 1.2; text-transform: none;
+
+					>span {
+						display: block;
+						max-width: 100%;
+					}
+				}
+			}
+	  }
+
+	  .carousel-buttons {
+			position: absolute;
+			top: 12px; right: 0; z-index: 20;
+			width: 80px;
+			padding: 0;
+			text-align: center;
+
+			.pagination {
+				display: block;
+				margin: 0; padding-left: 0; .border-radius(0);
+				color: #fff;
+				font-weight: @font-weight-sans-serif-bold; font-size: @font-size-semilarge;
+			}
+
+			.carousel-control {
+				position: relative;
+				top: -7px; left: auto; bottom: auto; z-index: 20;
+				width: auto;
+				border: 0 none;
+				.opacity(1);
+				color: #fff;
+				text-decoration: none;
+
+				&:focus {
+					.tab-focus();
+				}
+
+				&.right {
+					background: transparent none;
+				}
+			}
+		}
+
+		// Small devices (tablets, 768px and up)
+		@media (min-width: @screen-sm-min) {
+			min-height: 60px; max-height: 60px;
+			padding-right: 170px; padding-left: 155px;
+
+			>strong {
+				position: absolute; display: block;
+				top: 0; left: 0; z-index: 20;
+				width: 155px; min-height: inherit;
+				padding: 17px 12px 0 50px;
+				background-color: @gray-dark;
+				color: #fff;
+				font-weight: @font-weight-sans-serif-condensed-bold; font-size: @font-size-large; text-transform: uppercase; white-space: nowrap;
+			}
+
+			.carousel-inner {
+				>.item {
+					h2, .h2 {
+						// The following hack will work to center the content vertially IE,
+						// but if the content will not overflow for multiple lines.
+						height: 60px;
+					}
+				}
+			}
+
+			.carousel-buttons {
+				top: 0;
+				width: 170px; min-height: inherit;
+				padding-right: 65px; padding-left: 0;
+				text-align: right;
+
+				.pagination {
+					display: inline-block;
+					margin-right: 10px;
+				}
+
+				.carousel-control {
+					top: 9px;
+					padding: 0;
+				}
+			}
+		}
+
+		// //  Medium devices (desktops, 992px and up)
+		// @media (min-width: @screen-md-min) {
+
+		// }
+
+		// //  Large devices (large desktops, 1200px and up)
+		// @media (min-width: @screen-lg-min) {
+
+		// }
+
+		// //  Extra-Large devices (large desktops, 1300px and up)
+		// @media (min-width: @screen-xl-min) {
+
+		// }
+	}
+}

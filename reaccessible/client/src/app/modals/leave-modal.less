@@ -1,0 +1,96 @@
+.modal#leave-modal {
+
+
+	.modal-dialog {
+		max-width : 465px;
+		margin: 30px auto;
+	}
+
+	.modal-header {
+		padding: 5px;
+		border-bottom-color: dimgray;
+		.btn {
+			.pull-right();
+			padding: 8px 10px 7px 15px;
+			background-color: transparent;
+			color: #fff;
+			font-size: @font-size-semilarge; font-family: @font-family-sans-serif; text-transform: uppercase;
+			position: relative;
+ 
+			&:focus{
+				outline: none;
+			}
+			&:focus:before{
+				border:3px solid #f5833c;
+				content: "";
+				position:absolute;
+				top: 0; right: 0; bottom: -1px; left: -1px;
+			}
+ 
+			>span {
+				display: inline-block;
+				vertical-align: middle;
+			}
+ 
+			.icon-wmkCircleClose {
+				margin-left: 5px;
+				font-size: 27px;
+			}
+		}
+	}
+
+	.modal-content {
+		background-color: @gray-dark;
+		color: #fff;
+	}
+
+
+	.modal-body {
+		padding: 15px 25px 30px;
+
+		h3 {
+			margin: 5px 0;
+			text-transform: none;
+			font-size: 32px; font-weight: 600;
+		}
+
+		p {
+			margin-bottom: 25px;
+			font-size: 16px;
+		}
+
+		a.btn {
+			margin-right: 15px;
+		}
+
+		a.cancel {
+			color: #fff;
+			font-size: 19px;
+			font-weight: 500;
+		}
+	}
+
+
+	@media (max-width: @screen-xs-max) {
+	}
+
+	// Small devices (tablets, 768px and up)
+	@media (min-width: @screen-sm-min) {
+
+	}
+
+	// //  Medium devices (desktops, 992px and up)
+	// @media (min-width: @screen-md-min) {
+
+	// }
+
+	// //  Large devices (large desktops, 1200px and up)
+	// @media (min-width: @screen-lg-min) {
+
+	// }
+
+	// //  Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+}

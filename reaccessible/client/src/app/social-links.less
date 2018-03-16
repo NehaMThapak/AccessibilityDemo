@@ -1,0 +1,80 @@
+.social-links {
+    font-size: 18px;
+    margin: 15px 0;
+
+    .social-link {
+        font-size: 18px;
+        text-align: center;
+        width: 40px;
+        height: 40px;
+        line-height: 35px;
+        display: inline-block;
+        margin: 0;
+        text-decoration: none;
+        color: #fff;
+				position: relative;
+				top: 2px;
+
+				.social-link-content {
+						color: @brand-primary;
+						background: transparent;
+						border-radius: 50%;
+						display: inline-block;
+						width: 30px;
+						height: 30px;
+						border: 1px solid #ccc;
+						vertical-align: middle;
+				}
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        [class*=icon-] {
+						top: -2px;
+            width: 1.28571429em;
+            text-align: center;
+            position: relative;
+        }
+
+        .icon-facebook,
+        .icon-linkedin {
+            left: 1px;
+        }
+
+				.icon-linkedin {
+            top: -3px;
+        }
+
+        &:hover {
+						.social-link-content {
+								color: #fff;
+								border-color: transparent;
+								background: @brand-primary;
+						}
+        }
+
+    }
+
+    &.alt {
+        color: #fff;
+
+        .social-link {
+
+						.social-link-content {
+								color: #fff;
+								background: @brand-primary;
+								border: 1px solid #fff;
+						}
+
+            &:hover {
+								.social-link-content {
+										color: @brand-primary;
+										border-color: transparent;
+										background: #fff;
+								}
+            }
+        }
+    }
+
+}

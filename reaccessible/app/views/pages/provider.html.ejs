@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<h1 class="sr-only">This is a hidden heading</h1>
+
+					<div id="segment-four-carousel" class="carousel slide default segment-four"
+						data-pause="false" data-interval="5000">
+
+						<!-- Controls -->
+						<div>
+
+							<button type="button" class="left carousel-control"
+								aria-controls="segment-four-carousel"
+								data-target="#segment-four-carousel" data-slide="prev">
+								<span class="icon-prev icon-wmkCarouselArrowLeft" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</button>
+
+							<button type="button"  class="right carousel-control"
+								aria-controls="segment-four-carousel"
+								data-target="#segment-four-carousel" data-slide="next">
+								<span class="icon-next icon-wmkCarouselArrowRight" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</button>
+
+							<div class="carousel-indicators-container">
+								<!-- Indicators -->
+								<div class="carousel-indicators">
+									<button type="button" id="segment-four-carousel-slide-button-1" class="active"
+										aria-controls="segment-four-carousel-slide-1"
+										data-target="#segment-four-carousel" data-slide-to="0">
+										<span class="sr-only">Slide 1</span></button>
+									<button type="button" id="segment-four-carousel-slide-button-2"
+										aria-controls="segment-four-carousel-slide-2"
+										data-target="#segment-four-carousel" data-slide-to="1">
+										<span class="sr-only">Slide 2</span></button>
+									<button type="button" id="segment-four-carousel-slide-button-3"
+										aria-controls="segment-four-carousel-slide-3"
+										data-target="#segment-four-carousel" data-slide-to="2">
+										<span class="sr-only">Slide 3</span></button>
+								</div>
+
+								<!-- Pause -->
+								<button class="btn carousel-pause" type="button"
+									aria-controls="segment-four-carousel"
+									data-target="#segment-four-carousel" data-play-text="Play Button" data-pause-text="Pause Button">
+									<span class="sr-only">Pause</span><span
+										class="icon-pause" aria-hidden="true"></span></button>
+							</div>
+						</div>
+
+						<!-- Wrapper for slides -->
+						<ol class="carousel-inner">
+
+							<li id="segment-four-carousel-slide-1" class="item active">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-xs-12 col-sm-6">
+											<div class="description">
+												<h2>
+													<small>Provider Resources</small>
+													Helping You Focus on the Patient
+												</h2>
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-6">
+											<div class="image">
+												<img src="<%= config.assetPath %>img/carousel-segment-four-slide-1.png" alt="" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li id="segment-four-carousel-slide-2" class="item">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-xs-12 col-sm-6">
+											<div class="description">
+												<h2>
+													<small>Provider Resources</small>
+													Helping You Focus on the Patient
+												</h2>
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-6">
+											<div class="image">
+												<img src="<%= config.assetPath %>img/carousel-segment-four-slide-1.png" alt="" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li id="segment-four-carousel-slide-3" class="item">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-xs-12 col-sm-6">
+											<div class="description">
+												<h2>
+													<small>Provider Resources</small>
+													Helping You Focus on the Patient
+												</h2>
+											</div>
+										</div>
+										<div class="col-xs-12 col-sm-6">
+											<div class="image">
+												<img src="<%= config.assetPath %>img/carousel-segment-four-slide-1.png" alt="" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</li>
+
+					  </ol>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<% include ../includes/things-to-flexbox.html.ejs %>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

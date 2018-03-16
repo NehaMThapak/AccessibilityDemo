@@ -1,0 +1,41 @@
+.address {
+	padding-bottom: 30px;
+	font-size: @font-size-semilarge; line-height: 1.6;
+
+	.name {
+		font-weight: @font-weight-sans-serif-condensed-bold; font-size: @font-size-large;
+	}
+
+	.phone a {
+		color: inherit;
+		text-decoration: none;
+	}
+
+	// Small devices (tablets, 768px and up)
+	@media (min-width: @screen-sm-min) {
+		.address {
+			padding-bottom: 0;
+		}
+	}
+
+	// Medium devices (desktops, 992px and up)
+	@media (min-width: @screen-md-min) {
+		.address {
+			line-height: 1.8;
+		}
+	}
+
+	// Large devices (large desktops, 1200px and up)
+	@media (min-width: @screen-lg-min) {
+		font-size: @font-size-large;
+
+		.name {
+			font-size: 20px;
+		}
+	}
+
+	// // Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+}

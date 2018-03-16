@@ -1,0 +1,276 @@
+@import "bower_components/bootstrap/less/buttons.less";
+@import "mixins/buttons.less";
+//
+// Bootstrap Buttons Overrides
+// --------------------------------------------------
+
+.btn {
+	border: 0 none;
+	//background: transparent none;
+
+	&,
+	&:active,
+	&.active {
+		&:focus,
+		&.focus {
+			.tab-focus();
+		}
+	}
+
+	&.btn-preload {
+		&,
+		&:active,
+		&.active {
+			position: relative;
+			border-color: transparent;
+	    background-color: transparent; .box-shadow(none);
+	    color: transparent;
+			cursor: wait !important;
+
+			&:focus,
+			&.focus {
+				.tab-focus(none);
+			}
+		}
+
+		&:after {
+			position: absolute; display: block; content: '';
+			top: 0; right: 0; bottom: 0; left: 0;
+			background: transparent url(../../img/preloader-button.gif) no-repeat center center; background-size: auto 100%;
+			visibility: visible;
+		}
+	}
+
+}
+
+a.btn{
+	&,
+	&:hover {
+		text-decoration: none !important;
+	}
+
+	&.btn-link {
+		&,
+		&:hover {
+			text-decoration: underline !important;
+		}
+	}
+
+	.icon-wmkExternalLinkSmall,
+	.icon-wmkExternalLinkBig {
+			position: relative;
+			margin-bottom: 3px;
+			margin-left: 2px;
+			margin-right: -5px;
+			display: inline-block;
+			line-height: 0;
+			vertical-align: middle;
+		}
+}
+
+.btn-default,
+.btn-primary,
+.btn-search-form,
+.btn-things-to-one,
+.btn-things-to-two,
+.btn-segment-one,
+.btn-segment-two,
+.btn-segment-three,
+.btn-segment-four,
+.btn-login,
+.btn-register,
+.btn-segment-nav,
+.btn-glossary,
+.btn-nav-primary {
+	font-family: @font-family-sans-serif; text-transform: uppercase;
+}
+
+.btn-default {
+	&:hover,
+	&:focus,
+  	&:active,
+	&:active:focus {
+    	color: darken(@btn-default-color, 10%);
+  }
+}
+
+
+.btn-inverse {
+	text-transform: uppercase;
+	.button-variant(@brand-primary; #fff; #fff);
+}
+
+.btn-tag {
+	border-style: solid;
+	border-width: 1px;
+	border-radius: @font-size-base;
+	// .button-variant(@btn-tag-color; @btn-tag-default-bg; @btn-tag-default-border);
+	.button-variant-hover(@btn-tag-color; @btn-tag-default-bg; @btn-tag-default-border; #fff; @gray; @gray);
+}
+
+.btn-tag-circle {
+	display: inline-block;
+	width: 32px;
+	height: 32px;
+	border-radius: 16px;
+	vertical-align: baseline;
+	text-align: center;
+	line-height: 32px;
+	font-size: 16px;
+	font-weight: @font-weight-sans-serif-condensed-bold;
+	color: @btn-tag-circle-txt;
+	background-color: @btn-tag-circle-bg;
+	border-color: @btn-tag-circle-bg;
+
+	&.bg-ltgray 		{ background-color: @bluemag-ltgray; 		}
+	&.bg-gray 			{ background-color: @bluemag-gray; 			}
+	&.bg-purple 		{ background-color: @bluemag-purple; 		}
+	&.bg-pinkpurple { background-color: @bluemag-pinkpurple; }
+	&.bg-orange 		{ background-color: @bluemag-orange; 		}
+	&.bg-ltblue			{ background-color: @bluemag-ltblue;  	}
+	&.bg-blue 			{ background-color: @bluemag-blue;    	}
+	&.bg-dkblue 		{ background-color: @bluemag-dkblue;  	}
+	&.bg-dkrblue 		{ background-color: @bluemag-dkrblue; 	}
+	&.bg-dkstblue   { background-color: @bluemag-dkstblue;  }
+	&.bg-turquoise 	{ background-color: @bluemag-turquoise; }
+	&.bg-ltgreen 		{ background-color: @bluemag-ltgreen; 	}
+	&.bg-green 			{ background-color: @bluemag-green; 		}
+	&.bg-dkgreen 		{ background-color: @bluemag-dkgreen; 	}
+	&.bg-brown 			{ background-color: @bluemag-brown;   	}
+
+	&[class*=" bt-icon-"] {
+		color:transparent;
+		position: relative;
+		top: -2px;
+		white-space: nowrap;
+		overflow: hidden;
+		vertical-align: middle;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 70%;
+
+		&:before {
+			content: '\00a0';
+		}
+	}
+	&.bt-icon-heart {background-image: url('data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20id%3D%22bt-icon-heart%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20708.7%20708.7%22%20style%3D%22enable-background%3Anew%200%200%20708.7%20708.7%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23FFFFFF%3B%7D%3C%2Fstyle%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M508.6%2C93c0%2C0-0.1%2C0-0.1%2C0c-72.9%2C0-117.5%2C44-152.6%2C118.5C318%2C137%2C252.4%2C77.7%2C168.1%2C96.6c-71.4%2C16-121.8%2C78.1-121.6%2C149.6c0%2C190.5%2C309.4%2C387.7%2C309.4%2C387.7s309.4-197.2%2C309.4-387.7C665.3%2C161.7%2C595.2%2C93%2C508.6%2C93z%20M355.9%2C589.9c0%2C0-274.4-182.9-274.4-342.7c0-35.2%2C22.5-97.2%2C86.6-114.6C259.7%2C107.7%2C308%2C193%2C355.9%2C270.5C402%2C194%2C442%2C123%2C508.5%2C129c0%2C0%2C0.1%2C0%2C0.1%2C0c82.4%2C1%2C121.6%2C67%2C121.6%2C118.2C630.2%2C412%2C355.9%2C589.9%2C355.9%2C589.9z%22%2F%3E%3C%2Fsvg%3E');}
+	&.bt-icon-stopwatch {background-image: url('data:image/svg+xml,%3Csvg%20version%3D%221.1%22%20id%3D%22bt-icon-stopwatch%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20x%3D%220px%22%20y%3D%220px%22%20viewBox%3D%220%200%20708.7%20708.7%22%20style%3D%22enable-background%3Anew%200%200%20708.7%20708.7%3B%22%20xml%3Aspace%3D%22preserve%22%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E.st0%7Bfill%3A%23FFFFFF%3B%7D%3C%2Fstyle%3E%3Cg%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M352.5%2C234.4c-0.2%2C0-0.3%2C0-0.5%2C0l0.5%2C178.4L212.3%2C523c32.7%2C41.5%2C83.3%2C68.1%2C140.2%2C68.1c98.5%2C0%2C178.4-79.9%2C178.4-178.4S451%2C234.4%2C352.5%2C234.4z%22%2F%3E%3Cpath%20class%3D%22st0%22%20d%3D%22M672.4%2C217.9l-26.6-35.1c-5.5-8.3-14.8-12.4-23-6.9l-50.8%2C37.7c-3-3.3-6.1-6.6-9.3-9.8c-27.1-27.1-58.7-48.4-93.8-63.2c-23.6-10-48.1-16.8-73.3-20.3V46.6h60.1c9.1%2C0%2C16.4-7.4%2C16.4-16.4v-9.2c0-9.1-7.4-16.4-16.4-16.4H254.2c-9.1%2C0-16.4%2C7.4-16.4%2C16.4v9.2c0%2C9.1%2C7.4%2C16.4%2C16.4%2C16.4h58.3v73.7c-25.3%2C3.5-49.9%2C10.3-73.5%2C20.3c-35.1%2C14.9-66.7%2C36.1-93.8%2C63.2c-3.2%2C3.2-6.3%2C6.5-9.3%2C9.8l-48.9-35.8c-8.3-5.5-19.4-3.3-24.9%2C5l-24.7%2C37c-5.5%2C8.3-3.3%2C19.4%2C5%2C24.9l47.9%2C35.1c-2.9%2C5.8-5.7%2C11.7-8.2%2C17.7C66.5%2C334%2C58.7%2C372.7%2C58.7%2C412.5s7.8%2C78.5%2C23.2%2C114.9c14.9%2C35.1%2C36.1%2C66.7%2C63.2%2C93.8s58.7%2C48.4%2C93.8%2C63.2c36.4%2C15.4%2C75.1%2C23.2%2C114.9%2C23.2s78.5-7.8%2C114.9-23.2c35.1-14.9%2C66.7-36.1%2C93.8-63.2s48.4-58.7%2C63.2-93.8C641.2%2C491%2C649%2C452.4%2C649%2C412.5s-7.8-78.5-23.2-114.9c-2.5-6-5.3-11.9-8.2-17.7l49.8-37C675.6%2C237.3%2C677.9%2C226.2%2C672.4%2C217.9z%20M351%2C657.6c-134.6%2C0-244.1-110.4-244.1-246s109.5-246%2C244.1-246s244.1%2C110.4%2C244.1%2C246S485.6%2C657.6%2C351%2C657.6z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');}
+}
+
+
+.btn-nav-primary,
+.btn-search-form {
+	.button-variant(#fff; @nav-primary-btn-bg; @nav-primary-btn-bg);
+}
+
+.btn-things-to-one {
+	.button-variant(@btn-things-to-one-color; @btn-things-to-one-bg; @btn-things-to-one-border);
+	text-transform: uppercase;
+}
+
+.btn-things-to-two {
+	.button-variant(@btn-things-to-two-color; @btn-things-to-two-bg; @btn-things-to-two-border);
+	text-transform: uppercase;
+}
+
+.btn-segment-one {
+	.button-variant(@brand-segment-one; #fff; #fff);
+}
+
+.btn-segment-two {
+	.button-variant(@brand-segment-two; #fff; #fff);
+}
+
+.btn-segment-three {
+	.button-variant(@brand-segment-three; #fff; #fff);
+}
+
+.btn-segment-four {
+	.button-variant(@brand-segment-four; #fff; #fff);
+}
+
+.btn-register {
+	.button-variant(#fff; @nav-register-btn-bg; @nav-register-btn-bg);
+}
+
+.btn-segment-nav {
+	padding-left: 10px; .border-radius(0 @border-radius-large @border-radius-large 0);
+
+	.icon-wmkCaretLeft {
+		display: inline-block;
+		font-size: 20px; vertical-align: middle;
+	}
+
+	.text {
+		display: none;
+	}
+
+	// Medium devices (desktops, 992px and up)
+	@media (min-width: @screen-md-min) {
+		padding-right: 20px; padding-left: 12px;
+
+		.text {
+			display: inline-block;
+			padding-bottom: 1px;
+			vertical-align: middle;
+		}
+	}
+}
+
+// Segment specific colors
+.about {
+	.btn-segment-nav {
+		.button-variant(#fff; @brand-about; @brand-about);
+	}
+}
+
+.segment-one {
+	.btn-segment-nav {
+		.button-variant(#fff; @brand-segment-one; @brand-segment-one);
+	}
+}
+
+.segment-two {
+	.btn-segment-nav {
+		.button-variant(#fff; @brand-segment-two; @brand-segment-two);
+	}
+}
+
+.segment-three {
+	.btn-segment-nav {
+		.button-variant(#fff; @brand-segment-three; @brand-segment-three);
+	}
+}
+
+.segment-four {
+	.btn-segment-nav {
+		.button-variant(#fff; @brand-segment-four; @brand-segment-four);
+	}
+}
+
+.btn-glossary {
+	.button-variant(#fff; @brand-glossary; @brand-glossary);
+	text-transform: uppercase;
+
+	.icon-reaCaretDown,
+	.icon-wmkCaretUp {
+		display: inline-block;
+		margin-left: 10px;
+		vertical-align: middle;
+	}
+}
+
+.btn-calendar {
+	margin-left: 10px; padding: 0 5px;
+	background-color: transparent;
+	color: @brand-primary;
+	font-size: 26px;
+}
+
+
+// .button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius);
+
+.btn-xl {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size((@padding-large-vertical + 3); (@padding-large-horizontal + 30); @font-size-large; @line-height-large; @btn-border-radius-large);
+}

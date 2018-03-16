@@ -1,0 +1,102 @@
+<% extraStyles = ['WellmarkWFFM', 'Custom']; %>
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+		<%
+		var backLinkText = 'Guides';
+		var backLinkUrl = '/about/guides/';
+		var pageTitle = 'Nominate Your Hometown';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile " style="padding-top: 0;">
+							<!-- Paste in start -->
+							<form action="/form/Index?wffm.FormItemId=e377be5d-8cfb-47cc-8175-e36512342ce9&amp;wffm.Id=c82fd893-ed3e-45e1-96c2-3c6a168dbf2a" class="text-left" data-wffm="{E377BE5D-8CFB-47CC-8175-E36512342CE9}" data-wffm-ajax="True" enctype="multipart/form-data" id="wffmc82fd893ed3e45e196c23c6a168dbf2a" method="post">
+								<input name="__RequestVerificationToken" type="hidden" value="a35lLKEvJX5g6V9Odi1irFHxmvh_mYgIqVYdLDsB4P_aCbYwHn5CrODFlG0ZRzLYSPm2K-hR2iooE2aTmkfKZOJQpUqCwTakMDyRhMxPVXw1" />
+								<input id="wffmc82fd893ed3e45e196c23c6a168dbf2a_Id" name="wffmc82fd893ed3e45e196c23c6a168dbf2a.Id" type="hidden" value="c82fd893-ed3e-45e1-96c2-3c6a168dbf2a" />
+								<input id="wffmc82fd893ed3e45e196c23c6a168dbf2a_FormItemId" name="wffmc82fd893ed3e45e196c23c6a168dbf2a.FormItemId" type="hidden" value="{E377BE5D-8CFB-47CC-8175-E36512342CE9}" />
+								<div class="page-header">
+									<h1>Get Your Hometown in the Game!</h1>
+								</div>
+								<p>Select your team, and then nominate your Iowa or South Dakota hometown to win the health project funding that team generates this season.</p>
+								<p><span class="legend-required">*</span>Required Field</p>
+								<div class="has-error has-feedback validation-summary" tabindex="-1">
+									<div class="validation-summary-valid" data-valmsg-summary="true">
+										<span class="icon-warning pull-left" aria-hidden="true"></span>
+										<div class="h4">Please correct the following error(s):</div>
+										<ul class="list-group">
+											<li style="display:none"></li>
+										</ul>
+									</div>
+								</div>
+								<fieldset>
+									<div class="row">
+										<div class="col-md-12">
+											<div class="required-field  form-group">
+												<input id="wffmc82fd893ed3e45e196c23c6a168dbf2a_Sections_0__Fields_0__Id" name="wffmc82fd893ed3e45e196c23c6a168dbf2a.Sections[0].Fields[0].Id" type="hidden" value="{1AD4BF5C-C33C-41D1-8713-307A664CDB54}" />
+												<label class="control-label" for="wffmc82fd893ed3e45e196c23c6a168dbf2a_Sections_0__Fields_0__Value">Your Team</label>
+												<select class="form-control" data-val="true" data-val-required="Your Team must be selected." data-val-required-tracking="{7E86B2F5-ACEC-4C60-8922-4EB5AE5D9874}" id="wffmc82fd893ed3e45e196c23c6a168dbf2a_Sections_0__Fields_0__Value" name="wffmc82fd893ed3e45e196c23c6a168dbf2a.Sections[0].Fields[0].Value" data-jcf>
+													<option value="">Select</option>
+													<option value="Drake University">Drake Bulldogs</option>
+													<option value="Iowa State University">Iowa State Cyclones</option>
+													<option value="University of Iowa">Iowa Hawkeyes</option>
+													<option value="University of Northern Iowa">Northern Iowa Panthers</option>
+													<option value="University of South Dakota">South Dakota Coyotes</option>
+													<option value="South Dakota State">South Dakota State Jackrabbits</option>
+												</select>
+												<span class="field-validation-valid help-block" data-valmsg-for="wffmc82fd893ed3e45e196c23c6a168dbf2a.Sections[0].Fields[0].Value" data-valmsg-replace="true" tabindex="-1" aria-hidden="true"></span>
+											</div>
+											<div class="required-field  form-group">
+												<input id="wffmc82fd893ed3e45e196c23c6a168dbf2a_Sections_0__Fields_1__Id" name="wffmc82fd893ed3e45e196c23c6a168dbf2a.Sections[0].Fields[1].Id" type="hidden" value="{6295498A-A042-4C0E-847B-853FD7E9C77F}" />
+												<label class="control-label" for="wffmc82fd893ed3e45e196c23c6a168dbf2a_Sections_0__Fields_1__Value">Name of hometown you are nominating</label>
+												<input class=" form-control text-box single-line" data-val="true" data-val-length="Name of hometown you are nominating field must be a string with a minimum length of 0 and a maximum length of 256." data-val-length-max="256" data-val-required="Name of hometown you are nominating cannot be empty." data-val-required-tracking="{7E86B2F5-ACEC-4C60-8922-4EB5AE5D9874}" id="wffmc82fd893ed3e45e196c23c6a168dbf2a_Sections_0__Fields_1__Value" name="wffmc82fd893ed3e45e196c23c6a168dbf2a.Sections[0].Fields[1].Value" placeholder="" style="" type="text" value="" />
+												<span class="field-validation-valid help-block" data-valmsg-for="wffmc82fd893ed3e45e196c23c6a168dbf2a.Sections[0].Fields[1].Value" data-valmsg-replace="true" tabindex="-1" aria-hidden="true"></span>
+											</div>
+											<div class="required-field  form-group">
+												<input id="wffmc82fd893ed3e45e196c23c6a168dbf2a_Sections_0__Fields_2__Id" name="wffmc82fd893ed3e45e196c23c6a168dbf2a.Sections[0].Fields[2].Id" type="hidden" value="{22B4DB82-E12B-4840-9F96-984CE41492EB}" />
+												<label class="control-label" for="wffmc82fd893ed3e45e196c23c6a168dbf2a_Sections_0__Fields_2__Value">State of hometown you are nominating</label>
+												<select class="form-control" data-val="true" data-val-required="State of hometown you are nominating must be selected." data-val-required-tracking="{7E86B2F5-ACEC-4C60-8922-4EB5AE5D9874}" id="wffmc82fd893ed3e45e196c23c6a168dbf2a_Sections_0__Fields_2__Value" name="wffmc82fd893ed3e45e196c23c6a168dbf2a.Sections[0].Fields[2].Value" data-jcf>
+													<option value="">Select</option>
+													<option value="Iowa">Iowa</option>
+													<option value="South Dakota">South Dakota</option>
+												</select>
+												<span class="field-validation-valid help-block" data-valmsg-for="wffmc82fd893ed3e45e196c23c6a168dbf2a.Sections[0].Fields[2].Value" data-valmsg-replace="true" tabindex="-1" aria-hidden="true"></span>
+											</div>
+										</div>
+									</div>
+								</fieldset>
+								<div class="form-submit-border">
+									<input class="btn btn-primary btn-lg  btn btn-primary btn-lg-default" type="submit" value="Submit" />
+								</div>
+							</form>
+							<!-- Paste in end -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

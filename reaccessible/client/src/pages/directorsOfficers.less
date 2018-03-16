@@ -1,0 +1,100 @@
+@import "../app/bootstrap/variables.less";
+@import "../app/bootstrap/mixins.less";
+@import "../app/font-icons.less";
+
+#global-content {
+	// Default / Extra-Small devices (mobile, 320px and up)
+
+	h1 {
+		font-size: 30px;
+	}
+
+	h2 {
+		margin-bottom: 0; padding-right: 20px; padding-left: 20px;
+		font-weight: @font-weight-sans-serif-condensed-bold; font-size: 36px; text-transform: none; text-align: center;
+
+		small {
+			display: block;
+			margin-top: 35px;
+			font-size: @font-size-large; line-height: 1.8;
+		}
+	}
+
+	.bio {
+		position: relative;
+		padding-top: 40px;
+		font-size: @font-size-large; text-align: center;
+
+		img {
+			.square(210px);
+			margin-bottom: 20px;
+		}
+
+		.name,
+		.title {
+			width: 210px;
+			margin-right: auto; margin-left: auto;
+		}
+
+		.name {
+			margin-bottom: 15px;
+			font-weight: @font-weight-sans-serif-condensed-bold;
+		}
+
+		.title {
+			margin-bottom: 40px;
+			font-size: @font-size-semilarge;
+		}
+
+		.btn.btn-lg {
+			width: 140px;
+		}
+	}
+
+	// Small devices (tablets, 768px and up)
+	@media (min-width: @screen-sm-min) {
+		.row .row {
+			.flex-flow(row wrap, center, flex-start, stretch);
+
+			&:before { 
+				display: initial;
+			}
+
+			>[class^="col-"],
+			>[class*=" col-"] {
+				.flex-display(); .flex-flow(@justifyContent: center, @alignContent: stretch); .flex(0 1 auto);
+			}
+		}
+
+		.bio {
+			padding-bottom: 45px;
+
+			img {
+				.square(210px);
+			}
+
+			.btn.btn-lg {
+				position: absolute;
+				bottom: 0; left: 50%;
+				margin-left: -70px;
+			}
+		}
+	}
+
+	// Medium devices (desktops, 992px and up)
+	// @media (min-width: @screen-md-min) {
+
+	// }
+
+	//  Large devices (large desktops, 1200px and up)
+	@media (min-width: @screen-lg-min) {
+		// .row .row {
+		// 	.flex-flow(row wrap, flex-start, flex-start, stretch);
+		// }
+	}
+
+	// //  Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+}

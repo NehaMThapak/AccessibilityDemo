@@ -1,0 +1,79 @@
+.content-tile-accreditation {
+	padding: 20px;
+	line-height: 1.4;
+	font-size: @font-size-semilarge; text-align: left;
+
+	>a {
+		display: block;
+		color: @text-color;
+		text-decoration: none;
+
+		&:focus {
+			.tab-focus();
+		}
+	}
+
+	.image {
+		margin-bottom: 20px;
+		text-align: center;
+		@media (min-width: @screen-sm-min)
+		{
+			text-align: left;
+		}
+	}
+
+	.name {
+		font-weight: @font-weight-sans-serif-bold;
+	}
+
+	// // Small devices (tablets, 768px and up)
+	// @media (min-width: @screen-sm-min) {
+
+	// }
+
+	// // Medium devices (desktops, 992px and up)
+	// @media (min-width: @screen-md-min) {
+
+	// }
+
+	// Large devices (large desktops, 1200px and up)
+	@media (min-width: @screen-lg-min) {
+		padding-right: 40px; padding-left: 40px;
+		font-size: @font-size-large;
+	}
+
+	// Extra-Large devices (large desktops, 1300px and up)
+	@media (min-width: @screen-xl-min) {
+		padding-right: 60px; padding-left: 60px;
+	}
+}
+
+// .row > .col-sm-4 {
+// 	// Small devices (tablets, 768px and up)
+// 	@media (min-width: @screen-sm-min) {
+// 		&:last-child > .content-tile-accreditation {
+// 			margin-right: 10px;
+// 		}
+// 	}
+
+// 	// Medium devices (desktops, 992px and up)
+// 	@media (min-width: @screen-md-min) {
+// 		&:last-child > .content-tile-accreditation {
+// 			margin-right: 20px;
+// 		}
+// 	}
+
+// 	// Large devices (large desktops, 1200px and up)
+// 	@media (min-width: @screen-lg-min) {
+// 		&:last-child > .content-tile-accreditation {
+// 			margin-right: 30px;
+// 		}
+// 	}
+
+// 	// Extra-Large devices (large desktops, 1300px and up)
+// 	@media (min-width: @screen-xl-min) {
+// 		&:last-child > .content-tile-accreditation {
+// 			margin-right: 50px;
+// 		}
+// 	}
+// }

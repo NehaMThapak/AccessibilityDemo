@@ -1,0 +1,39 @@
+<!-- Header -->
+<header id="global-header">
+	<nav class="navbar navbar-default navbar-fixed-top" aria-label="Navigation Bar">
+		<div class="container-fluid">
+				<div class="navbar-header">
+
+					<a class="navbar-brand" href="/" title="RealEstate homepage">
+						<img src="<%= config.assetPath %>img/logo-realestate.png" alt="RealEstate logo" />
+					</a>
+
+					<button type="button" class="navbar-toggle"
+						aria-controls="global-navigation-modal"
+						data-toggle="modal" data-target="#global-navigation-modal">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="btn-text">MENU</span>
+					</button>
+
+					<div class="navbar-left navbar-logo">
+						<a href="/blue" title="Blue homepage">
+							<img src="<%= config.assetPath %>img/bluelogo_header.png" alt="Blue logo" />
+						</a>
+					</div>
+
+					<div class="navbar-right">
+						<button
+							type="button" class="btn btn-search btn-default btn-lg navbar-btn"
+							data-toggle="modal" data-target="#search-modal">
+							<span class="sr-only">Toggle dialog</span>
+							<span class="icon-search"></span>
+							<span class="btn-text">SEARCH</span>
+						</button>
+					</div>
+				</div>
+		</div>
+	</nav>
+</header>

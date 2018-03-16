@@ -1,0 +1,32 @@
+<section class="content-preview-tile">
+	<div>
+		<div class="image">
+			<img src="http://fpoimg.com/200x160?bg_color=EEEEEE&text_color=666666" alt="" />
+		</div>
+		<div class="preview">
+			<h3 class="heading-<%= contentPreviewHeaderColor %>"><a href="<%- contentPreviewLink %>"<% if (contentPreviewIsExternal) {%> target="_blank"<%} %> ><%- contentPreviewTitle %></a></h3>
+			<p>
+				This is some example content for the content preview tile.
+				It contains <span class="link">link</span> styled text.
+			</p>
+		</div>
+		<div class="action">
+		<a role="button" href="<%- contentPreviewLink %>"<% if (contentPreviewIsExternal) {%> target="_blank"<%} %> >
+			<%
+			if (!contentPreviewIsExternal) {
+			%>
+			<span class="sr-only">Links to <%- contentPreviewTitle %></span>
+			<span class="icon icon-wmkCircleArrowRight" aria-hidden="true"></span>
+			<%
+			}
+			else {
+			%>
+			<span class="sr-only"> External Link</span>
+			<span class="icon icon-wmkExternalLinkBig" aria-hidden="true"></span>
+			<%
+			}
+			%>
+			</a>
+		</div>
+	</div>
+</section>

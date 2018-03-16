@@ -1,0 +1,215 @@
+@import "../app/bootstrap/variables.less";
+@import "../app/bootstrap/mixins.less";
+@import "../app/font-icons.less";
+
+#global-content {
+	.glossary-nav {
+		position: fixed;
+		top: @navbar-height; right: 0; left: 0; z-index: 100;
+		height: @glossary-navbar-height;
+		padding-top: 20px;
+		background-color: @brand-glossary-light;
+
+		h1 {
+			display: inline-block;
+			margin: 0;
+			color: #fff;
+			font-weight: @font-weight-sans-serif-condensed-bold; font-size: @font-size-semilarge;
+		}
+
+		.letters {
+			position: absolute;
+			top: 50%; right: 20px;
+			height: 44px;
+			margin-top: -22px;
+		}
+
+		.jcf-select {
+			position: relative; display: inline-block;
+			min-width: 65px; height: 52px;
+			margin: 0; border: 0 none;
+			background-color: @brand-glossary; .border-radius(4px);
+			color: #fff;
+			vertical-align: top;
+
+			&.jcf-drop-active {
+				.border-radius(4px 4px 0 0);
+			}
+
+			select {
+				top: 0; left: 0; z-index: 1;
+				background-color: @brand-glossary;
+			}
+
+			&.jcf-focus {
+				.tab-focus();
+			}
+
+			.jcf-select-text {
+				margin: 0 35px 0 20px;
+				color: #fff;
+				font-weight: @font-weight-sans-serif-condensed-bold; font-size: 24px; line-height: 52px; .text-overflow();
+				cursor: default;
+			}
+
+			.jcf-select-opener {
+				position: absolute;
+				top: 0; right: 10px; bottom: 0;
+				width: 25px; height: 52px;
+				text-align: center;
+
+				&:before {
+					position: relative;
+					top: auto; left: auto;
+					margin: 0; padding-top: 15px;
+					color: #fff;
+					font-size: 20px; line-height: initial;
+				}
+			}
+		}
+	}
+
+	>.container-fluid {
+		position: relative;
+		top: @glossary-navbar-height; z-index: 0;
+		margin-bottom: @glossary-navbar-height;
+		color: @gray;
+	}
+
+	a.anchor {
+		position: absolute; display: block;
+		top: -(@navbar-height + @glossary-navbar-height + 25x); z-index: 0;
+		width: 0; height: 0;
+	}
+
+	h2 {
+		margin: 0; padding-bottom: 12px;
+		color: @brand-glossary;
+		font-weight: @font-weight-sans-serif-condensed-heavy; font-size: 46px;
+
+		.text {
+			position: relative; display: inline-block;
+			.square(62px);
+			padding-top: 2px; .border-radius(4px);
+			background-color: #fff;
+			text-align: center; vertical-align: middle;
+
+			&:after {
+				position: absolute; content: '';
+				top: 100%; left: 50%; z-index: 0;
+				width: 16px; height: 16px;
+				margin-top: -8px; margin-left: -8px;
+				background-color: inherit;
+				.rotate(45deg);
+			}
+		}
+	}
+
+	h3 {
+		margin-bottom: 5px;
+		font-size: 24px;
+	}
+
+	ul.letters.list-unstyled {
+		>li {
+			position: relative;
+			margin-bottom: 20px; border-bottom: 1px solid #fff;
+
+			&:last-child {
+				margin-bottom: 0; border-bottom: 0 none; padding-bottom: 0;
+			}
+		}
+	}
+
+	ul.terms.list-unstyled {
+		margin-top: 20px;
+
+		>li {
+			position: relative;
+			margin-bottom: 20px; border-bottom: 1px solid #fff; padding-bottom: 20px;
+			font-size: @font-size-semilarge;
+
+			&:last-child {
+				margin-bottom: 0; border-bottom: 0 none; padding-bottom: 0;
+			}
+		}
+
+		.definition > p {
+			margin-bottom: 0;
+		}
+	}
+
+	// Small devices (tablets, 768px and up)
+	@media (min-width: @screen-sm-min) {
+		.glossary-nav {
+			top: @navbar-height-large;
+
+			h1 {
+				font-size: 24px;
+			}
+		}
+	}
+
+	// Medium devices (desktops, 992px and up)
+	@media (min-width: @screen-md-min) {
+
+	}
+
+	//  Large devices (large desktops, 1200px and up)
+	@media (min-width: @screen-lg-min) {
+		a.anchor {
+			top: -(@navbar-height-large + @glossary-navbar-height-large + 25x);
+		}
+
+		.content-tile {
+			padding-top: 55px;
+		}
+
+		.glossary-nav {
+			height: @glossary-navbar-height-large;
+			padding-top: 45px;
+
+			h1 {
+				font-size: 40px;
+			}
+		}
+
+		h2 {
+			// TODO - bubble
+		}
+
+		h3 {
+			margin-bottom: 10px;
+			font-size: 26px;
+		}
+
+		>.container-fluid {
+			top: @glossary-navbar-height-large;
+			margin-bottom: @glossary-navbar-height-large;
+		}
+
+		ul.letters.list-unstyled {
+			>li {
+				margin-bottom: 45px; border-bottom: 1px solid #fff;
+			}
+		}
+
+		ul.terms.list-unstyled {
+			margin-top: 20px;
+
+			>li {
+				margin-bottom: 45px; border-bottom: 1px solid #fff; padding-bottom: 45px;
+				font-size: @font-size-large;
+
+				&:last-child {
+					margin-bottom: 0; border-bottom: 0 none; padding-bottom: 0;
+				}
+			}
+		}
+	}
+
+	// // Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+}

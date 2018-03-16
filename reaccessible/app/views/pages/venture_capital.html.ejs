@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'Guides';
+		var backLinkUrl = '/about/guides';
+		var pageTitle = 'Veteran Home Buyers';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+							</h1>
+
+							<p>
+									Helping service members and their families buy homes
+							</p>
+
+							<img src="http://fpoimg.com/315x230?bg_color=f3f3f3&text_color=555555&text=FPO" alt="" />
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'primary'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile content-rich-text-tile">
+							<h3>1. How to Compare VA Loan Rates</h3>
+
+							<p>
+									by CD Reed
+							</p>
+							
+							<p>
+									You may have heard that the VA home loan comes with a pretty exceptional interest rate, one of the most competitive on the market. But where does that number come from? Who sets it — the Department of Veteran Affairs or some mystery entity? Does it fluctuate? Or does everyone get the same rate, no matter what his or her financial circumstance may be?
+							</p>
+							<h3>2. VA Mortgage Interest Rate: Where Does It Come From?</h3>
+							
+							<p>
+									First know that VA has nothing to do with setting interest rates, or financing your loan, for that matter. VA backs 25 percent of the loan amount to lessen the lender’s risk and, therefore, improve your chances of getting the most favorable terms.
+
+The job of setting an interest rate, then, falls to each individual lender, who will take a look at market conditions, what other lenders are willing to offer (competition among lenders is a win for you!) and your own financial circumstances.
+
+Say, a lender posts a rate of 3.625 percent for a 30-year fixed VA mortgage. That same lender may offer you a rate that’s even lower than that If you have stellar credit (760 or higher), plenty of money in reserves and DTI sitting in that sweet spot. Why? You don’t pose much risk. But even if you’re credit score is hovering around 620 and financials are so-so, you may still qualify for a VA loan although your interest rate may be higher than the posted rate
+							</p>
+
+							<h3>3. How to Comparison Shop</h3>
+							
+							<p>
+									Lender A may offer you a better deal than Lender B. And the only way to know that is to shop around for the best interest rate.
+
+Before you get started, a word to the wise: The interest rate you see in an advertisement or online may not be exactly the one you get when you start making phone calls. And that’s pretty normal; rates can change from morning to afternoon as well as day to day when the market is going bonkers. And your credit score, income and the amount of money you put down will also have an impact.
+
+So you’re comparing apples to apples, ask for rates from lenders on the same day, at the same time of day. Follow these steps to find a lender and an interest rate that works for you. And remember, the rate you’re quoted isn’t official until you have a Loan Estimate, a form created by the CFPB that outlines all the details of a loan. Your lender is required to give you this form within three business days of receiving your application. You can use these forms to easily compare interest rates, plus any fees and closing costs.</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = ''; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<% include ../includes/about-next.html.ejs %>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

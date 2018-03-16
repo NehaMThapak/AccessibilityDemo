@@ -1,0 +1,246 @@
+@import "../app/bootstrap/variables.less";
+@import "../app/bootstrap/mixins.less";
+
+// Default / Extra-Small devices (mobile, 320px and up)
+
+.font-icons {
+	*[class^="icon-"],
+	*[class*=" icon-"],
+	*[class^="fa-"],
+	*[class*=" fa-"] {
+		font-size: 30px;
+	}
+}
+
+dt {
+	margin-top: @padding-large-vertical;
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+dd {
+	margin-top: @padding-small-vertical;
+}
+
+.colors {
+	.list-unstyled {
+		//.flex-flow();
+		width: 100%;
+		margin: 0;
+
+		>li {
+			//.flex();
+			margin: 0 0 @padding-large-vertical 0; padding: 0;// @padding-small-vertical;
+		}
+	}
+}
+
+.color {
+	//text-align: center;
+
+	.swatch {
+		//display: inline-block;
+		width: 40px; height: 40px;
+		border: 1px solid #000;
+
+		// Grays
+		&.gray-darker {
+			background-color: @gray-darker;
+		}
+
+		&.gray-dark {
+			background-color: @gray-dark;
+		}
+
+		&.gray-dark-alt {
+			background-color: @gray-dark-alt;
+		}
+
+		&.gray {
+			background-color: @gray;
+		}
+
+		&.gray-light {
+			background-color: @gray-light;
+		}
+
+		&.gray-lighter {
+			background-color: @gray-lighter;
+		}
+
+		&.gray-lighter-alt {
+			background-color: @gray-lighter-alt;
+		}
+
+		&.gray-lightest {
+			background-color: @gray-lightest;
+		}
+
+		// Colors
+		&.brand-primary {
+			background-color: @brand-primary;
+		}
+		&.brand-danger {
+			background-color: @brand-danger;
+		}
+
+		&.brand-segment-one {
+			background-color: @brand-segment-one;
+		}
+		&.brand-segment-one-dark {
+			background-color: @brand-segment-one-dark;
+		}
+		&.brand-segment-one-light {
+			background-color: @brand-segment-one-light;
+		}
+
+		&.brand-segment-two {
+			background-color: @brand-segment-two;
+		}
+		&.brand-segment-two-dark {
+			background-color: @brand-segment-two-dark;
+		}
+		&.brand-segment-two-light {
+			background-color: @brand-segment-two-light;
+		}
+
+		&.brand-segment-three {
+			background-color: @brand-segment-three;
+		}
+		&.brand-segment-three-dark {
+			background-color: @brand-segment-three-dark;
+		}
+		&.brand-segment-three-light {
+			background-color: @brand-segment-three-light;
+		}
+
+		&.brand-segment-four {
+			background-color: @brand-segment-four;
+		}
+		&.brand-segment-four-dark {
+			background-color: @brand-segment-four-dark;
+		}
+		&.brand-segment-four-light {
+			background-color: @brand-segment-four-light;
+		}
+
+		&.brand-glossary {
+			background-color: @brand-glossary;
+		}
+		&.brand-glossary-dark {
+			background-color: @brand-glossary-dark;
+		}
+		&.brand-glossary-light {
+			background-color: @brand-glossary-light;
+		}
+
+		&.brand-about {
+			background-color: @brand-about;
+		}
+		&.brand-about-dark {
+			background-color: @brand-about-dark;
+		}
+		&.brand-about-light {
+			background-color: @brand-about-light;
+		}
+
+		&.brand-heading-things-to-one {
+			background-color: @brand-heading-things-to-one;
+		}
+		&.brand-heading-things-to-two {
+			background-color: @brand-heading-things-to-two;
+		}
+		&.brand-heading-purple {
+			background-color: @brand-heading-purple;
+		}
+		&.brand-heading-orange {
+			background-color: @brand-heading-orange;
+		}
+		&.brand-heading-red {
+			background-color: @brand-heading-red;
+		}
+		&.brand-heading-green {
+			background-color: @brand-heading-green;
+		}
+		&.brand-heading-bluegray {
+			background-color: @brand-heading-bluegray;
+		}
+		&.brand-heading-torquise {
+			background-color: @brand-heading-torquise;
+		}
+		&.brand-heading-darkblue {
+			background-color: @brand-heading-darkblue;
+		}
+	}
+}
+
+.form-group {
+	max-width: 340px;
+
+	>label {
+		width: 100%;
+	}
+	>.radio-wrap {
+		display: flex;
+		font-size: 16px;
+		margin-bottom: 8px;
+		.jcf-radio {
+			margin-top: 3px;
+			margin-right: 6px;
+		}
+		label {
+			margin: 0;
+		}
+	}
+}
+
+.tabs .well {
+	background-color: #fff;
+
+	.tabs-container {
+		max-width: 400px;
+	}
+}
+
+.progress {
+	margin-top: 20px;
+}
+
+.secondry-alternate {
+	color: #fff;
+	padding: 20px;
+	background: @brand-primary;
+}
+
+.code-container {
+	margin-bottom: 15px;
+	.code-label {
+		display: block;
+		font-weight: bold;
+	}
+	code {
+		padding: 7px 10px
+	}
+}
+
+// Small devices (tablets, 768px and up)
+// @media (min-width: @screen-sm-min) {
+
+// }
+
+// //  Medium devices (desktops, 992px and up)
+// @media (min-width: @screen-md-min) {
+
+// }
+
+// //  Large devices (large desktops, 1200px and up)
+// @media (min-width: @screen-lg-min) {
+
+// }
+
+// //  Extra-Large devices (large desktops, 1300px and up)
+// @media (min-width: @screen-xl-min) {
+
+// }

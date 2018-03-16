@@ -1,0 +1,13 @@
+{
+  "name": "accdc-bootstrap",
+  "homepage": "https://github.com/accdc/bootstrap",
+  "_release": "3ce11aee23",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "3ce11aee23a5fb8d66c6473729924a55d741ad17"
+  },
+  "_source": "https://github.com/accdc/bootstrap.git",
+  "_target": "master",
+  "_originalSource": "https://github.com/accdc/bootstrap.git"
+}

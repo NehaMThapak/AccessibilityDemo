@@ -1,0 +1,29 @@
+<nav class="magsubnav" aria-label="Sub Section Navigation">
+
+	<%
+    if (param('cat') === 'recipe' || param('cat') === undefined) {
+			var links = ["All", "Main Dishes", "Appetizers", "Breakfast", "Salads & Sides", "Smoothies & Drinks", "Snacks", "Desserts"]
+		} else if (param('cat') ===  'article') {
+			var links = ["All", "Subcat 1", "Subcat 2", "Subcat 3", "Subcat 4", "Subcat 5", "Subcat 6", "Subcat 7"]
+		}
+	%>
+
+	<div class="jcf-select-container">
+		<select name="magsubnav" aria-label="Sub Navigation" data-jcf="{&quot;wrapNative&quot;:true,&quot;wrapNativeOnMobile&quot;:true,&quot;fakeDropInBody&quot;:false,&quot;maxVisibleItems&quot;:7,&quot;useCustomScroll&quot;:false}"
+			required
+			data-native-error="Subcategory cannot be empty">
+			<option value="/blue/category?subcat=1" selected="selected">Select</option>
+			<% links.forEach(function (el) { %>
+			<option value="/blue/category?subcat=1"><%- el %></option>
+			<% }); %>
+		</select>
+	</div>
+
+	<ul>
+		<% links.forEach(function (el) { %>
+			<!-- <li><a href="#" class="<%= (el === 'All') ? 'active' : '' %>"><%- el %><span class="icon" aria-hidden="true"></span></a></li> -->
+			<li><a href="#" <%= (pageId === 'recipe' && el === 'All') ? 'class=active ' : '' %>><%- el %><% if (pageId === 'recipe' && el === 'All') { %><span class="sr-only">Current</span><% } %><span class="icon" aria-hidden="true"></span></a></li>
+		<% }); %>
+	</ul>
+
+</nav>

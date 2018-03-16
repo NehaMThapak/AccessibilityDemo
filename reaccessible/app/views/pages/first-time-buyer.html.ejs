@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'Guides';
+		var backLinkUrl = '/about/guides';
+		var pageTitle = 'RealEstate Guide';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+							</h1>
+
+							<p>
+								First-Time Home Buyers
+								The <a href="#">Blue Zones Project&trade;</a> is a community well-being improvement initiative. It's designed to make healthy choices easier through permanent changes to the environment, public policy and social networks. It is based on the Blue Zones principles developed by author and researcher, Dan Buettner. The focus is simple: Live longer, healthier, happier lives. The genesis of the idea was simple, too: Find out where people live the longest and ask them how they do it. Not surprisingly, the answers were beautiful in their simplicity, including principles like &quot;Move naturally,&quot; &quot;Know your purpose,&quot; and &quot;Loved ones first.&quot; It's a very systematic approach to well-being. And it works.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'primary'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12 col-md-6" style="background-color:white;">
+						<img src="http://fpoimg.com/515x492?bg_color=<%= (rowType === 'primary')? 'ffffff' : '0079bc' %>&text_color=<%= (rowType === 'primary')? '0079bc' : 'ffffff' %>&text=FPO" alt="" style="width:100%;" />
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<div class="content-tile content-rich-text-tile">
+							<p>
+								<strong>The Big Decision Toying with the idea of buying? Here’s how to make the right move.</strong>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = ''; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<% include ../includes/content-image-full-tile.html.ejs %>
+					</div>
+				</div>
+
+				<% rowType = 'default'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile content-rich-text-tile" style="padding-bottom:0;">
+							<p>
+								<strong>Rent vs. Buy: Are You Ready to Own Your First Home?</strong> by Casey Fleming
+
+								You have a little savings, solid income and a super-irritating landlord, so the time feels right to make your move. Buying a home will bump up your monthly housing costs, use up most of your cash and tie you down. Are you ready for all that? Here’s how to make the rent vs. buy decision.
+								The <a href="#">Power 9 Principles</a> are easy to adopt and fun to implement. With them, every Iowan has the opportunity to help make his or her community a happier, healthier place to live, work and play. 
+							</p>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12 col-md-6" style="text-align:center;">
+								<img src="http://fpoimg.com/400x300?bg_color=ffffff&text_color=666666&text=Image%20FPO" alt="" />
+							</div>
+							<div class="col-xs-12 col-md-6" style="padding-top:0;">
+								<div class="content-tile content-rich-text-tile" style="padding-top:0;padding-bottom:0;">
+									<p>
+										<a href="#">Investing in a House: A Smart Move?</a> 
+										What makes a house a good investment? First, you should enjoy your time living in it. And, just as important, make some serious stacks when you eventually sell it for more than your purchase price. The beauty of your winnings? The profit (depending on the amount and time lived in the home) is tax free….
+									</p>
+
+									<button type="button" class="btn-link btn-link-video-opener"
+										aria-controls="video-modal"
+										data-toggle="modal" data-target="#video-modal" data-video-url="">
+											<span class="text">WATCH HOW IT WORKS</span>
+											<span class="video-play-icon" aria-hidden="true"><span class="icon-play"></span></span></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<% rowType = ''; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<% include ../includes/about-next.html.ejs %>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'Directors &amp; Officers';
+		var backLinkUrl = '/about/company-information/directors-officers';
+		var pageTitle = 'Person Name';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+				<% rowType = 'primary'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<img src="http://fpoimg.com/140x140?bg_color=e3d7bf&text_color=4c4f54" alt="FPO" class="img-circle" />
+							<h1>
+								<%- pageTitle %>
+								<small>Title</small>
+							</h1>
+						</div>
+					</div>
+				</div>
+				<% rowType = 'default'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile content-rich-text-tile">
+							<p>
+								John Forsyth is Chairman and CEO of Wellmark, Inc. Wellmark is the largest health insurer in both Iowa and South Dakota and issues or pays health benefit claims for more than 2 million Iowans and South Dakotans.
+							</p>
+
+							<p>
+								Forsyth joined Wellmark as CEO in August 1996 and was named chairman in 2000. During his tenure, he has repositioned Wellmark Blue Cross and Blue Shield as a health improvement company dedicated to serving the people of Iowa and South Dakota.
+							</p>
+
+							<p>
+								Under his leadership, Wellmark has achieved exceptional operating efficiencies atnd results. As testament, medical trend and administrative costs for Wellmark now rank among the lowest in the nation. Further, membership has grown by over 60 percent.
+							</p>
+
+							<p>
+								Believing that the extensive health care data maintained by Wellmark can be a powerful catalyst for action to improve community health, Forsyth has transformed the company's sharing of appropriate information with community leaders, policymakers, customers, and others. Complementing this approach, the company is currently on a journey to build a sustainable health care system by reducing the rate of increase in medical expenses and reducing the average rate increase to the level of the Consumer Price Index (CPI) by 2014. A significant component of this work includes improving the Well-Being of all Iowan's.  Forsyth is co-chairing a team that has been charged with developing a plan to Make Iowa the Healthiest State. This plan will have a significant emphasis on changing the environment in which Iowans live, work and play and will be presented to Iowa Governor Terry Branstad this summer. Before joining Wellmark, Forsyth served in a variety of executive roles over a 26-year career with the University of Michigan. In 1985, he was named president and CEO of the University of Michigan Health System, one of the largest and most prestigious health systems in the nation.
+							</p>
+
+							<p>
+								In April 2000, at Governor Tom Vilsack's request, Forsyth led a state-wide task force on teacher compensation, which resulted in precedent-setting changes to teacher pay in Iowa. In April 2003, Forsyth was named by Governor Vilsack to the Iowa Board of Regents, and he served as president of the board from April 2004 to January 2005.
+							</p>
+
+							<p>
+								The Wellmark Foundation, under Forsyth's leadership, focuses its philanthropic activities on key areas of health improvement for all Iowans and South Dakotans. The Foundation awards more than $1.5 million annually to fund community-based health initiatives in Iowa and South Dakota. Since 1997, over $18 million has been awarded to nearly 450 grant recipients. A contributing author and editor for various publications throughout his career, including the Journal of the American College of Healthcare Executives, Forsyth served on the Detroit Branch of the Federal Reserve Bank of Chicago board of directors from 1992-1996 and was Chair from 1995-1996.
+							</p>
+
+							<p>
+								Forsyth served as president of the Federation of Iowa Insurers, and is a member of the Iowa Business Council, serving as chair of that organization in 2004.  He has also chaired the board of directors of the Greater Des Moines Partnership, United Way of Central Iowa, and the Variety Club Annual Telethon.  In September 2003, he was elected to the board of directors of Baxter, International, Inc., and in May 2004 named chair of the Compensation Committee.  He is a member of the National Institute for Health Care Management (NIHCM) board of directors and currently serves as chairman of that organization.  He has chaired the Investment Committee of the Association of American Medical Colleges (AAMC) and in November, 2008 was named to their initial board of directors.  He served, and continues to serve, on numerous national committees of the Blue Cross and Blue Shield Association, including serving on its board of directors.
+							</p>
+
+							<p>
+								In November 2008 Forsyth served as co-chair of the NAACP Des Moines Branch's 33rd Annual Freedom Fund Banquet, and under his leadership, Wellmark received the 2008 Better Business Bureau Integrity Award, the 2009 Sioux Empire Society for Human Resource Management Workplace Excellence Award, the 2010 Greater Des Moines Partnership Diversity Award, and the 2010 NAACP Merit Employer Award. In 2011, Forsyth was a recipient of the Diversity Journal CEO Leadership in Action Award.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

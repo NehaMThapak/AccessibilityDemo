@@ -1,0 +1,71 @@
+.content-large-image-tile {
+	img {
+		width: auto; max-width: 100%; height: auto;
+		margin-top: 30px; margin-bottom: 30px;
+	}
+
+	.infographic {
+		text-align: center;
+
+		picture {
+			display: block;
+		}
+
+		.btn-link {
+			display: inline-block;
+			font-weight: @font-weight-sans-serif-condensed-bold; font-size: @font-size-large; text-decoration: @link-hover-decoration;
+			color: inherit;
+
+			&:hover {
+				text-decoration: none;
+			}
+		}
+
+		.infographic-decscription {
+			margin-top: 20px;
+			text-align: left;
+		}
+
+		+ * {
+			margin-top: 20px;
+		}
+	}
+
+	// // Small devices (tablets, 768px and up)
+	// @media (min-width: @screen-sm-min) {
+
+	// }
+
+	// Medium devices (desktops, 992px and up)
+	@media (min-width: @screen-md-min) {
+		img {
+			margin-bottom: 50px;
+		}
+
+		.infographic {
+			.infographic-decscription {
+				margin-top: 30px;
+			}
+			+ * {
+				margin-top: 30px;
+			}
+		}
+	}
+
+	// Large devices (large desktops, 1200px and up)
+	@media (min-width: @screen-lg-min) {
+		.infographic {
+			.infographic-decscription {
+				margin-top: 40px;
+			}
+			+ * {
+				margin-top: 40px;
+			}
+		}
+	}
+
+	// // Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+}

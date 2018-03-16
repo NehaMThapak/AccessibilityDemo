@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'About Wellmark';
+		var backLinkUrl = '/about';
+		var pageTitle = 'Forms';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = ''; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+							</h1>
+
+							<p>
+								The back of your ID card states if you are insured through Wellmark BCBS of Iowa, Wellmark Health Plan of Iowa, or Wellmark BCBS of South Dakota. Choose forms based on the state you're insured through, regardless of where services were received.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = ''; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile centered">
+							<a href="/about/forms/iowa" class="btn btn-primary btn-lg">Iowa</a>
+							<a href="/about/forms/south-dakota" class="btn btn-primary btn-lg">South Dakota</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<% extraStyles = ['WellmarkWFFM', 'Custom']; %>
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+		<%
+		var backLinkText = 'Contact Us';
+		var backLinkUrl = '/about/contact';
+		var pageTitle = 'Healthcare Abuse &amp; Fraud';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile" style="padding-top: 0;">
+							<!-- Paste in start -->
+							<form action="/about/contact-us/reporting-fraud-and-abuse-form" class="" data-wffm="{11E3B6EA-440D-439D-98A7-F8B9422C974E}" enctype="multipart/form-data" id="wffmc82fd893ed3e45e196c23c6a168dbf2a" method="post">
+								<div class="page-header">
+									<h1>Thank you for submitting your fraud and abuse report.</h1>
+								</div>
+								<p>A confirmation email with additional instructions for forwarding pertinent documents has been sent to you.</p>
+							</form>
+							<!-- Paste in end -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

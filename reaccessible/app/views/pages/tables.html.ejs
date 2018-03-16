@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'About Wellmark';
+		var backLinkUrl = '/about';
+		var pageTitle = 'Tables';
+
+		// Please see the folloing for accessibility
+		// https://www.w3.org/WAI/tutorials/tables/
+		// https://www.w3.org/WAI/tutorials/tables/caption-summary/
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<div class="table-responsive">
+								<table class="table table-bordered table-striped">
+									<caption>This is the optional table caption</caption>
+									<thead>
+										<tr>
+											<th scope="col"><div>#</div></th>
+											<th scope="col"><div>Table head 1</div></th>
+											<th scope="col"><div>Table head 2</div></th>
+											<th scope="col"><div>Table head 3</div></th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><div>1</div></td>
+											<td><div>table row 1 col 1</div></td>
+											<td><div>table row 1 col 2</div></td>
+											<td><div>table row 1 col 3</div></td>
+										</tr>
+										<tr>
+											<td><div>2</div></td>
+											<td><div>table row 2 col 1</div></td>
+											<td><div>table row 2 col 2</div></td>
+											<td><div>table row 2 col 3</div></td>
+										</tr>
+										<tr>
+											<td><div>3</div></td>
+											<td><div>table row 3 col 1</div></td>
+											<td><div>table row 3 col 2</div></td>
+											<td><div>table row 3 col 3</div></td>
+										</tr>
+										<tr>
+											<td><div>4</div></td>
+											<td><div>table row 4 col 1</div></td>
+											<td><div>table row 4 col 2</div></td>
+											<td><div>table row 4 col 3</div></td>
+										</tr>
+										<tr>
+											<td><div>5</div></td>
+											<td><div>table row 5 col 1</div></td>
+											<td><div>table row 5 col 2</div></td>
+											<td><div>table row 5 col 3</div></td>
+										</tr>
+										<tr>
+											<td><div>6</div></td>
+											<td><div>table row 6 col 1</div></td>
+											<td><div>table row 6 col 2</div></td>
+											<td><div>table row 6 col 3</div></td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

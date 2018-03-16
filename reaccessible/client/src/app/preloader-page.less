@@ -1,0 +1,10 @@
+#preloader-page {
+	position: fixed; display: none;
+	top: 0; right: 0; bottom: 0; left: 0; z-index: @zindex-tooltip + 10;
+	background: rgba(0,0,0,0.1) url(../../img/preloader-page.gif) no-repeat center center;// background-size: auto 100%;
+	cursor: wait;
+
+	&.in {
+		display: block;
+	}
+}

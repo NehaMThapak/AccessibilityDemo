@@ -1,0 +1,78 @@
+// Login Modal
+.modal#login-modal {
+
+	.modal-dialog {
+		width: 100%;
+		margin: 0;
+	}
+
+	.modal-content {
+		border: 0 none; .border-radius(0);
+	}
+
+	.modal-header,
+	.modal-footer {
+		display: none;
+	}
+
+	.modal-body {
+		padding: 0;
+		background-color: @brand-primary;
+	}
+
+	.modal-body,
+	a {
+		color: #fff;
+	}
+
+	.btn-close {
+		position: absolute;
+		top: 14px; right: 11px; z-index: 10;
+		width: 42px; height: 41px;
+		border: 0 none; padding: 0;
+		background: transparent none;
+		color: #fff;
+		font-size: 35px; text-align: center;
+	}
+
+	// Small devices (tablets, 768px and up)
+	@media (min-width: @screen-sm-min) {
+		.row {
+			.flex-wrap();
+
+			[class^="col-"],
+			[class*=" col-"] {
+				.flex-display();
+			}
+		}
+
+		.col-sm-8 {
+			border-right: 1px solid rgba(255,255,255,0.3); border-bottom: 0 none; padding: 45px 67px;
+		}
+		.col-sm-4 {
+			padding-right: 0; padding-left: 0;
+		}
+	}
+
+	@media (max-width: @screen-sm-max) {
+		.col-sm-8 {
+			padding-left: 32px;
+			padding-right: 32px;
+		}
+	}
+
+	// //  Medium devices (desktops, 992px and up)
+	// @media (min-width: @screen-md-min) {
+
+	// }
+
+	// //  Large devices (large desktops, 1200px and up)
+	// @media (min-width: @screen-lg-min) {
+
+	// }
+
+	// //  Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+}

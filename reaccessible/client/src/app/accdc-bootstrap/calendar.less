@@ -1,0 +1,168 @@
+// ACCDC Bootstrap
+@import (inline) "bower_components/accdc-bootstrap/css/calendar.css";
+
+//
+// Calendar
+// --------------------------------------------------
+
+div.calendar {
+	padding: 0; .border-radius(0.3rem);
+	background-color: #eee;
+	color: @gray;
+	.box-shadow(0 0 8px rgba(0,0,0,0.3));
+// -webkit-font-smoothing: -webkit-box-shadow: 0 10px 6px -6px #777;
+// -moz-box-shadow: 0 10px 6px -6px #777;
+// box-shadow: 0 10px 6px -6px #777;
+}
+@media (max-width: @screen-xs-max) {
+    div.calendar[role="dialog"] {
+        left: ~"calc(50% - 122px)" !important;
+    }
+}
+
+table.calendar {
+	border-collapse: collapse;
+
+	>tbody > tr {
+		&:first-child td {
+			padding: 0 0.5em;
+			background-color: #e4e4e4;
+
+			&.nav {
+				font-size: 26px;
+
+				>span:after {
+					left: 37px;
+					margin-top: -25px;
+				}
+
+				&:first-child {
+					padding: 0;
+
+					>span {
+						.icon-wmkCaretLeft();
+					}
+				}
+				&:last-child {
+					padding: 0;
+
+					>span {
+						.icon-wmkCaretRight();
+					}
+				}
+			}
+		}
+
+		&:nth-child(2) td.nav {
+			font-size: 28px;
+
+			&,
+			&:active {
+				background-color: inherit;
+			}
+
+			>span:after {
+				margin-top: -27px;
+			}
+
+			&:first-child {
+				padding: 0;
+
+				>span {
+					.icon-wmkCircleArrowLeft();
+
+					&:after {
+						left: 39px;
+					}
+				}
+			}
+			&:last-child {
+				padding: 0;
+
+				>span {
+					.icon-wmkCircleArrowRight();
+
+					&:after {
+						left: 35px;
+					}
+				}
+			}
+		}
+	}
+
+	th {
+		text-align: center;
+
+		&.week {
+			color: @gray;
+			font-weight: @font-weight-sans-serif-bold; font-size: 18px;
+		}
+	}
+
+	td {
+		&.nav {
+			position: relative;
+			overflow: hidden;
+			color: @brand-primary;
+
+			&:focus, {
+				.tab-focus();
+			}
+
+			>span {
+				position: absolute; display: inline-block;
+				left: -30px;
+
+				&:after {
+					position: absolute; display: inline-block;
+					top: 50%;
+				}
+			}
+		}
+		&.year {
+			background-color: #e4e4e4;
+			color: @gray;
+			font-size: 24px;
+		}
+
+		&.month {
+			padding: 0.2em 0.5em;
+			color: @gray;
+			font-weight: @font-weight-sans-serif-bold; font-size: 20px;
+		}
+
+		&.day {
+			padding: 0.3em 0.5em 0.4em 0.5em;
+			background-color: #eee;
+			color: @gray;
+			font-size: 16px;
+
+			&:hover {
+				background-color: #fff;
+			}
+
+			&:focus {
+				.tab-focus();
+			}
+
+			&.selected {
+				background-color: @brand-primary;
+				color: #fff;
+			}
+		}
+
+
+		&.disabled {
+			&,
+			&:hover {
+				background-color: #bdbdbd;
+				color: #ccc;
+				cursor: auto;
+			}
+
+			&.selected {
+				background-color: #c2c2c2;
+			}
+		}
+	}
+}

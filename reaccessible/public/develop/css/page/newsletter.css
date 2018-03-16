@@ -1,0 +1,681 @@
+.navbar.navbar-fixed-top {
+  position: static;
+  margin-bottom: 0;
+  border-bottom: 0;
+}
+html {
+  overflow-x: visible;
+}
+html.modal-open {
+  overflow: hidden;
+  width: inherit;
+  height: inherit;
+}
+html.modal-open body,
+html.modal-open #page {
+  overflow: inherit;
+  width: inherit;
+  height: inherit;
+}
+body {
+  padding-top: 0;
+}
+h3 {
+  text-transform: none;
+}
+p {
+  line-height: 1.8;
+}
+/* Old shadow dom for hiding play button */
+*::--webkit-media-controls-play-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+/* New shadow dom for hiding play button */
+*::-webkit-media-controls-start-playback-button {
+  display: none!important;
+  -webkit-appearance: none;
+}
+.container-fluid {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.text-condensed {
+  font-weight: 600;
+}
+.text-condensed-bold {
+  font-weight: 700;
+}
+.newsletter-container {
+  font-size: 18px;
+}
+.newsletter-container a,
+.newsletter-container button,
+.newsletter-container .btn {
+  font-size: 18px;
+}
+.newsletter-container a.light,
+.newsletter-container button.light,
+.newsletter-container .btn.light,
+.newsletter-container a.light:hover,
+.newsletter-container button.light:hover,
+.newsletter-container .btn.light:hover,
+.newsletter-container a.light:focus,
+.newsletter-container button.light:focus,
+.newsletter-container .btn.light:focus {
+  color: #fff;
+}
+.newsletter-container .learn-more {
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.newsletter-container .learn-more:hover {
+  text-decoration: none;
+}
+.no-side-pad {
+  padding-left: 0;
+  padding-right: 0;
+}
+.newsletter-container > div {
+  position: relative;
+}
+.arrow-down {
+  display: none;
+  font-family: 'icomoon';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 30px;
+  width: 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -15px;
+  transform: rotate(-90deg);
+}
+.arrow-down:before {
+  position: relative;
+}
+.arrow-down:before {
+  content: "\e901";
+}
+.arrow-down.gray {
+  color: #999999;
+}
+.stretch {
+  margin-left: -20px;
+  margin-right: -20px;
+}
+.stretch img {
+  width: 100%;
+  height: auto;
+}
+.infographic .btn {
+  margin: 40px 0 20px 0;
+  text-decoration: underline;
+}
+.infographic .btn:hover {
+  text-decoration: none;
+}
+.img-hd {
+  width: 100%;
+  height: auto;
+}
+.img-hd.iconography {
+  max-width: 180px;
+}
+.img-hd.signature {
+  max-width: 204px;
+}
+.img-hd.logo-bdc,
+.img-hd.logo-bdc-plus {
+  max-width: 110px;
+}
+.img-hd.logo-realestate-vhp,
+.img-hd.logo-realestate-sh {
+  max-width: 195px;
+}
+.img-hd.logo-healthy-hometown {
+  max-width: 301px;
+}
+.img-hd.foundation-chart {
+  max-width: 575px;
+}
+.img-hd.ambulance {
+  max-width: 164px;
+}
+.img-hd.hospital {
+  max-width: 140px;
+}
+.img-hd.wallet {
+  max-width: 117px;
+}
+.img-hd.laptop {
+  max-width: 650px;
+}
+.img-hd.donut-chart {
+  max-width: 650px;
+}
+.img-hd.clock {
+  max-width: 141px;
+}
+.img-hd.donate {
+  max-width: 137px;
+}
+.section-title {
+  font-size: 24px;
+  line-height: 1;
+  margin-top: 0;
+  color: #0079bc;
+}
+.section-title.alt {
+  color: #fff;
+}
+.section-title .ability {
+  color: #000;
+}
+.section-subtitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 30px;
+}
+.card {
+  padding: 40px 20px;
+  background: #fff;
+}
+.card .section-title {
+  font-size: 24px;
+  color: #000;
+}
+.card p:last-child {
+  margin-bottom: 0;
+}
+.text-lg,
+.percent-lower {
+  font-size: 34px;
+  font-weight: 700;
+}
+.text-lg.blue,
+.percent-lower.blue {
+  color: #105c8c;
+}
+.text-lg.green,
+.percent-lower.green {
+  color: #60740f;
+}
+.text-lg.green-light,
+.percent-lower.green-light {
+  color: #788e1e;
+}
+.text-lg.orange,
+.percent-lower.orange {
+  color: #de5f10;
+}
+.text-lg.coral,
+.percent-lower.coral {
+  color: #e05137;
+}
+.byline {
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.section-hero {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 0;
+  overflow: hidden;
+}
+.section-hero .title-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+}
+.section-hero .section-hero-title {
+  visibility: hidden;
+  margin: 0;
+  font-size: 38px;
+  font-weight: 700;
+}
+.section-hero .section-hero-title .ability {
+  color: #bce6fd;
+}
+.section-hero .section-hero-subtitle {
+  visibility: hidden;
+  font-size: 20px;
+  font-weight: 700;
+}
+.section-hero video {
+  width: 100%;
+  height: auto;
+  margin-bottom: -5px;
+}
+.section-content-container {
+  padding: 30px 0;
+}
+.section-sustainability {
+  color: #fff;
+  background: #0079bc;
+}
+.section-sustainability p:last-child {
+  margin-bottom: 0;
+}
+.section-sustainability img {
+  width: 50%;
+  float: left;
+}
+.section-ceo {
+  background: #fff;
+}
+.section-ceo blockquote {
+  border: 0;
+  padding: 40px 0 0 0;
+  margin: 0 0 25px 0;
+  color: #005b8b;
+  font-size: 24px;
+  line-height: 1.8;
+  position: relative;
+  font-weight: 600;
+}
+.section-ceo blockquote .begin-quotemark {
+  position: absolute;
+  top: 0;
+  left: -4px;
+  line-height: .7;
+  font-size: 100px;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+.section-ceo .signature {
+  margin: 0 0 10px 0;
+}
+.section-ceo .learn-more {
+  margin-top: 10px;
+}
+.section-inside-hc img {
+  width: 100%;
+  height: auto;
+}
+.section-inside-hc .section-title {
+  margin: 0;
+}
+.section-deliverability {
+  color: #fff;
+  background: #0079bc;
+}
+.section-deliverability .center-block {
+  width: 225px;
+  margin-bottom: 60px;
+}
+.section-deliverability .center-block.last {
+  margin-bottom: 0;
+}
+.section-deliverability .iconography {
+  margin-bottom: 20px;
+}
+.section-deliverability .row {
+  margin-top: 40px;
+}
+.section-manageability {
+  background: #fff;
+}
+.section-manageability img {
+  width: 100%;
+  height: auto;
+}
+.section-manageability .center-block {
+  margin: 45px 0 0 0;
+}
+.section-manageability .center-block p:last-child {
+  margin-bottom: 0;
+}
+.section-measureability {
+  background: #f0f0f0;
+}
+.section-measureability .infographic {
+  margin-top: 15px;
+}
+.section-accountability {
+  background: #fff;
+}
+.section-accountability .infographic {
+  margin-top: 45px;
+}
+.section-predictability {
+  color: #fff;
+  background: #0079bc;
+}
+.section-predictability .center-block {
+  margin-bottom: 60px;
+}
+.section-predictability .center-block.last {
+  margin-bottom: 0;
+}
+.section-predictability .content-guesswork {
+  max-width: 290px;
+}
+.section-predictability .content-shop-compare {
+  max-width: 240px;
+}
+.section-predictability .iconography {
+  margin-bottom: 20px;
+}
+.section-predictability .row {
+  margin-top: 40px;
+}
+.section-outside-hc img {
+  width: 100%;
+  height: auto;
+}
+.section-outside-hc .section-title {
+  margin: 0;
+}
+.section-improvability {
+  background: #f0f0f0;
+}
+.section-improvability .logo-healthy-hometown {
+  margin-top: 45px;
+}
+.section-remarkability {
+  color: #fff;
+  background: #0079bc;
+}
+.section-remarkability .infographic {
+  margin-top: 45px;
+}
+.section-remarkability .infographic-decscription {
+  text-align: left;
+  max-width: 575px;
+  margin: 0 auto;
+}
+.section-honorability {
+  background: #f0f0f0;
+}
+.section-honorability img {
+  margin-bottom: 20px;
+}
+.section-honorability p {
+  line-height: 1.4;
+}
+.section-honorability .center-block {
+  margin-top: 60px;
+  max-width: 333px;
+}
+.section-outro img {
+  width: 100%;
+  height: auto;
+}
+.section-outro .section-title {
+  margin: 0 0 15px 0;
+}
+.newsletter-modal {
+  top: 0;
+}
+.newsletter-modal ul li {
+  margin-bottom: 10px;
+}
+.newsletter-modal ~ .modal-backdrop {
+  top: 0;
+  background: rgba(0, 0, 0, 0.7);
+}
+.newsletter-modal .modal-content {
+  border-radius: 0;
+  font-size: 18px;
+}
+.newsletter-modal .modal-content p,
+.newsletter-modal .modal-content ul {
+  margin-bottom: 30px;
+}
+.newsletter-modal .modal-content p:last-child,
+.newsletter-modal .modal-content ul:last-child {
+  margin-bottom: 0;
+}
+.newsletter-modal .modal-content .two-column-list ul {
+  margin-bottom: 0;
+}
+.newsletter-modal .modal-body {
+  padding: 20px;
+}
+.newsletter-modal .close {
+  color: #0079bc;
+  font-size: 40px;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  z-index: 1;
+  opacity: 1;
+}
+.newsletter-modal .modal-heading {
+  font-size: 24px;
+  padding-right: 70px;
+  margin-bottom: 30px;
+}
+.newsletter-modal .iconography {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto;
+}
+.newsletter-modal .logo-bdc,
+.newsletter-modal .logo-bdc-plus,
+.newsletter-modal .logo-realestate-vhp,
+.newsletter-modal .logo-realestate-sh {
+  margin-bottom: 20px;
+}
+.newsletter-modal .logo-bdc,
+.newsletter-modal .logo-realestate-vhp {
+  margin-right: 60px;
+}
+.two-column-list {
+  margin-bottom: 30px;
+}
+.two-column-list ul {
+  margin-bottom: 0;
+}
+@media (min-width: 768px) {
+  .newsletter-modal .modal-body {
+    padding: 30px;
+  }
+}
+@media (min-width: 992px) {
+  ul.two-columns-lg:before,
+  ul.two-columns-lg:after {
+    content: " ";
+    display: table;
+  }
+  ul.two-columns-lg:after {
+    clear: both;
+  }
+  ul.two-columns-lg:before,
+  ul.two-columns-lg:after {
+    content: " ";
+    display: table;
+    height: 0;
+    overflow: hidden;
+  }
+  ul.two-columns-lg:after {
+    clear: both;
+  }
+  ul.two-columns-lg li {
+    float: left;
+    width: 50%;
+  }
+  .two-column-list:before,
+  .two-column-list:after {
+    content: " ";
+    display: table;
+  }
+  .two-column-list:after {
+    clear: both;
+  }
+  .two-column-list:before,
+  .two-column-list:after {
+    content: " ";
+    display: table;
+    height: 0;
+    overflow: hidden;
+  }
+  .two-column-list:after {
+    clear: both;
+  }
+  .two-column-list ul {
+    float: left;
+    width: 50%;
+  }
+  .container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .arrow-down {
+    display: block;
+    bottom: 30px;
+  }
+  .stretch {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+  .section-title {
+    font-size: 48px;
+  }
+  .section-subtitle {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  .section-content-container {
+    padding: 50px 45px 50px 45px;
+  }
+  .card {
+    padding: 50px;
+    position: absolute;
+    bottom: 70px;
+    left: 60px;
+  }
+  .card .section-title {
+    font-size: 36px;
+  }
+  .section-hero .section-hero-title {
+    font-size: 90px;
+  }
+  .section-hero .section-hero-subtitle {
+    font-size: 36px;
+  }
+  .section-sustainability img {
+    width: 100%;
+    float: none;
+  }
+  .section-sustainability .arrow-down {
+    left: 25%;
+  }
+  .section-ceo {
+    overflow: hidden;
+  }
+  .section-ceo blockquote {
+    font-size: 30px;
+  }
+  .section-ceo .arrow-down {
+    left: 75%;
+  }
+  .section-inside-hc br {
+    display: block;
+  }
+  .section-deliverability .row {
+    margin-top: 60px;
+    margin-bottom: 80px;
+  }
+  .section-manageability .ambulance {
+    margin-top: 23px;
+  }
+  .section-manageability .hospital {
+    margin-top: 8px;
+  }
+  .section-manageability .center-block {
+    margin-bottom: 100px;
+  }
+  .section-measureability .infographic {
+    margin-top: 80px;
+  }
+  .section-measureability .row {
+    margin-bottom: 80px;
+  }
+  .section-accountability .row {
+    margin-bottom: 80px;
+  }
+  .section-predictability .section-title {
+    margin-bottom: 70px;
+  }
+  .section-predictability .iconography {
+    margin-bottom: 20px;
+  }
+  .section-predictability .row {
+    margin-bottom: 80px;
+  }
+  .section-outside-hc br {
+    display: block;
+  }
+  .section-improvability p {
+    margin-bottom: 30px;
+  }
+  .section-improvability .logo-healthy-hometown {
+    margin-top: 100px;
+  }
+  .section-remarkability .row {
+    margin-bottom: 80px;
+  }
+  .section-remarkability .infographic {
+    margin-top: 70px;
+  }
+  .section-honorability .donate {
+    margin-top: 11px;
+  }
+  .section-honorability .row {
+    margin-bottom: 80px;
+  }
+  .section-outro .section-title {
+    font-size: 26px;
+  }
+  .section-outro .card {
+    width: 470px;
+  }
+  .newsletter-modal .modal-dialog {
+    width: 90%;
+    max-width: 965px;
+  }
+  .newsletter-modal .modal-body {
+    padding: 50px 50px 50px 160px;
+  }
+  .newsletter-modal .modal-heading {
+    font-size: 36px;
+  }
+  .newsletter-modal .iconography {
+    margin: 0;
+    position: absolute;
+    top: 50px;
+    left: 45px;
+  }
+  .newsletter-modal .logo-realestate-vhp {
+    margin-right: 60px;
+  }
+  .newsletter-modal.newsletter-modal-letter .modal-body {
+    padding: 50px;
+  }
+}
+@media (min-width: 1200px) {
+  .section-hero .section-hero-title {
+    font-size: 120px;
+  }
+  .section-hero .section-hero-subtitle {
+    font-size: 56px;
+  }
+}

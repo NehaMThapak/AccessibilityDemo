@@ -1,0 +1,225 @@
+﻿@import "../app/bootstrap/variables.less";
+
+.field-validation-error {
+	font-size: 14px;
+	&:before {
+		font-family: 'icomoon';
+		content: "\f072";
+		margin-right: 2px;
+	}
+}
+
+form[data-wffm] {
+	label {
+		.lbl_line:not(:first-child) {
+			display: block;
+		}
+		.lbl_line {line-height: 0.75;}
+		.unbold {
+			font-weight: 300;
+		}
+	}
+	legend {
+		.lgd_line {display: block;}
+	}
+	.validation-summary-valid  {
+		display: none;
+	}
+
+	.validation-summary-errors  {
+		color: #fff;
+		background-color: @brand-danger;
+		border-radius: 5px;
+		padding: 15px 25px 15px 80px;
+		position: relative;
+
+		.icon-warning {
+			font-size: 40px;
+			left: 25px;
+			margin-top: -20px;
+			position: absolute;
+			top: 50%;
+		}
+
+		.h4 {
+			font-size: 16px;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+
+		li {
+			font-size: 16px;
+			text-decoration: underline;
+			cursor: pointer;
+			border: none;
+			margin: 0 0 3px;
+			padding: 0;
+			background-color: @brand-danger;
+			color: #fff;
+			
+			&:focus {
+				outline: medium solid @input-border-focus;
+				outline-offset: -2px;
+			}
+		}
+	}
+
+	.radio label{
+		margin-left: 20px;
+		.jcf-radio{
+			margin-left: -20px;
+		}
+	}
+
+	div.has-error.validation-summary {
+		padding-top: 127px;
+		margin-top: -127px;
+	}
+	//standard input override
+	input.form-control:not([type="submit"]) {
+		box-sizing: border-box;
+		height: 40px;
+	}
+	//jcf override
+	.jcf-select {
+		box-sizing: border-box;
+		height: 40px;
+		border-radius: 2px;
+		font-size: 14px;
+
+		.jcf-select-text {
+			font-size: 14px; 
+			line-height: 34px;
+		}
+
+		.jcf-select-opener {
+			&:before {
+				margin: -12px 0 0 -16px;
+				font-size: 26px;
+			}
+		}
+	}
+}
+.content-tile form[data-wffm] {
+	> p {
+		text-align: center;
+		margin-bottom: 12px;
+		&:last-of-type {margin-bottom: 0;}
+	}
+	fieldset {
+		padding-top: 40px;
+		&.ntop {
+			padding-top: 0;
+		}
+	}
+	legend {
+		padding-top: 0;
+		font-weight: 600;
+		line-height: 1.2;
+		position: relative;
+		top: 40px;
+		.lgd_line {
+			font-size: 16px;
+			font-weight: 400;
+		}
+	}
+	input[type="submit"] {
+		width: 100%;
+	}
+}
+#global-content.has-segment-nav .content {
+	background-color: @concrete;
+
+	.content-tile form[data-wffm] {
+		.page-header {
+			margin-bottom: 0;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	>.container-fluid>.row .content-tile form[data-wffm] {
+		legend + .row {
+			>[class^="col-"],
+			>[class*=" col-"] {
+				padding-top: 12px;
+			}
+		}
+	}
+}
+// Small devices (tablets, 768px and up)
+@media (min-width: @screen-sm-min) {
+	form[data-wffm] div.has-error.validation-summary {
+		padding-top: 93px;
+		margin-top: -93px;
+	}
+}
+// Medium devices (desktops, 992px and up)
+@media (min-width: @screen-md-min) {
+	.content-tile form[data-wffm] {
+		padding: 0 1.5%;
+
+		> p {
+			margin-bottom: 8px;
+		}
+		legend {
+			font-size: 36px;
+			padding-bottom: 30px;
+			position: relative;
+			top: 42px;
+			.lgd_line {
+				font-size: 18px;
+			}
+		}
+		fieldset, .form-submit-border {
+			padding: 42px 7% 0;
+			&.ntop {
+				padding-top: 0;
+			}
+		}
+		input[type="submit"] {
+			width: auto;
+		}
+	}
+	#global-content.has-segment-nav .content {
+		.content-tile form[data-wffm] {
+			.page-header {
+				margin-bottom: 0;
+				padding-bottom: 20px;
+			}
+		}
+		>.container-fluid>.row .content-tile form[data-wffm] {
+			legend + .row {
+				>[class^="col-"],
+				>[class*=" col-"] {
+					padding-top: 12px;
+				}
+			}
+		}
+	}
+}
+// Large devices (large desktops, 1200px and up)
+@media (min-width: @screen-lg-min) {
+	.content-tile form[data-wffm] {
+		padding: 0 2%;
+		
+		fieldset, .form-submit-border {
+			padding: 42px 10% 0;
+			&.ntop {
+				padding-top: 0;
+			}
+		}
+	}
+}
+// Extra-Large devices (large desktops, 1300px and up)
+@media (min-width: @screen-xl-min) {
+	.content-tile form[data-wffm] {
+		padding: 0 3%;
+		
+		fieldset, .form-submit-border {
+			padding: 42px 14% 0;
+			&.ntop {
+				padding-top: 0;
+			}
+		}
+	}
+}

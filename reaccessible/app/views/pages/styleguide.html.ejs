@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content">
+		<div class="container-fluid">
+			<h1>Styleguide</h1>
+
+			<div class="scaffolding">
+				<h2>Scaffolding</h2>
+
+				<div class="well">
+					<h3>Links</h3>
+
+					<dl>
+						<dt>External Link:</dt>
+						<dd>
+							<a href="http://google.com" target="_blank">
+								<span class="text">External</span>
+								<span class="sr-only"> External Link</span>
+								<span class="icon-wmkExternalLinkSmall" aria-hidden="true"></span>
+							</a>
+						</dd>
+						<dt>External Link w/Warning:</dt>
+						<dd>
+							<a class="leave" href="http://google.com" target="_blank">
+								<span class="text">External</span>
+								<span class="sr-only"> External Link</span>
+								<span class="icon-wmkExternalLinkSmall" aria-hidden="true"></span>
+							</a>
+						</dd>
+						<dt>Download Link:</dt>
+						<dd>
+							<a href="#" download>
+								<span class="text">Download</span>
+								<span class="sr-only">PDF File</span><span class="icon-file-pdf" aria-hidden="true"></span>
+							</a>
+						</dd>
+					</dl>
+				</div>
+
+			</div>
+
+			<div class="typography">
+				<h2>Typography</h2>
+
+				<div class="well">
+					<h3>Body Copy</h3>
+
+					<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+
+					<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+
+					<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+				</div>
+
+				<div class="well">
+					<h3>Headings</h3>
+						<h1>h1 heading <small>Secondary text</small></h1>
+						<h2>h2 heading <small>Secondary text</small></h2>
+						<h3>h3 heading <small>Secondary text</small></h3>
+						<h4>h4 heading <small>Secondary text</small></h4>
+						<h5>h5 heading <small>Secondary text</small></h5>
+						<h6>h6 heading <small>Secondary text</small></h6>
+				</div>
+			</div>
+
+			<div class="font-icons">
+				<h2>Font Icons</h2>
+
+				<div class="well">
+					<dl>
+						<dt>Pinterest: .icon-pinterest</dt>
+						<dd><span class="icon-pinterest"></span></dd>
+
+						<dt>Facebook: .icon-facebook</dt>
+						<dd><span class="icon-facebook"></span></dd>
+
+						<dt>File PDF: .icon-file-pdf</dt>
+						<dd><span class="icon-file-pdf"></span></dd>
+
+						<dt>Instagram: .icon-instagram</dt>
+						<dd><span class="icon-instagram"></span></dd>
+
+						<dt>YouTube: .icon-youtube-play</dt>
+						<dd><span class="icon-youtube-play"></span></dd>
+
+						<dt>LinkedIn: .icon-linkedin</dt>
+						<dd><span class="icon-linkedin"></span></dd>
+
+						<dt>Mail: .icon-mail</dt>
+						<dd><span class="icon-mail"></span></dd>
+
+						<dt>Mail (outline): .icon-mail-o</dt>
+						<dd><span class="icon-mail-o"></span></dd>
+
+						<dt>Play: .icon-play</dt>
+						<dd><span class="icon-play"></span></dd>
+
+						<dt>Twitter: .icon-twitter</dt>
+						<dd><span class="icon-twitter"></span></dd>
+
+						<dt>Calendar: .icon-calendar</dt>
+						<dd><span class="icon-calendar"></span></dd>
+
+						<dt>Warning: .icon-warning</dt>
+						<dd><span class="icon-warning"></span></dd>
+
+						<dt>Info: .icon-info</dt>
+						<dd><span class="icon-info"></span></dd>
+
+						<dt>Lock: .icon-lock</dt>
+						<dd><span class="icon-lock"></span></dd>
+
+						<dt>Search: .icon-search</dt>
+						<dd><span class="icon-search"></span></dd>
+
+						<dt>Phone: .icon-phone</dt>
+						<dd><span class="icon-phone"></span></dd>
+
+						<dt>Trophy: .icon-trophy</dt>
+						<dd><span class="icon-trophy"></span></dd>
+
+						<dt>Star: .icon-star</dt>
+						<dd><span class="icon-star"></span></dd>
+
+						<dt>Window Close: .icon-window-close</dt>
+						<dd><span class="icon-window-close"></span></dd>
+
+						<dt>Compress: .icon-compress</dt>
+						<dd><span class="icon-compress"></span></dd>
+
+						<dt>Expand: .icon-expand</dt>
+						<dd><span class="icon-expand"></span></dd>
+
+						<dt>Edit: .icon-edit</dt>
+						<dd><span class="icon-edit"></span></dd>
+
+						<dt>External Link (big): .icon-wmkExternalLinkBig</dt>
+						<dd><span class="icon-wmkExternalLinkBig"></span></dd>
+
+						<dt>External Link (small): .icon-wmkExternalLinkSmall</dt>
+						<dd><span class="icon-wmkExternalLinkSmall"></span></dd>
+
+						<dt>Circle Pause: .icon-wmkCirclePause</dt>
+						<dd><span class="icon-wmkCirclePause"></span></dd>
+
+						<dt>Circle Play: .icon-wmkCirclePlay</dt>
+						<dd><span class="icon-wmkCirclePlay"></span></dd>
+
+						<dt>Carousel Arrow Left: .icon-wmkCarouselArrowLeft</dt>
+						<dd><span class="icon-wmkCarouselArrowLeft"></span></dd>
+
+						<dt>Carousel Arrow Right: .icon-wmkCarouselArrowRight</dt>
+						<dd><span class="icon-wmkCarouselArrowRight"></span></dd>
+
+						<dt>Bullet: .icon-wmkBullet</dt>
+						<dd><span class="icon-wmkBullet"></span></dd>
+
+						<dt>Caret Down: .icon-reaCaretDown</dt>
+						<dd><span class="icon-reaCaretDown"></span></dd>
+
+						<dt>Caret Up: .icon-wmkCaretUp</dt>
+						<dd><span class="icon-wmkCaretUp"></span></dd>
+
+						<dt>Caret Up 2: .icon-wmkCaretLeft</dt>
+						<dd><span class="icon-wmkCaretLeft"></span></dd>
+
+						<dt>Caret Up 3: .icon-wmkCaretRight</dt>
+						<dd><span class="icon-wmkCaretRight"></span></dd>
+
+						<dt>Circle Arrow Left: .icon-wmkCircleArrowLeft</dt>
+						<dd><span class="icon-wmkCircleArrowLeft"></span></dd>
+
+						<dt>Circle Arrow Right: .icon-wmkCircleArrowRight</dt>
+						<dd><span class="icon-wmkCircleArrowRight"></span></dd>
+
+						<dt>Circle Arrow Down: .icon-wmkCircleArrowDown</dt>
+						<dd><span class="icon-wmkCircleArrowDown"></span></dd>
+
+						<dt>Circle Arrow Up: .icon-wmkCircleArrowUp</dt>
+						<dd><span class="icon-wmkCircleArrowUp"></span></dd>
+
+						<dt>Hamburger: .icon-wmkHamburger</dt>
+						<dd><span class="icon-wmkHamburger"></span></dd>
+
+						<dt>Back to Top: .icon-wmkBackToTop</dt>
+						<dd><span class="icon-wmkBackToTop"></span></dd>
+
+						<dt>Arrow Right: .icon-wmkArrowRight</dt>
+						<dd><span class="icon-wmkArrowRight"></span></dd>
+
+						<dt>Circle Close: .icon-wmkCircleClose</dt>
+						<dd><span class="icon-wmkCircleClose"></span></dd>
+					</dl>
+				</div>
+			</div>
+
+			<div class="color-palatte">
+				<h2>Color Palatte</h2>
+
+				<div class="well">
+
+					<div class="row">
+						<div class="col-xs-4 col-sm-2">
+							<h3>Grays</h3>
+
+							<ul class="list-unstyled">
+								<li class="color">
+									<div class="swatch gray-darker"></div>
+									<h4>@gray-darker <small>#232323</small></h4>
+								</li>
+								<li class="color">
+									<div class="swatch gray-dark"></div>
+									<h4>@gray-dark <small>#333</small></h4>
+								</li>
+								<li class="color">
+									<div class="swatch gray-dark-alt"></div>
+									<h4>@gray-dark-alt <small>#3d3d3d</small></h4>
+								</li>
+								<li class="color">
+									<div class="swatch gray"></div>
+									<h4>@gray-darker <small>#545454</small></h4>
+								</li>
+								<li class="color">
+									<div class="swatch gray-light"></div>
+									<h4>@gray-light <small>#6c6c6c</small></h4>
+								</li>
+								<li class="color">
+									<div class="swatch gray-lighter"></div>
+									<h4>@gray-lighter <small>#eeeeee</small></h4>
+								</li>
+								<li class="color">
+									<div class="swatch gray-lighter-alt"></div>
+									<h4>@gray-lighter-alt <small>#e0e0e0</small></h4>
+								</li>
+								<li class="color">
+									<div class="swatch gray-lightest"></div>
+									<h4>@gray-lightest <small>#f9f9f9</small></h4>
+								</li>
+							</ul>
+						</div>
+						<div class="col-xs-8 col-sm-10">
+							<h3>Colors</h3>
+
+							<div class="row">
+								<div class="col-xs-6 col-sm-4">
+									<ul class="list-unstyled">
+										<li class="color">
+											<div class="swatch brand-primary"></div>
+											<h4>@brand-primary <small>#0079bc</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-danger"></div>
+											<h4>@brand-danger <small>#d23432</small></h4>
+										</li>
+									</ul>
+								</div>
+								<div class="col-xs-6 col-sm-4">
+									<ul class="list-unstyled">
+										<li class="color">
+											<div class="swatch brand-segment-one"></div>
+											<h4>@brand-segment-one <small>#007088</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-segment-one-dark"></div>
+											<h4>@brand-segment-one-dark <small>#005568</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-segment-one-light"></div>
+											<h4>@brand-segment-one-light <small>#008baa</small></h4>
+										</li>
+
+										<li class="color">
+											<div class="swatch brand-segment-two"></div>
+											<h4>@brand-segment-two <small>#01466a</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-segment-two-dark"></div>
+											<h4>@brand-segment-two-dark <small>#013550</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-segment-two-light"></div>
+											<h4>@brand-segment-two-light <small>#005b8b</small></h4>
+										</li>
+
+										<li class="color">
+											<div class="swatch brand-segment-three"></div>
+											<h4>@brand-segment-three <small>#652666</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-segment-three-dark"></div>
+											<h4>@brand-segment-three-dark <small>#4a154b</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-segment-three-light"></div>
+											<h4>@brand-segment-three-light <small>#8a428b</small></h4>
+										</li>
+
+										<li class="color">
+											<div class="swatch brand-segment-four"></div>
+											<h4>@brand-segment-four <small>#620d39</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-segment-four-dark"></div>
+											<h4>@brand-segment-four-dark <small>#490629</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-segment-four-light"></div>
+											<h4>@brand-segment-four-light <small>#861a52</small></h4>
+										</li>
+									</ul>
+								</div>
+								<div class="col-xs-6 col-sm-4">
+									<ul class="list-unstyled">
+										<li class="color">
+											<div class="swatch brand-glossary"></div>
+											<h4>@brand-glossary <small>#476600</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-glossary-dark"></div>
+											<h4>@brand-glossary-dark <small>#395100</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-glossary-light"></div>
+											<h4>@brand-glossary-light <small>#6e8f00</small></h4>
+										</li>
+
+										<li class="color">
+											<div class="swatch brand-about"></div>
+											<h4>@brand-about <small>#51452f</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-about-dark"></div>
+											<h4>@brand-about-dark <small>#403018</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-about-light"></div>
+											<h4>@brand-about-light <small>#695e4a</small></h4>
+										</li>
+
+										<!-- Headings -->
+										<li class="color">
+											<div class="swatch brand-heading-things-to-one"></div>
+											<h4>@brand-heading-things-to-one <small>#0279bc</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-heading-things-to-two"></div>
+											<h4>@brand-heading-things-to-two <small>#4e7e1c</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-heading-purple"></div>
+											<h4>@brand-heading-purple <small>#5d2572</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-heading-orange"></div>
+											<h4>@brand-heading-orange <small>#ed5017</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-heading-red"></div>
+											<h4>@brand-heading-red <small>#d13827</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-heading-green"></div>
+											<h4>@brand-heading-green <small>#4d7e1c</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-heading-bluegray"></div>
+											<h4>@brand-heading-bluegray <small>#295f69</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-heading-torquise"></div>
+											<h4>@brand-heading-torquise <small>#0087a6</small></h4>
+										</li>
+										<li class="color">
+											<div class="swatch brand-heading-darkblue"></div>
+											<h4>@brand-heading-darkblue <small>#102304</small></h4>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="buttons">
+				<h2>Buttons</h2>
+
+				<div class="well">
+
+					<h3>Default</h3>
+					<ul class="list-unstyled">
+						<li>
+							<button type="button" class="btn btn-default btn-lg">Button</button>
+							<h4>btn-default btn-lg</h4>
+						</li>
+						<li>
+							<button type="button" class="btn btn-default btn-sm">Button</button>
+							<h4>btn-default btn-sm</h4>
+						</li>
+						<li>
+							<button type="button" class="btn btn-default btn-xs">Button</button>
+							<h4>btn-default btn-xs</h4>
+						</li>
+					</ul>
+
+					<hr />
+
+					<h3>Primary</h3>
+					<ul class="list-unstyled">
+						<li>
+							<button type="button" class="btn btn-primary btn-lg">Button</button>
+							<h4>btn-primary btn-lg</h4>
+						</li>
+						<li>
+							<button type="button" class="btn btn-primary btn-sm">Button</button>
+							<h4>btn-primary btn-sm</h4>
+						</li>
+						<li>
+							<button type="button" class="btn btn-primary btn-xs">Button</button>
+							<h4>btn-primary btn-xs</h4>
+						</li>
+					</ul>
+
+					<hr />
+
+					<h3>Secondary</h3>
+					<ul class="list-unstyled">
+						<li>
+							<button type="button" class="btn btn-secondary btn-lg">Button</button>
+							<h4>btn-secondary btn-lg</h4>
+						</li>
+						<li>
+							<button type="button" class="btn btn-secondary btn-sm">Button</button>
+							<h4>btn-secondary btn-sm</h4>
+						</li>
+						<li>
+							<button type="button" class="btn btn-secondary btn-xs">Button</button>
+							<h4>btn-secondary btn-xs</h4>
+						</li>
+					</ul>
+
+					<hr />
+
+					<h3>Secondary - Alternate</h3>
+					<div class="secondry-alternate">
+						<ul class="list-unstyled">
+							<li>
+								<button type="button" class="btn btn-secondary btn-lg btn-alt">Button</button>
+								<h4>btn-secondary btn-lg btn-alt</h4>
+							</li>
+							<li>
+								<button type="button" class="btn btn-secondary btn-sm btn-alt">Button</button>
+								<h4>btn-secondary btn-sm btn-alt</h4>
+							</li>
+							<li>
+								<button type="button" class="btn btn-secondary btn-xs btn-alt">Button</button>
+								<h4>btn-secondary btn-xs btn-alt</h4>
+							</li>
+						</ul>
+					</div>
+
+					<hr />
+
+					<h3>Things to One (Do)</h3>
+					<ul class="list-unstyled">
+						<li>
+							<button type="button" class="btn btn-things-to-one btn-lg">Button</button>
+							<h4>btn-things-to-one btn-lg</h4>
+						</li>
+						<li>
+							<button type="button" class="btn btn-things-to-one btn-sm">Button</button>
+							<h4>btn-things-to-one btn-sm</h4>
+						</li>
+						<li>
+							<button type="button" class="btn btn-things-to-one btn-xs">Button</button>
+							<h4>btn-things-to-one btn-xs</h4>
+						</li>
+					</ul>
+
+					<hr />
+
+					<h3>Things to Two (Know)</h3>
+					<ul class="list-unstyled">
+						<li>
+							<button type="button" class="btn btn-things-to-two btn-lg">Button</button>
+							<h4>btn-things-to-two btn-lg</h4>
+						</li>
+						<li>
+							<button type="button" class="btn btn-things-to-two btn-sm">Button</button>
+							<h4>btn-things-to-do btn-sm</h4>
+						</li>
+						<li>
+							<button type="button" class="btn btn-things-to-two btn-xs">Button</button>
+							<h4>btn-things-to-two btn-xs</h4>
+						</li>
+					</ul>
+
+					<h3>Multiple Buttons - Ordering Convention</h3>
+					<ul class="list-inline">
+						<li>
+							<button type="button" class="btn btn-primary btn-lg">Button - Primary</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-secondary btn-lg">Button - Secondary</button>
+						</li>
+						<li>
+							<a href="#">Link - Ancillary</a>
+						</li>
+					</ul>
+
+					<ul class="list-inline">
+						<li>
+							<button type="button" class="btn btn-primary btn-lg">Button - Primary</button>
+						</li>
+						<li>
+							<button type="button" class="btn btn-secondary btn-lg">Button - Secondary</button>
+						</li>
+					</ul>
+
+					<ul class="list-inline">
+						<li>
+							<button type="button" class="btn btn-primary btn-lg">Button - Primary</button>
+						</li>
+						<li>
+							<a href="#">Link - Ancillary</a>
+						</li>
+					</ul>
+
+					<h3>Link Buttons with External Link Icon</h3>
+
+					<ul class="list-unstyled">
+						<li>
+							<a class="btn btn-primary btn-lg" href="#" target="_blank">
+								Link Button<span class="icon-wmkExternalLinkSmall" aria-hidden="true"></span><span class="sr-only"> External Site</span>
+							</a>
+						</li>
+					</ul>
+
+				</div>
+			</div>
+
+			<div class="preloaders">
+				<h2>Preloaders</h2>
+
+				<div class="well">
+
+					<h3>Default</h3>
+					<ul class="list-unstyled">
+						<li>
+							<button type="button" class="btn btn-default btn-lg" data-has-btn-preloader>Button Preloader</button>
+							<h4>data-has-btn-preloader</h4>
+						</li>
+						<li>
+							<button id="page-preloader-btn" type="button" class="btn btn-default btn-lg">Page Preloader</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="pagination-arrows">
+				<h2>Pagination</h2>
+
+				<div class="well">
+					<h3>For 9 Pages Or Less</h3>
+
+					<h4>First Page (Previous Disabled)</h4>
+					<div>
+						<ul class="pagination">
+							<li class="disabled">
+								<span class="icon-wmkCarouselArrowLeft"></span>
+							</li>
+							<li class="active"><span>1 <span class="sr-only">(current)</span></span></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li><a href="#">8</a></li>
+							<li><a href="#">9</a></li>
+							<li>
+								<a class="icon-wmkCarouselArrowRight" href="#" aria-label="Next"></a>
+							</li>
+						</ul>
+					</div>
+
+					<h4>Middle Page</h4>
+					<div>
+						<ul class="pagination">
+							<li>
+								<a class="icon-wmkCarouselArrowLeft" href="#" aria-label="Previous"></a>
+							</li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li class="active"><span>5  <span class="sr-only">(current)</span></span></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li><a href="#">8</a></li>
+							<li><a href="#">9</a></li>
+							<li>
+								<a class="icon-wmkCarouselArrowRight" href="#" aria-label="Next"></a>
+							</li>
+						</ul>
+					</div>
+
+					<h4>Last Page (Next Disabled)</h4>
+					<div>
+						<ul class="pagination">
+							<li>
+								<a class="icon-wmkCarouselArrowLeft" href="#" aria-label="Previous"></a>
+							</li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li><a href="#">8</a></li>
+							<li class="active"><span>9 <span class="sr-only">(current)</span></span></li>
+							<li class="disabled">
+								<span class="icon-wmkCarouselArrowRight"></span>
+							</li>
+						</ul>
+					</div>
+
+					<h3>For 9 Pages Or More</h3>
+
+					<h4>For a page in the initial 4</h4>
+					<div>
+						<ul class="pagination">
+							<li>
+								<a class="icon-wmkCarouselArrowLeft" href="#" aria-label="Previous"></a>
+							</li>
+							<li><a href="#">1</a></li>
+							<li class="active"><span>2 <span class="sr-only">(current)</span></span></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li class="skip"><span>&hellip;</span></li>
+							<li><a href="#">149</a></li>
+							<li>
+								<a class="icon-wmkCarouselArrowRight" href="#" aria-label="Next"></a>
+							</li>
+						</ul>
+					</div>
+
+					<h4>For a page in the middle</h4>
+					<div>
+						<ul class="pagination">
+							<li>
+								<a class="icon-wmkCarouselArrowLeft" href="#" aria-label="Previous"></a>
+							</li>
+							<li><a href="#">1</a></li>
+							<li class="skip"><span>&hellip;</span></li>
+							<li><a href="#">72</a></li>
+							<li class="active"><span>73 <span class="sr-only">(current)</span></span></li>
+							<li><a href="#">74</a></li>
+							<li class="skip"><span>&hellip;</span></li>
+							<li><a href="#">149</a></li>
+							<li>
+								<a class="icon-wmkCarouselArrowRight" href="#" aria-label="Next"></a>
+							</li>
+						</ul>
+					</div>
+
+					<h4>For a page in the last 4</h4>
+					<div>
+						<ul class="pagination">
+							<li>
+								<a class="icon-wmkCarouselArrowLeft" href="#" aria-label="Previous"></a>
+							</li>
+							<li><a href="#">1</a></li>
+							<li class="skip"><span>&hellip;</span></li>
+							<li><a href="#">146</a></li>
+							<li><a href="#">147</a></li>
+							<li class="active"><span>148 <span class="sr-only">(current)</span></span></li>
+							<li><a href="#">149</a></li>
+							<li>
+								<a class="icon-wmkCarouselArrowRight" href="#" aria-label="Next"></a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="forms">
+				<h2>Forms</h2>
+
+				<div class="well">
+					<form id="exampleForm" name="exampleForm" action="/styleguide" method="GET" data-toggle="validator" data-disable="false" data-focus="false">
+						<fieldset>
+
+							<div class="errors" aria-hidden="true" role="alert" aria-live="assertive" aria-atomic="true"><div class="errors-focus" tabindex="-1">
+								<span class="icon-warning pull-left" aria-hidden="true"></span>
+								<div class="h4">Please correct the following error(s):</div>
+								<div class="list-unstyled"></div>
+							</div></div>
+
+							<div class="form-group">
+								<label>
+									<span class="lbl lbl-block">Field Label</span>
+									<input type="text" class="form-control input-lg" placeholder="Placeholder Text"
+										required
+										data-native-error="Field cannot be empty" />
+								</label>
+								<div class="help-block with-errors" aria-hidden="true"></div>
+							</div>
+
+							<div class="form-group">
+								<label>
+									<span class="lbl lbl-block">Disabled Field Label</span>
+									<input type="text" class="form-control input-lg" placeholder="Placeholder Text" disabled />
+								</label>
+							</div>
+
+							<div class="form-group">
+								<label>
+									<span class="lbl lbl-block">Readonly Field Label</span>
+									<input type="text" class="form-control input-lg" value="I am read only" readonly />
+								</label>
+							</div>
+
+							<div class="form-group" style="padding: 20px; background-color: #0079bc;">
+								<label class="alt">
+									<span class="lbl lbl-block">Field Label (reversed)</span>
+									<input type="text" class="form-control input-lg alt" placeholder="Placeholder Text" />
+								</label>
+							</div>
+
+							<%
+							// Reference: https://github.com/w3co/jcf#checkbox
+							%>
+							<div class="form-group">
+								<label>
+									<input type="checkbox" value="yes"
+										data-jcf />
+									<span class="lbl">Checkbox label</span>
+								</label>
+							</div>
+							<div class="form-group">
+								<label>
+									<input type="checkbox" value="" disabled
+										data-jcf />
+									<span class="lbl">Disabled Checkbox label</span>
+								</label>
+							</div>
+							<div class="form-group">
+								<label>
+									<input name="checkboxExample" type="checkbox" value="yes"
+										required
+										data-jcf
+										data-native-error="Checkbox cannot be empty" />
+									<span class="lbl">Required Checkbox label</span>
+								</label>
+								<div class="help-block with-errors"></div>
+							</div>
+
+
+
+							<div class="form-group">
+								<%
+								// Reference: https://github.com/w3co/jcf#user-content-select
+								%>
+								<select name="selectExample" data-jcf="{&quot;wrapNative&quot;:true,&quot;wrapNativeOnMobile&quot;:true,&quot;fakeDropInBody&quot;:false,&quot;maxVisibleItems&quot;:7,&quot;useCustomScroll&quot;:false}"
+									required
+									data-native-error="Select example cannot be empty">
+									<option value="" selected>Select</option>
+									<option value="1">Option 1</option>
+									<option value="2">Option 2</option>
+									<option value="3">Option 3</option>
+									<option value="4">Option 4</option>
+									<option value="5">Option 5</option>
+								</select>
+
+								<div class="help-block with-errors"></div>
+							</div>
+
+							<div class="form-group">
+								<%
+								// Reference: https://github.com/accdc/bootstrap, http://whatsock.com/tsg/
+								%>
+								<label for="date-field">
+									Date Field<br />
+									<small>MM/DD/YYYY</small>
+								</label>
+
+								<input id="date-field" name="dateField" type="text" maxlength="10" class="form-control input-lg date bfh-date" required
+									pattern="^(0[1-9]|1[012])/(0[1-9]|[12][0-9]|3[01])/(19|20)\d\d$"
+									data-format="dd/dd/dddd"
+									data-native-error="Date field cannot be empty and must be in the format MM/DD/YYYY" />
+
+								<button id="date-field-opener" type="button" class="btn btn-calendar"
+									aria-describedby="date-field" aria-expanded="false"
+									data-calendar-opener data-name="dateField"><span class="icon-calendar"></span><span class="sr-only">Open Calendar</span></button>
+
+								<div class="help-block with-errors"></div>
+							</div>
+
+							<div class="form-group">
+								<%
+								// Reference: http://www.freenetmall.com/common/jquery/FormHelpers/docs/phone.html
+								%>
+								<div class="phone">
+									<div class="number" style="padding-right: 10px;">
+										<label for="phone-field">
+											Phone Number<br />
+											<small>(###) ###-####</small>
+										</label>
+										<input id="phone-field" name="phoneField" type="text" maxlength="15" class="form-control input-lg bfh-phone"
+											required
+											pattern="^\(\d{3}\) \d{3}-\d{4}$"
+											data-format="(ddd) ddd-dddd"
+											data-native-error="Phone number must be in the format (###) ###-####" />
+									</div>
+									<div class="form-group">
+										<div class="ext">
+												<label for="phone-ext-field">
+												Ext.<br />
+												<small>####</small>
+											</label>
+											<input id="phone-ext-field" name="phoneExtField" type="text" maxlength="6" class="form-control input-lg phone-ext" />
+										</div>
+									</div>
+									<div class="help-block with-errors"></div>
+								</div>
+							</div>
+
+							<div class="form-group" style="padding-left: 15px;">
+								<input id="ex19" type="text"
+									data-provide="slider"
+									data-slider-labelledby='["Short","Medium","Long"]'
+									data-slider-ticks="[1,2,3]"
+									data-slider-ticks-labels='["Short","Medium","Long"]'
+									data-slider-min="1"
+									data-slider-max="3"
+									data-slider-step="1"
+									data-slider-value="1"
+									data-slider-tooltip="hide"
+									data-slider-focus="true" />
+							</div>
+							<div class="form-group">
+								<%
+								// Reference: https://github.com/w3co/jcf#radio
+								%>
+								<div class="radio-wrap">
+									<input id="radioExample_1" type="radio" name="radioExample" value="1" required data-jcf />
+									<label for="radioExample_1">
+										Radio label 1
+									</label>
+								</div>
+								<div class="radio-wrap">
+									<input id="radioExample_2" type="radio" name="radioExample" value="2" required data-jcf />
+									<label for="radioExample_2">
+										Radio label 2
+									</label>
+								</div>
+								<div class="radio-wrap">
+									<input id="radioExample_3" type="radio" name="radioExample" value="3" required data-jcf />
+									<label for="radioExample_3">
+										Radio label 3
+									</label>
+								</div>
+								<div class="help-block with-errors"></div>
+							</div>
+							<div class="actions">
+								<button type="submit" class="btn btn-primary btn-lg">Submit</button>
+							</div>
+						</fieldset>
+					</form>
+
+					<div class="form-group">
+						<div class="progress">
+							<div class="progress-bar progress-bar-striped active" style="width: 10%"
+								role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+								<span class="sr-only">10% Complete</span>
+							</div>
+						</div>
+						<button type="button" class="btn btn-primary btn-sm inc-progress">Increment progress by 10%</button>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="tabs">
+				<h2>Tabs</h2>
+
+				<div class="well">
+
+					<div class="tabs-container">
+						<!-- Nav tabs -->
+						<ul class="nav nav-tabs" role="tablist">
+							<li class="active" role="presentation">
+								<a href="#tab-panel-1"
+									aria-controls="tab-panel-1" role="tab"
+									data-toggle="tab">Tab 1</a></li>
+							<li role="presentation">
+								<a href="#tab-panel-2"
+									aria-controls="tab-panel-2" role="tab"
+									data-toggle="tab">Tab 2</a></li>
+							<li role="presentation">
+								<a href="#tab-panel-3"
+									aria-controls="tab-panel-3" role="tab"
+									data-toggle="tab">Tab 3</a></li>
+						</ul>
+
+						<!-- Tab panes -->
+						<div class="tab-content">
+							<div id="tab-panel-1" class="tab-pane active" role="tabpanel">
+								Tab content 1
+							</div>
+							<div id="tab-panel-2" class="tab-pane" role="tabpanel">
+								Tab content 2
+							</div>
+							<div id="tab-panel-3" class="tab-pane" role="tabpanel">
+								Tab content 3
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="home-carousel">
+				<h2>Home Carousel</h2>
+
+				<div class="well">
+
+					<div id="home-carousel" class="carousel slide default home"
+						data-ride="carousel" data-pause="false" data-interval="5000">
+
+						<!-- Controls -->
+						<div>
+
+							<button type="button" class="left carousel-control" tabindex="-1"
+								aria-controls="home-carousel"
+								data-target="#home-carousel" data-slide="prev">
+								<span class="icon-prev icon-wmkCarouselArrowLeft" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</button>
+
+							<button type="button"  class="right carousel-control" tabindex="-1"
+								aria-controls="home-carousel"
+								data-target="#home-carousel" data-slide="next">
+								<span class="icon-next icon-wmkCarouselArrowRight" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</button>
+
+							<div class="carousel-indicators-container">
+								<!-- Indicators -->
+								<div class="carousel-indicators">
+									<button type="button" id="home-carousel-slide-button-1" class="active"
+										aria-controls="home-carousel-slide-1"
+										data-target="#home-carousel" data-slide-to="0">
+										<span class="sr-only">Slide 1</span></button>
+									<button type="button" id="home-carousel-slide-button-2"
+										aria-controls="home-carousel-slide-2"
+										data-target="#home-carousel" data-slide-to="1">
+										<span class="sr-only">Slide 2</span></button>
+									<button type="button" id="home-carousel-slide-button-3"
+										aria-controls="home-carousel-slide-3"
+										data-target="#home-carousel" data-slide-to="2">
+										<span class="sr-only">Slide 3</span></button>
+								</div>
+
+								<!-- Pause -->
+								<button class="btn carousel-pause" type="button"
+									aria-controls="home-carousel"
+									data-target="#home-carousel" data-play-text="Play Button" data-pause-text="Pause Button">
+									<span class="sr-only">Pause</span><span
+										class="icon-pause" aria-hidden="true"></span></button>
+							</div>
+						</div>
+
+						<!-- Wrapper for slides -->
+						<ol class="carousel-inner">
+
+							<li id="home-carousel-slide-1" class="item active">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-xs-12 col-sm-7 col-md-3 col-lg-4">
+											<h2>
+												Health Insurance Isn't Just a Service.
+												<small>It's a promise to maintain your trust.</small>
+											</h2>
+										</div>
+										<div class="col-xs-12 col-sm-5 col-md-6 col-lg-5">
+											<div class="image">
+												<img src="<%= config.assetPath %>img/carousel-slide-1.jpg" alt="" />
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-3">
+											<p>
+												Looking for health care insurance that delivers on its promise?
+											</p>
+											<a href="#" class="btn btn-primary btn-lg">Start Here</a>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li id="home-carousel-slide-2" class="item">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-xs-12 col-sm-7 col-md-3 col-lg-4">
+											<h2>
+												Health Insurance Isn't Just a Service.
+												<small>It's a promise to maintain your trust.</small>
+											</h2>
+										</div>
+										<div class="col-xs-12 col-sm-5 col-md-6 col-lg-5">
+											<div class="image">
+												<img src="<%= config.assetPath %>img/carousel-slide-2.jpg" alt="" />
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-3">
+											<p>
+												Looking for health care insurance that delivers on its promise?
+											</p>
+											<a href="#" class="btn btn-primary btn-lg">Start Here</a>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li id="home-carousel-slide-3" class="item">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-xs-12 col-sm-7 col-md-3 col-lg-4">
+											<h2>
+												Health Insurance Isn't Just a Service.
+												<small>It's a promise to maintain your trust.</small>
+											</h2>
+										</div>
+										<div class="col-xs-12 col-sm-5 col-md-6 col-lg-5">
+											<div class="image">
+												<img src="<%= config.assetPath %>img/carousel-slide-3.jpg" alt="" />
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-3">
+											<p>
+												Looking for health care insurance that delivers on its promise?
+											</p>
+											<a href="#" class="btn btn-primary btn-lg">Start Here</a>
+										</div>
+									</div>
+								</div>
+							</li>
+
+						</ol>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="news-carousel">
+				<h2>News Carousel</h2>
+
+				<div class="well">
+
+					<div id="news-carousel" class="carousel slide news" data-ride="false">
+
+						<strong>In the News:</strong>
+
+						<!-- Wrapper for slides -->
+						<ol class="carousel-inner pull-left">
+
+							<li id="news-carousel-slide-1" class="item active">
+								<div class="content">
+									<a href="#"><h2>Medicare drug plan offered by Wellmark is one of 3 plans nationwide to receive a 5-star rating.</h2></a>
+								</div>
+							</li>
+
+							<li id="news-carousel-slide-2" class="item">
+								<div class="content">
+									<a href="#"><h2>Medicare drug plan offered by Wellmark is one of 3 plans nationwide to receive a 5-star rating.</h2></a>
+								</div>
+							</li>
+
+							<li id="news-carousel-slide-3" class="item">
+								<div class="content">
+									<a href="#"><h2>Medicare drug plan offered by Wellmark is one of 3 plans nationwide to receive a 5-star rating.</h2></a>
+								</div>
+							</li>
+
+							<li id="news-carousel-slide-4" class="item">
+								<div class="content">
+									<a href="#"><h2>Medicare drug plan offered by Wellmark is one of 3 plans nationwide to receive a 5-star rating.</h2></a>
+								</div>
+							</li>
+
+						</ol>
+
+						<div class="pull-right">
+							<div class="pagination">
+								<span class="page">1</span> of <span class="of">4</span>
+							</div>
+
+							<!-- Controls -->
+							<button type="button" class="right carousel-control"
+								aria-controls="news-carousel"
+								data-target="#news-carousel" data-slide="next">
+								<span class="icon-wmkCircleArrowRight" aria-hidden="true"></span><span
+									class="sr-only">Next</span></button>
+
+							<!-- Indicators (required for accessibility) -->
+							<div class="carousel-indicators sr-only">
+								<button type="button" id="news-carousel-slide-button-1" class="active"
+									aria-controls="news-carousel-slide-1"
+									data-target="#news-carousel" data-slide-to="0">Slide 1</button>
+								<button type="button" id="news-carousel-slide-button-2"
+									aria-controls="news-carousel-slide-2"
+									data-target="#news-carousel" data-slide-to="1">Slide 2</button>
+								<button type="button" id="news-carousel-slide-button-3"
+									aria-controls="news-carousel-slide-3"
+									data-target="#news-carousel" data-slide-to="2">>Slide 3</button>
+								<button type="button" id="news-carousel-slide-button-4"
+									aria-controls="news-carousel-slide-4"
+									data-target="#news-carousel" data-slide-to="3">Slide 4</button>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<div class="glossary-popover">
+				<h2>Glossary Popover</h2>
+
+				<div class="well">
+					<a href="/glossary#coinsurance"	data-glossary="coinsurance">Coinsurance</a>
+					<p>Actual markup: &lt;a href="/glossary#coinsurance" data-glossary="coinsurance"&gt;Coinsurance&lt;/a&gt;</p>
+				</div>
+			</div>
+
+			<div class="tables">
+				<h2>Tables</h2>
+
+				<div class="well">
+					<div class="table-responsive">
+						<table class="table table-bordered table-striped">
+							<caption>This is the optional table caption</caption>
+							<thead>
+								<tr>
+									<th scope="col"><div>#</div></th>
+									<th scope="col"><div>Table head 1</div></th>
+									<th scope="col"><div>Table head 2</div></th>
+									<th scope="col"><div>Table head 3</div></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><div>1</div></td>
+									<td><div>table row 1 col 1</div></td>
+									<td><div>table row 1 col 2</div></td>
+									<td><div>table row 1 col 3</div></td>
+								</tr>
+								<tr>
+									<td><div>2</div></td>
+									<td><div>table row 2 col 1</div></td>
+									<td><div>table row 2 col 2</div></td>
+									<td><div>table row 2 col 3</div></td>
+								</tr>
+								<tr>
+									<td><div>3</div></td>
+									<td><div>table row 3 col 1</div></td>
+									<td><div>table row 3 col 2</div></td>
+									<td><div>table row 3 col 3</div></td>
+								</tr>
+								<tr>
+									<td><div>4</div></td>
+									<td><div>table row 4 col 1</div></td>
+									<td><div>table row 4 col 2</div></td>
+									<td><div>table row 4 col 3</div></td>
+								</tr>
+								<tr>
+									<td><div>5</div></td>
+									<td><div>table row 5 col 1</div></td>
+									<td><div>table row 5 col 2</div></td>
+									<td><div>table row 5 col 3</div></td>
+								</tr>
+								<tr>
+									<td><div>6</div></td>
+									<td><div>table row 6 col 1</div></td>
+									<td><div>table row 6 col 2</div></td>
+									<td><div>table row 6 col 3</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="table-responsive">
+						<table class="table table-bordered">
+						<caption>This is the optional table caption</caption>
+							<thead>
+								<tr>
+									<th scope="col"><div>Table head 1</div></th>
+									<th scope="col"><div>Table head 2</div></th>
+									<th scope="col"><div>Table head 3</div></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><div>table row 1 col 1</div></td>
+									<td rowspan="2"><div>table row 1 col 2</div></td>
+									<td><div>table row 1 col 3</div></td>
+								</tr>
+								<tr>
+									<td><div>table row 2 col 1</div></td>
+									<td><div>table row 2 col 3</div></td>
+								</tr>
+								<tr class="row-alternate">
+									<th colspan="3" scope="colgroup"><div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam posuere.</div></th>
+								</tr>
+								<tr>
+									<td><div>table row 4 col 1</div></td>
+									<td><div>table row 4 col 2</div></td>
+									<td><div>table row 4 col 3</div></td>
+								</tr>
+								<tr class="row-alternate">
+									<td><div>table row 5 col 1</div></td>
+									<td><div>table row 5 col 2</div></td>
+									<td><div>table row 5 col 3</div></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="preview-tiles">
+				<h2>Preview Tiles</h2>
+				<div class="well">
+					<h3>Internal Link</h3>
+					<section class="content-preview-tile">
+						<div>
+								<div class="image">
+										<img src="http://fpoimg.com/200x160?bg_color=EEEEEE&text_color=666666" alt="" />
+								</div>
+								<div class="preview">
+										<h3 class="heading-green">
+											<a href="#">Events &amp; Sponsorships</a>
+										</h3>
+										<p>On the stage, in the stands and at the starting line, we’re there to lend support.</p>
+								</div>
+								<div class="action">
+									<a href="#">
+										<span class="sr-only">Events &amp; Sponsorships</span>
+										<span class="icon icon-wmkCircleArrowRight" aria-hidden="true"></span>
+									</a>
+								</div>
+						</div>
+					</section>
+					<h3>External Link</h3>
+					<section class="content-preview-tile">
+						<div>
+								<div class="image">
+										<img src="http://fpoimg.com/200x160?bg_color=EEEEEE&text_color=666666" alt="" />
+								</div>
+								<div class="preview">
+										<h3 class="heading-purple">
+											<a href="http://www.wellmark.com/foundation/" target="_blank">The Wellmark Foundation
+												<span class="sr-only"> External Link</span>
+												<span class="icon-wmkExternalLinkSmall" aria-hidden="true"></span>
+											</a>
+										</h3>
+										<p>
+												The <a href="http://www.wellmark.com/foundation" target="_blank"><span class="sr-only">External Site</span>Wellmark Foundation</a><span class="icon icon-wmkExternalLinkSmall" aria-hidden="true"></span> works to improve the health of Iowans, South Dakotans and their communities. We not only provide grants but offer Wellmark employees numerous incentives to volunteer.
+										</p>
+								</div>
+								<div class="action">
+									<a href="http://www.wellmark.com/foundation/" target="_blank">
+										<span class="sr-only"> External Link to The Wellmark Foundation</span>
+										<span class="icon icon-wmkExternalLinkBig" aria-hidden="true"></span>
+									</a>
+								</div>
+						</div>
+					</section>
+				</div>
+			</div>
+
+			<div class="expand-collapse-tile">
+				<h2>Expand/Collapse Tile</h2>
+				<div class="well">
+					<%
+						var collapseId;
+						var collapseTitle;
+						[
+							'Tile Heading'
+						].forEach(function(title, idx) {
+							collapseId = 'collapse-' + (idx + 1);
+							collapseTitle = title;
+						%>
+						<% include ../includes/collapse-content-tile.html.ejs %>
+						<%
+						});
+					%>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

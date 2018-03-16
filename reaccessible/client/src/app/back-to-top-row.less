@@ -1,0 +1,51 @@
+.back-to-top.row {
+	.col-xs-12 {
+		padding-top: 10px; padding-bottom: 15px;
+		text-align: right;
+	}
+
+	a {
+		margin-right: 20px;
+		color: @brand-primary;
+		font-size: 28px; text-decoration: none;
+
+		&:active,
+		&:hover {
+			color: darken(@brand-primary, 20%);
+		}
+	}
+
+	&.primary {
+		a {
+			color: #fff;
+			font-size: 34px;
+
+			&:active,
+			&:hover {
+				color: darken(#fff, 20%);
+			}
+		}
+	}
+
+	// // Small devices (tablets, 768px and up)
+	// @media (min-width: @screen-sm-min) {
+
+	// }
+
+	// Medium devices (desktops, 992px and up)
+	@media (min-width: @screen-md-min) {
+		.col-xs-12 {
+			padding-bottom: 20px;
+		}
+	}
+
+	// // Large devices (large desktops, 1200px and up)
+	// @media (min-width: @screen-lg-min) {
+
+	// }
+
+	// // Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+}

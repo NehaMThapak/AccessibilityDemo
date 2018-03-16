@@ -1,0 +1,56 @@
+@import "bower_components/bootstrap/less/tables.less";
+
+//
+// Bootstrap Tables Overrides
+// --------------------------------------------------
+
+@-moz-document url-prefix() {
+  fieldset { display: table-cell; }
+}
+
+.table-responsive {
+	&::-webkit-scrollbar
+	{
+    width: 15px;
+    height: 15px;
+    border-bottom: 1px solid #eee;
+    border-top: 1px solid #eee;
+	}
+	&::-webkit-scrollbar-thumb
+	{
+    border-radius: 8px;
+    background-color: #C3C3C3;
+    border: 2px solid #eee;
+	}
+	&::-webkit-scrollbar-track
+	{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+	}
+	@media screen and (max-width: @screen-xs-max) {
+		-ms-overflow-style: auto;
+	}
+}
+
+table.table {
+	&.table-borderless
+	{
+		td, th { border: 0; }
+	}
+	caption {
+		padding: 20px 0;
+		font-size: @font-size-semilarge;
+	}
+
+	thead,
+	tbody {
+		:not(.row-alternate) th {
+			background-color: @brand-primary;
+			color: #fff;
+			font-weight: @font-weight-sans-serif-condensed-bold; font-size: @font-size-large; text-transform: uppercase;
+		}
+	}
+
+	tr.row-alternate td,th  {
+		background-color: @gray-lighter;
+	}
+}

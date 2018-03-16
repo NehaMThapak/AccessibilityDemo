@@ -1,0 +1,198 @@
+@import "bower_components/bootstrap/less/type.less";
+
+//
+// Typography
+// --------------------------------------------------
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	text-transform: uppercase;
+
+	small,
+	.small {
+		color: inherit;
+		text-transform: none;
+	}
+
+	&.heading-brand {
+		color: @brand-primary;
+	}
+
+	&.heading-purple {
+		color: @brand-heading-purple;
+	}
+	&.heading-orange {
+		color: @brand-heading-orange;
+	}
+	&.heading-red {
+		color: @brand-heading-red;
+	}
+	&.heading-green {
+		color: @brand-heading-green;
+	}
+	&.heading-bluegray {
+		color: @brand-heading-bluegray;
+	}
+	&.heading-torquise {
+		color: @brand-heading-torquise;
+	}
+	&.heading-darkblue {
+		color: @brand-heading-darkblue;
+	}
+
+	&.heading-things-to-one {
+		color: @brand-heading-things-to-one;
+	}
+
+	&.heading-things-to-two {
+		color: @brand-heading-things-to-two;
+	}
+}
+
+h1,
+.h1 {
+	font-weight: @font-weight-sans-serif-condensed-bold;
+}
+
+strong {
+	font-weight: @font-weight-sans-serif-bold;
+}
+
+div.content-quote-tile {
+	margin: 0 0 20px; border: 0 none; padding: 0;
+
+	&.primary {
+		.quote {
+			background-color: @brand-primary;
+
+			&,
+			a:not(.btn) {
+				color: #fff;
+			}
+		}
+	}
+
+	.quote {
+		position: relative;
+		z-index: 5;
+		padding: 30px; .border-radius(6px);
+		background-color: #fff;
+		color: @text-color;
+		font-size: @blockquote-font-size;
+		border: none;
+
+		&:after {
+			position: absolute; content: '';
+			top: 100%; left: 25px; z-index: 0;
+			width: 34px; height: 34px;
+			margin-top: -20px;
+			background-color: inherit;
+			.rotate(45deg);
+		}
+
+		strong {
+			font-weight: @font-weight-sans-serif-bold;
+		}
+	}
+
+	.quotee {
+		position: relative;
+		z-index: 5;
+		min-height: 82px;
+		padding-left: 92px;
+		margin-top: 34px;
+
+		.image {
+			position: absolute;
+			top: 0; left: 6px;
+		}
+		img {
+			width: 72px; height: 72px;
+		}
+
+		.name {
+			font-weight: @font-weight-sans-serif-condensed-bold;
+
+			small {
+				display: block;
+				color: inherit;
+				font-weight: @font-weight-sans-serif-normal; font-size: @font-size-semilarge;
+				line-height: 1em;
+
+				&:before {
+					display: none;
+				}
+			}
+		}
+	}
+
+	// Medium devices (desktops, 992px and up)
+	@media (min-width: @screen-md-min) {
+		.quote {
+			padding: 60px;
+			font-size: @font-size-large;
+
+			&:after {
+				left: 35px;
+			}
+		}
+
+		.quotee {
+			min-height: 102px;
+			padding-left: 125px;
+
+			img {
+				width: 92px; height: 92px;
+			}
+
+			.name {
+				font-size: @font-size-largest;
+
+				small {
+					font-size: @font-size-large;
+				}
+			}
+		}
+	}
+}
+
+// Page header
+// -------------------------
+
+.page-header {
+	margin-top: 0; padding-top: 40px; padding-right: (@grid-gutter-width / 2); padding-left: (@grid-gutter-width / 2);
+	border-bottom: 0 none;
+	text-align: center;
+
+	h1 {
+		margin-bottom: 30px;
+
+		small {
+			display: block;
+			margin-top: 6px;
+			color: #4c4f54;
+			font-size: 30px;
+		}
+	}
+
+	p {
+		max-width: 600px;
+		margin-right: auto; margin-left: auto;
+		font-size: @font-size-large;
+	}
+
+	// Medium devices (desktops, 992px and up)
+	@media (min-width: @screen-md-min) {
+		padding-top: 90px; margin-bottom: 70px;
+	}
+}
+
+&.about .page-header {
+	h1 {
+		color: @brand-about;
+
+		small {
+			color: #4c4f54;
+		}
+	}
+}

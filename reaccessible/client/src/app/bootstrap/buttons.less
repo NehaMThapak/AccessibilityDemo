@@ -1,0 +1,240 @@
+@import "bower_components/bootstrap/less/buttons.less";
+
+//
+// Bootstrap Buttons Overrides
+// --------------------------------------------------
+
+.btn {
+	border: 0 none;
+	//background: transparent none;
+
+	&,
+	&:active,
+	&.active {
+		&:focus,
+		&.focus {
+			.tab-focus();
+		}
+	}
+
+	&.btn-preload {
+		&,
+		&:active,
+		&.active {
+			position: relative;
+			border-color: transparent;
+	    background-color: transparent; .box-shadow(none);
+	    color: transparent;
+			cursor: wait !important;
+
+			&:focus,
+			&.focus {
+				.tab-focus(none);
+			}
+		}
+
+		&:after {
+			position: absolute; display: block; content: '';
+			top: 0; right: 0; bottom: 0; left: 0;
+			background: transparent url(../../img/preloader-button.gif) no-repeat center center; background-size: auto 100%;
+			visibility: visible;
+		}
+	}
+
+}
+
+a.btn{
+	&,
+	&:hover {
+		text-decoration: none !important;
+	}
+
+	&.btn-link {
+		&,
+		&:hover {
+			text-decoration: underline !important;
+		}
+	}
+
+	.icon-wmkExternalLinkSmall,
+	.icon-wmkExternalLinkBig {
+		position: relative;
+		display: inline-block;
+		line-height: 0;
+		vertical-align: middle;
+	}
+}
+
+.btn-default,
+.btn-primary,
+.btn-secondary,
+.btn-search-form,
+.btn-things-to-one,
+.btn-things-to-two,
+.btn-segment-one,
+.btn-segment-two,
+.btn-segment-three,
+.btn-segment-four,
+.btn-login,
+.btn-register,
+.btn-segment-nav,
+.btn-glossary,
+.btn-nav-primary {
+	font-family: @font-family-sans-serif; text-transform: uppercase;
+}
+
+.btn-default {
+	&:hover,
+	&:focus,
+  &:active,
+	&:active:focus {
+    	color: darken(@btn-default-color, 10%);
+  }
+}
+
+.btn-secondary {
+	border: 2px solid @btn-default-color;
+	.button-variant(@btn-default-color; @btn-default-bg; @btn-default-color);
+	padding: 4px 10px;
+
+	&.btn-lg {
+		padding: 8px 14px;
+	}
+
+	&.btn-sm {
+		padding: 3px 8px
+	}
+
+	&.btn-xs {
+		padding: 1px 5px;
+	}
+
+	&:hover,
+	&:focus,
+  &:active,
+	&:active:focus {
+    	color: darken(@btn-default-color, 10%);
+  }
+
+	&.btn-alt {
+		border: 2px solid @btn-default-bg;
+		.button-variant(@btn-default-bg; @btn-default-color; @btn-default-bg);
+	}
+}
+
+.btn-nav-primary,
+.btn-search-form {
+	.button-variant(#fff; @nav-primary-btn-bg; @nav-primary-btn-bg);
+}
+
+.btn-things-to-one {
+	.button-variant(@btn-things-to-one-color; @btn-things-to-one-bg; @btn-things-to-one-border);
+	text-transform: uppercase;
+}
+
+.btn-things-to-two {
+	.button-variant(@btn-things-to-two-color; @btn-things-to-two-bg; @btn-things-to-two-border);
+	text-transform: uppercase;
+}
+
+.btn-segment-one {
+	.button-variant(@brand-segment-one; #fff; #fff);
+}
+
+.btn-segment-two {
+	.button-variant(@brand-segment-two; #fff; #fff);
+}
+
+.btn-segment-three {
+	.button-variant(@brand-segment-three; #fff; #fff);
+}
+
+.btn-segment-four {
+	.button-variant(@brand-segment-four; #fff; #fff);
+}
+
+.btn-register {
+	.button-variant(#fff; @nav-register-btn-bg; @nav-register-btn-bg);
+}
+
+.btn-segment-nav {
+	padding-left: 10px; .border-radius(0 @border-radius-large @border-radius-large 0);
+
+	.icon-wmkCaretLeft {
+		display: inline-block;
+		font-size: 20px; vertical-align: middle;
+	}
+
+	.text {
+		display: none;
+	}
+
+	// Medium devices (desktops, 992px and up)
+	@media (min-width: @screen-md-min) {
+		padding-right: 20px; padding-left: 12px;
+
+		.text {
+			display: inline-block;
+			padding-bottom: 1px;
+			vertical-align: middle;
+		}
+	}
+}
+
+// Segment specific colors
+.about {
+	.btn-segment-nav {
+		.button-variant(#fff; @brand-about; @brand-about);
+	}
+}
+
+.segment-one {
+	.btn-segment-nav {
+		.button-variant(#fff; @brand-segment-one; @brand-segment-one);
+	}
+}
+
+.segment-two {
+	.btn-segment-nav {
+		.button-variant(#fff; @brand-segment-two; @brand-segment-two);
+	}
+}
+
+.segment-three {
+	.btn-segment-nav {
+		.button-variant(#fff; @brand-segment-three; @brand-segment-three);
+	}
+}
+
+.segment-four {
+	.btn-segment-nav {
+		.button-variant(#fff; @brand-segment-four; @brand-segment-four);
+	}
+}
+
+.btn-glossary {
+	.button-variant(#fff; @brand-glossary; @brand-glossary);
+	text-transform: uppercase;
+
+	.icon-reaCaretDown,
+	.icon-wmkCaretUp {
+		display: inline-block;
+		margin-left: 10px;
+		vertical-align: middle;
+	}
+}
+
+.btn-calendar {
+	margin-left: 10px; padding: 0 5px;
+	background-color: transparent;
+	color: @brand-primary;
+	font-size: 26px;
+}
+
+
+// .button-size(@padding-vertical; @padding-horizontal; @font-size; @line-height; @border-radius);
+
+.btn-xl {
+  // line-height: ensure even-numbered height of button next to large input
+  .button-size((@padding-large-vertical + 3); (@padding-large-horizontal + 30); @font-size-large; @line-height-large; @btn-border-radius-large);
+}

@@ -1,0 +1,229 @@
+<!doctype html>
+<html class="no-js" lang="">
+<% include ../includes/mag/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/mag/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/mag/header.html.ejs %>
+
+	<main id="global-content" class="<%= (param('highlight') === '0') ? 'no-highlight' : 'has-highlight' %>">
+		<% include ../includes/mag/magMainHeading.html.ejs %>
+
+		<div tabindex="-1" id="skip-to-content"></div>
+
+		<% if (param('highlight') !== '0') { %>
+
+			<% if (param('cat') === 'recipe') { %>
+			<div class="container-fluid mag-feat-1 recipe-feat-1">
+				<div class="row">
+					<div class="col-xs-12 col-md-6 img-block">
+						<a href="#" tabindex="-1" aria-hidden="true"><img src="http://fpoimg.com/480x320?bg_color=4e4e4e&text_color=ffffff&text=FPO" alt="" /></a>
+					</div>
+					<div class="col-xs-12 col-md-6 txt-block">
+						<div class="txt-block-inner">
+							<header>
+								<span class="category">Salads & Sides</span>
+								<div class="h2 title"><a href="#">Shrimp & Avocado Taco Salad</a></div>
+							</header>
+							<p>
+								<span class="btn-tag-circle">GF</span>
+								<span class="btn-tag-circle bg-green">DF</span>
+								<strong class="serves">Serves 2</strong>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<% } else { %>
+			<div class="container-fluid mag-feat-1 article-feat-1">
+				<div class="row">
+					<div class="col-xs-12 col-md-6 img-block">
+						<a href="#" tabindex="-1" aria-hidden="true"><img src="http://fpoimg.com/480x320?bg_color=4e4e4e&text_color=ffffff&text=FPO" alt="" /></a>
+					</div>
+					<div class="col-xs-12 col-md-6 txt-block">
+						<div class="txt-block-inner">
+							<header>
+								<span class="category">Nutrition</span>
+								<div class="h2 title"><a href="#">Iowa Girl Eats</a></div>
+							</header>
+							<p>Food blogger (and true food lover) goes gluten free</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<% } %>
+
+		<% } %>
+
+		<div class="container-fluid category-content-items">
+			<div class="flex-container">
+
+				<% [
+						{
+							type: "article",
+							category: "Subcategory 1",
+							title: "Fitness Article Title",
+							blurb: "This is a short blurb about the article",
+							featured: true
+						},
+						{
+							type: "article",
+							category: "Subcategory 2",
+							title: "Fitness Article Title",
+							blurb: "This is a long blurb about the article. this is a long blurb about the article",
+							featured: false
+						},
+						{
+							type: "article",
+							category: "Subcategory 1",
+							title: "Fitness Article Title",
+							blurb: "This blurb is shortest",
+							featured: true
+						},
+						{
+							type: "article",
+							category: "",
+							title: "Fitness Article Title",
+							blurb: "This is a short blurb about the article",
+							featured: true
+						},
+						{
+							type: "article",
+							category: "Subcategory 2",
+							title: "Fitness Article Title",
+							blurb: "This is a short blurb",
+							featured: false
+						},
+						{
+							type: "article",
+							category: "",
+							title: "Fitness Article Title",
+							blurb: "This is a short blurb about the article",
+							featured: true
+						},
+						{
+							type: "recipe",
+							category: "Breakfast",
+							title: "Red Potato Hash with Bacon and Kale",
+							blurb: "",
+							tags: false,
+							hasVideo: true,
+							featured: true
+						},
+						{
+							type: "recipe",
+							category: "Salads & Sides",
+							title: "Shrimp and Avacado Taco Salad",
+							blurb: "",
+							tags: false,
+							hasVideo: true,
+							featured: true
+						},
+						{
+							type: "recipe",
+							category: "Breakfast",
+							title: "Fluffy Little Almond Flour Pancakes",
+							blurb: "",
+							tags: true,
+							hasVideo: true,
+							featured: true
+						},
+						{
+							type: "recipe",
+							category: "Appetizer",
+							title: "Apple Salsa",
+							blurb: "",
+							tags: true,
+							hasVideo: false,
+							featured: true
+						},
+						{
+							type: "recipe",
+							category: "Smoothies & Drinks",
+							title: "Strawberry Smoothie",
+							blurb: "",
+							tags: true,
+							hasVideo: true,
+							featured: true
+						}
+					].forEach(function (el) {
+				%>
+
+				<% if ( (param('cat') === 'recipe' && el.type === 'recipe') || (param('cat') != 'recipe' && el.type === 'article') ) { %>
+				<div class="category-content-item content-item-<%= el.type %>">
+
+					<% if (el.featured) { %>
+					<div class="featured">
+						<span>featured</span>
+					</div>
+					<% } %>
+
+					<a href="#" tabindex="-1" aria-hidden="true"><img src="http://fpoimg.com/300x200?bg_color=4e4e4e&text_color=ffffff&text=FPO" alt="" /></a>
+
+					<header>
+						<% if (el.category) { %>
+						<span class="category"><%- el.category %></span>
+						<% } %>
+						<div class="h2 title"><a href="#"><%- el.title %></a></div>
+					</header>
+
+					<% if (el.type === 'article') { %>
+					<div class="blurb">
+						<p><%- el.blurb %></p>
+					</div>
+					<% } %>
+
+					<% if (el.type === 'recipe') { %>
+					<div class="recipe-meta">
+						<% if (el.tags) { %>
+						<span class="btn-tag-circle">GF</span>
+						<span class="btn-tag-circle bg-green">DF</span>
+						<% } %>
+						<strong class="serves">Serves 2</strong>
+						<% if (el.hasVideo) { %>
+						<span class="divider"></span>
+						<strong class="video">
+							<span class="sr-only">has video</span>
+							<span class="icon-video"></span>
+						</strong>
+						<% } %>
+					</div>
+					<% } %>
+
+				</div>
+				<% } %>
+
+				<% }); %>
+
+			</div>
+		</div>
+		<!-- <span class="sr-only">Page </span> -->
+		<div class="category-pagination">
+			<ul class="pagination">
+				<li class="disabled" aria-hidden="true">
+					<a class="icon-wmkCarouselArrowLeft" tabindex="-1" href="#"><span class="sr-only"></span></a>
+				</li>
+				<li class="active"><span><span class="sr-only">Current Page 1</span><span aria-hidden="true">1</span></span></li>
+				<li><a href="#"><span class="sr-only">Page </span>2</a></li>
+				<li><a href="#"><span class="sr-only">Page </span>3</a></li>
+				<li><a href="#"><span class="sr-only">Page </span>4</a></li>
+				<li class="skip"><span>…</span></li>
+				<li><a href="#"><span class="sr-only">Page </span>8</a></li>
+				<li>
+					<a class="icon-wmkCarouselArrowRight" href="#"><span class="sr-only">next page 2</span></a>
+				</li>
+			</ul>
+		</div>
+
+	</main>
+	<% include ../includes/mag/footer.html.ejs %>
+</div>
+
+<% include ../includes/mag/foot.html.ejs %>
+
+</body>
+</html>

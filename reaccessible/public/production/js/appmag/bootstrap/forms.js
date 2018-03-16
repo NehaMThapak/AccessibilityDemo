@@ -1,0 +1,1 @@
+!function(){"use strict";function a(){jcf.replaceAll()}a()}();

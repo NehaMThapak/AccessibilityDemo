@@ -1,0 +1,157 @@
+// Custom Selection Colors
+//.selection(#cdeafb);
+
+// Custom Scrollbars (Safari, Chrome)
+// * {
+// 	::-webkit-scrollbar {
+// 		width: 8px;
+// 	}
+// 	::-webkit-scrollbar-track-piece {
+// 		background-color: transparent;
+// 	}
+
+// 	//margin: 5px;
+// 	::-webkit-scrollbar-thumb {
+// 		-webkit-border-radius: 10px;
+// 		background-color: rgba(0,0,0,.4);
+// 	}
+
+// 	::-webkit-scrollbar-button:start:decrement,
+// 	::-webkit-scrollbar-button:end:increment {
+// 		display: none;
+// 	}
+// }
+
+image-full-bleed
+{
+	background-image: url(https://cdn.us-west-2.prod.realestate.com/97d5daa….jpg);
+}
+
+
+// Ensure body occupies the entire viewport
+html {
+	min-width: 320px; overflow-x: hidden; -ms-overflow-style: scrollbar;
+}
+
+body {
+	width: 100%; height: 100%; overflow-x: hidden;
+	padding-top: @navbar-height;
+	font-smooth: always; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+
+	// Small devices (tablets, 768px and up)
+	@media (min-width: @screen-sm-min) {
+		padding-top: @navbar-height-large;
+	}
+
+	// //  Medium devices (desktops, 992px and up)
+	// @media (min-width: @screen-md-min) {
+
+	// }
+
+	// //  Large devices (large desktops, 1200px and up)
+	// @media (min-width: @screen-lg-min) {
+
+	// }
+
+	// //  Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+}
+
+// Page Container
+
+#page {
+	#skip-content {
+		font-size: 16px;
+		display: none;
+		@media (min-width: @screen-md-min) {
+			display: block; 
+			&:focus {
+				display: inline-block;
+				padding: 10px;
+				outline: none;
+				>span { 
+					.tab-focus(@offset: 0);
+					padding: 5px;
+				}
+				z-index: 2000;
+			}
+		}
+	}
+}
+
+
+// Global Content
+
+#global-content {
+	position: relative;
+	z-index: 5;
+
+	&:focus {
+		outline: none;
+	}
+
+	>.container-fluid > .row {
+		>[class^="col-"],
+		>[class*=" col-"] {
+			padding-right: 0; padding-left: 0;
+		}
+	}
+}
+
+a.anchor{
+	display: inline-block;
+	padding-top: (@navbar-height + 25x);
+	margin-top: -(@navbar-height + 25x);
+	width: 0; height: 0;
+}
+
+@media (min-width: @screen-lg-min) {
+	a.anchor {
+		padding-top: (@navbar-height-large + 25x);
+		margin-top: -(@navbar-height-large + 25x);
+	}
+}
+
+@media print {
+	img {
+		display: none !important;
+	}
+
+	.infographic,
+	header {
+		img {
+			display: block !important;
+		}
+	}
+
+	header.visible-print {
+		img {
+			margin: 0 auto;
+		}
+	}
+
+	a[href]:after {
+		content: "";
+	}
+
+	// Chrome Bootstrap print bug hacks start
+	body {
+		zoom: .8;
+	}
+
+	.container {
+		width: 100% !important;
+	}
+
+	[class*="col-md"], [class*="col-sm"], [class*="col-xs"] {
+		float: none !important;
+	}
+	// Chrome Bootstrap print bug hacks end
+}
+// More Chrome Bootstrap print bug hacks start
+@page { 
+	margin-bottom: .6in;
+}
+// More Chrome Bootstrap print bug hacks end

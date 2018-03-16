@@ -1,0 +1,21 @@
+<div id="global-navigation-modal" class="modal fade" tabindex="-1" role="dialog"
+	aria-labelledby="gn-modal-label" aria-describedby="gn-modal-description" aria-hidden="true"
+	data-push-page>
+	<div class="modal-dialog" role="document">
+		<div class="sr-only" id="gn-modal-description">Beginning of dialog</div>
+		<div class="modal-content">
+			<button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close" data-autofocus>
+				<span class="sr-only">Close Button</span><span class="icon-wmkCircleClose" aria-hidden="true"></span>
+			</button>
+			<div class="modal-header">
+				<div class="h2 modal-title" id="gn-modal-label" role="heading" aria-level="1"><a href="/blue">Blue Magazine</a></div>
+			</div>
+			<div class="modal-body">
+				<div class="container-fluid">
+					<% include ../../includes/mag/magnav.html.ejs %>
+				</div>
+			</div>
+		</div>
+		<span class="sr-only">End of dialog</span>
+	</div>
+</div>

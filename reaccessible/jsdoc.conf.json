@@ -1,0 +1,31 @@
+{
+  "tags": {
+    "allowUnknownTags": true
+  },
+  "plugins": ["plugins/markdown"],
+  "templates": {
+    "cleverLinks": false,
+    "collapseSymbols": false,
+    "copyright": "",
+    "dateFormat": "ddd MMM Do YYYY",
+    "footer": "",
+    "includeDate": true,
+    "inverseNav": false,
+    "linenums": true,
+    "logoFile": "../assets/img/logo-realestate.png",
+    "methodHeadingReturns": false,
+    "monospaceLinks": false,
+    "navType": "vertical",
+    "outputSourceFiles": true,
+    "outputSourcePath": true,
+    "protocol": "html://",
+    "syntaxTheme": "dark",
+    "systemName": "Documentation",
+    "theme": "spacelab"
+  },
+  "markdown": {
+    "excludeTags": ["author"],
+    "hardwrap": true,
+    "parser": "gfm"
+  }
+}

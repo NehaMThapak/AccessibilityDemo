@@ -1,0 +1,118 @@
+form[name="loginForm"] {
+	width: 100%;
+
+	legend,
+	a {
+		color: #fff;
+	}
+
+	label {
+		display: block;
+		font-size: @font-size-semilarge;
+	}
+	fieldset {
+		white-space: nowrap;
+	}
+
+	>div {
+		margin-bottom: 30px; border-bottom: 0 none; padding: 0;
+		>h2 {
+			text-transform: inherit;
+			font-weight: inherit;
+			margin: 0;
+			line-height: @line-height-base;
+			width: 70%;
+			padding-right: 20px;
+			white-space: normal;
+			font-size: 21px;
+		}
+		>span {
+			width: 70%;
+			padding-right: 20px;
+			white-space: normal;
+			font-size: 21px;
+
+			&.required-info {
+				width: 30%;
+				padding-top: 3px; padding-right: 0;
+				font-size: @font-size-semilarge; text-align: right;
+			}
+		}
+		
+	}
+
+	input[type="text"],
+	input[type="password"] {
+		width: 100%;
+	}
+
+	input[type="submit"].btn {
+		width: 100%;
+		margin-top: 10px;
+	}
+
+	.has-error .help-block.with-errors {
+		color: #fff;
+	}
+
+	.forgot {
+		margin-top: 36px;
+		font-weight: @font-weight-sans-serif-condensed-bold; font-size: @font-size-base; text-transform: uppercase;
+
+		a {
+			text-decoration: @link-hover-decoration;
+
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+		}
+	}
+
+	// Small devices (tablets, 768px and up)
+	@media (min-width: @screen-sm-min) {
+		legend {
+			margin-bottom: 20px;
+		}
+
+		.fields {
+			.flex-wrap();
+			width: 100%;
+		}
+		.form-group {
+			width: 33%;
+			margin-right: 20px;
+		}
+
+
+		.actions {
+			padding-top: 27px;
+		}
+
+		input[type="submit"].btn {
+			width: auto;
+			margin-top: 0;
+			vertical-align: bottom;
+		}
+
+		&.form-inline .form-control {
+			display: block;
+		}
+
+		.forgot {
+			margin-top: 20px;
+			font-size: @font-size-large;
+		}
+	}
+
+	//  Medium devices (desktops, 992px and up)
+	@media (min-width: @screen-md-min) {
+		legend {
+			margin-bottom: 30px;
+		}
+
+		.forgot {
+			margin-top: 20px;
+		}
+	}
+}

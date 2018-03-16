@@ -1,0 +1,196 @@
+<!doctype html>
+<html class="no-js" lang="">
+<% include ../includes/mag/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/mag/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/mag/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content">
+		<% include ../includes/mag/magMainHeading.html.ejs %>
+
+		<div tabindex="-1" id="skip-to-content"></div>
+
+		<div class="container-fluid mag-feat-1 recipe-feat-1">
+			<div class="row">
+				<div class="col-xs-12 col-md-6 img-block">
+					<img src="http://fpoimg.com/480x320?bg_color=4e4e4e&text_color=ffffff&text=FPO" alt="" />
+				</div>
+				<div class="col-xs-12 col-md-6 txt-block">
+					<div class="txt-block-inner">
+						<header>
+							<h1 class="title">Shrimp & Avocado Taco Salad</h1>
+						</header>
+						<p>
+							<% if (param('spectag') === '1') { %>
+							<span class="btn-tag-circle bg-turquoise bt-icon-stopwatch">Long description 1</span>
+							<span class="btn-tag-circle bg-pinkpurple bt-icon-heart">Long description 2</span>
+							<% } else { %>
+							<span class="btn-tag-circle">GF</span>
+							<span class="btn-tag-circle bg-green">DF</span>
+							<% } %>
+							<strong class="serves">Serves 2</strong>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid mag-content recipe-content">
+			<div class="cnd-row">
+				<div role="region" aria-label="Social Links" class="social-links"> 
+					<a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwellmark-blue-ui.herokuapp.com%2Fblue%2Frecipe" target="_blank"><span class="sr-only">Facebook share</span><span class="icon-facebook2"></span></a>
+					<a href="https://twitter.com/intent/tweet/?text=The%20Title%20of%20the%20Recipe.&amp;url=http%3A%2F%2Fwellmark-blue-ui.herokuapp.com%2Fblue%2Frecipe" target="_blank"><span class="sr-only">Twitter share</span><span class="icon-twitter"></span></a>
+					<a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//wellmark-blue-ui.herokuapp.com/blue/recipe&title=The%20Title%20of%20the%20Recipe" target="_blank"><span class="sr-only">LinkedIn share</span><span class="icon-linkedin"></span></a>
+					<a href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwellmark-blue-ui.herokuapp.com%2Fblue%2Frecipe&media=https%3A%2F%2Fwww.wellmark.com%2F-%2Fmedia%2Fsites%2Fpublic%2Fimages%2Fglobal%2Flogo-realestate.png&description=The%20Title%20of%20the%20recipe" target="_blank"><span class="sr-only">Pinterest share</span><span class="icon-pinterest"></span></a>
+					<a href="https://plus.google.com/share?url=http%3A%2F%2Fwellmark-blue-ui.herokuapp.com%2Fblue%2Frecipe" target="_blank"><span class="sr-only">Google Plus share</span><span class="icon-google-plus"></span></a>
+					<a href="mailto:?subject=The%20Title%20of%20the%20Recipe"><span class="sr-only">Email</span><span class="icon-mail"></span></a>
+					<a href="#" class="print-page"><span class="sr-only">Print</span><span class="icon-print"></span></a>
+				</div>
+				<div role="region" aria-label="Tags" class="tags"> 
+					<a href="#" class="btn btn-tag">gluten</a>
+					<a href="#" class="btn btn-tag">organic</a>
+				</div>
+			</div>
+
+			<div class="cnd-row">
+				<div class="content-block">
+					<h2>Ingredients</h2>
+
+					<ul class="row">
+						<li class="col-xs-12 col-md-6">⅓ cup packed cilantro leaves, roughly chopped</li>
+						<li class="col-xs-12 col-md-6">¼ cup fresh lime juice</li>
+						<li class="col-xs-12 col-md-6">¼ cup extra virgin olive oil</li>
+						<li class="col-xs-12 col-md-6">1 Tablespoon honey</li>
+						<li class="col-xs-12 col-md-6">½ teaspoon chili powder</li>
+						<li class="col-xs-12 col-md-6">Salt and pepper</li>
+						<li class="col-xs-12 col-md-6">½ pound jumbo shrimp, peeled and deveined</li>
+						<li class="col-xs-12 col-md-6">10 ounces chopped romaine lettuce</li>
+						<li class="col-xs-12 col-md-6">½ cup shredded red cabbage</li>
+						<li class="col-xs-12 col-md-6">½ cup grape or cherry tomatoes, halved</li>
+						<li class="col-xs-12 col-md-6">1 avocado, chopped</li>
+						<li class="col-xs-12 col-md-6">Coarse sea salt (optional)</li>
+						<li class="col-xs-12 col-md-6">Blue corn tortilla chips, gluten free, crushed</li>
+					</ul>
+
+					<div class="vid-row">
+						<div class="tip-box col-xs-12 col-md-6">
+							<div class="">
+								<h3>Tip</h3>
+								<p>Speed up your prep time for this dish by purchasing pre-chopped kale, microwave bacon and pre-cooked or microwave potatoes.</p>
+							</div>
+						</div>
+						<div class="video-box col-xs-12 col-md-6">
+							<div class="video-opener">
+								<button type="button" class="btn" aria-controls="video-modal" data-toggle="modal" data-target="#video-modal" data-video-url="https://www.youtube.com/embed/p46dusnr7Rw?enablejsapi=1">
+									<img src="http://fpoimg.com/410x231?bg_color=4e4e4e&text_color=ffffff&text=FPO" alt="" class="ctr" />
+									<span class="video-play-icon" aria-hidden="true">
+										<span class="icon-play"></span>
+									</span>
+								</button>
+							</div>
+							<p>Video Caption goes here</p>
+						</div>
+
+					</div>
+
+					<h2>Cook</h2>
+
+					<ol>
+						<li><strong>Combine the first six ingredients</strong> in a food processor or blender then process until smooth. Place shrimp in a plastic bag then add 3 tablespoons of the dressing and marinate in the refrigerator for 10 minutes (no longer). Reserve remaining dressing for salad dressing.</li>
+						<li><strong>After the shrimp have marinated,</strong> spray the bottom of a skillet with extra virgin olive oil or nonstick spray then sauté in two batches to avoid overcrowding the pan, for 1–2 minutes a side, or until just barely cooked through. Set aside to cool slightly. Discard remaining marinade.</li>
+					</ol>
+
+					<div class="content-l">
+						<h2>Serve</h2>
+
+						<p>Divide lettuce and red cabbage between plates. Top with avocados, tomatoes, sautéed shrimp, and crushed tortilla chips. Sprinkle with sea salt, if desired, then drizzle dressing on top and serve.</p>
+					</div>
+
+					<div class="callout callout-nutrition f_rt">
+						<h2>NUTRITION PER SERVING</h2>
+						<ul>
+							<li>275 Calories</li>
+							<li>21g Fat <em>(3g saturated fat)</em></li>
+							<li>86mg Cholesterol</li>
+							<li>94mg Sodium</li>
+							<li>13g Carbohydrate</li>
+							<li>6g Sugar</li>
+							<li>5g Fiber</li>
+							<li>14g Protein</li>
+						</ul>
+					</div>
+
+					<blockquote class="callout ctr bg-blue closing">
+						<p>“This meal is light and refreshing with a shrimp marinade that doubles as the salad dressing.”</p>
+						<p class="quotee"><strong class="quotee-name">Kristin Porter</strong> <span>of IowaGirlEats.com</span></p>
+					</blockquote>
+
+				</div>
+			</div>
+
+			<div class="cnd-row">
+				<div role="region" aria-label="Tags" class="tags"> 
+					<a href="#" class="btn btn-tag">gluten</a>
+					<a href="#" class="btn btn-tag">organic</a>
+				</div>
+				<div role="region" aria-label="Social Links" class="social-links"> 
+					<a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fwellmark-blue-ui.herokuapp.com%2Fblue%2Frecipe" target="_blank"><span class="sr-only">Facebook share</span><span class="icon-facebook2"></span></a>
+					<a href="https://twitter.com/intent/tweet/?text=The%20Title%20of%20the%20Recipe.&amp;url=http%3A%2F%2Fwellmark-blue-ui.herokuapp.com%2Fblue%2Frecipe" target="_blank"><span class="sr-only">Twitter share</span><span class="icon-twitter"></span></a>
+					<a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A//wellmark-blue-ui.herokuapp.com/blue/recipe&title=The%20Title%20of%20the%20Recipe" target="_blank"><span class="sr-only">LinkedIn share</span><span class="icon-linkedin"></span></a>
+					<a href="https://www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fwellmark-blue-ui.herokuapp.com%2Fblue%2Frecipe&media=https%3A%2F%2Fwww.wellmark.com%2F-%2Fmedia%2Fsites%2Fpublic%2Fimages%2Fglobal%2Flogo-realestate.png&description=The%20Title%20of%20the%20recipe" target="_blank"><span class="sr-only">Pinterest share</span><span class="icon-pinterest"></span></a>
+					<a href="https://plus.google.com/share?url=http%3A%2F%2Fwellmark-blue-ui.herokuapp.com%2Fblue%2Frecipe" target="_blank"><span class="sr-only">Google Plus share</span><span class="icon-google-plus"></span></a>
+					<a href="mailto:?subject=The%20Title%20of%20the%20Recipe"><span class="sr-only">Email</span><span class="icon-mail"></span></a>
+					<a href="#" class="print-page"><span class="sr-only">Print</span><span class="icon-print"></span></a>
+				</div>
+				<div class="cat-link">
+					<a href="#" class="btn btn-primary btn-lg">All Salads & Sides Recipes</a>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="container-fluid mag-closing">
+			<h2>Related Articles &amp; Recipes</h2>
+			<div class="row">
+				<% [
+						{
+							category: "Fitness",
+							title: "Make it Stick"
+						},
+						{
+							category: "Recipes",
+							title: "Shrimp and Avacado Taco Salad"
+						},
+						{
+							category: "Nutrition",
+							title: "Stack Up on Self-Improvement"
+						}
+					].forEach(function (el) {
+				%>
+				<div class="col-xs-12 col-sm-4 imgtxt-block">
+					<a href="#" tabindex="-1" aria-hidden="true"><img src="http://fpoimg.com/300x200?bg_color=4e4e4e&text_color=ffffff&text=FPO" alt="" /></a>
+					<header>
+						<span class="category"><%- el.category %></span>
+						<div class="h2 title"><a href="#"><%- el.title %></a></div>
+					</header>
+				</div>
+				<%
+				});
+				%>
+			</div>
+		</div>
+
+	</main>
+	<% include ../includes/mag/footer.html.ejs %>
+</div>
+
+<% include ../includes/mag/foot.html.ejs %>
+
+</body>
+</html>

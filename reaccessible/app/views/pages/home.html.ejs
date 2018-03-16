@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content">
+		<div class="container-fluid">
+
+			<div class="row">
+				<div class="col-xs-12">
+					<h1 class="sr-only">This is a hidden heading</h1>
+
+					<div id="home-carousel" class="carousel slide default home"
+						data-pause="false" data-interval="5000">
+
+						<!-- Controls -->
+						<div>
+
+							<button type="button" class="left carousel-control"
+								aria-controls="home-carousel"
+								data-target="#home-carousel" data-slide="prev">
+								<span class="icon-prev icon-wmkCarouselArrowLeft" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</button>
+
+							<div class="carousel-indicators-container">
+								<!-- Indicators -->
+								<div class="carousel-indicators">
+									<button type="button" id="home-carousel-slide-button-1" class="active"
+										aria-controls="home-carousel-slide-1"
+										data-target="#home-carousel" data-slide-to="0">
+										<span class="sr-only">Slide 1</span></button>
+									<button type="button" id="home-carousel-slide-button-2"
+										aria-controls="home-carousel-slide-2"
+										data-target="#home-carousel" data-slide-to="1">
+										<span class="sr-only">Slide 2</span></button>
+									<button type="button" id="home-carousel-slide-button-3"
+										aria-controls="home-carousel-slide-3"
+										data-target="#home-carousel" data-slide-to="2">
+										<span class="sr-only">Slide 3</span></button>
+								</div>
+
+								<!-- Pause -->
+								<button class="btn carousel-pause" type="button"
+									aria-controls="home-carousel"
+									data-target="#home-carousel" data-play-text="Play Button" data-pause-text="Pause Button">
+									<span class="sr-only">Pause</span><span
+										class="icon-pause" aria-hidden="true"></span></button>
+							</div>
+						</div>
+
+						<!-- Wrapper for slides -->
+						<ol class="carousel-inner">
+
+							<li id="home-carousel-slide-1" class="item active">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-xs-12 col-sm-7 col-md-3 col-lg-4">
+												<h2>
+														GUESSWORK = GONE </h2>
+														<h3>"Our All-In Monthly Pricing search includes estimated property taxes, HOA fees, PMI, 
+															utilities, insurance and closing costs to help take the surprises out of buying a home."</h3>
+												
+										</div>
+										<div class="col-xs-12 col-sm-5 col-md-6 col-lg-5">
+											<div class="image">
+												<img src="<%= config.assetPath %>img/carousel-slide-1.png" alt="" />
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-3">
+											<p>
+												Looking for Help for First-Time Home Buyers?
+											</p>
+											<a href="#" class="btn btn-primary btn-xl">Start Here</a>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li id="home-carousel-slide-2" class="item">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-xs-12 col-sm-7 col-md-3 col-lg-4">
+												<h2>
+														GUESSWORK = GONE </h2>
+														<h3>"Our All-In Monthly Pricing search includes estimated property taxes, HOA fees, PMI, 
+															utilities, insurance and closing costs to help take the surprises out of buying a home."</h3>
+												
+										</div>
+										<div class="col-xs-12 col-sm-5 col-md-6 col-lg-5">
+											<div class="image">
+												<img src="<%= config.assetPath %>img/carousel-slide-2.png" alt="" />
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-3">
+											<p>
+													Looking for Help for First-Time Home Buyers?
+											</p>
+											<a href="#" class="btn btn-primary btn-xl">Start Here</a>
+										</div>
+									</div>
+								</div>
+							</li>
+
+							<li id="home-carousel-slide-3" class="item">
+								<div class="container-fluid">
+									<div class="row">
+										<div class="col-xs-12 col-sm-7 col-md-3 col-lg-4">
+											<h2>
+													GUESSWORK = GONE </h2>
+													<h3>"Our All-In Monthly Pricing search includes estimated property taxes, HOA fees, PMI, 
+														utilities, insurance and closing costs to help take the surprises out of buying a home."</h3>
+											
+										</div>
+										<div class="col-xs-12 col-sm-5 col-md-6 col-lg-5">
+											<div class="image">
+												<img src="<%= config.assetPath %>img/carousel-slide-3.png" alt="" />
+											</div>
+										</div>
+										<div class="col-xs-12 col-md-3">
+											<p>
+													Looking for Help for First-Time Home Buyers?
+											</p>
+											<a href="#" class="btn btn-primary btn-xl">Start Here</a>
+										</div>
+									</div>
+								</div>
+							</li>
+
+						 </ol>
+
+						<button type="button"  class="right carousel-control"
+							aria-controls="home-carousel"
+							data-target="#home-carousel" data-slide="next">
+							<span class="icon-next icon-wmkCarouselArrowRight" aria-hidden="true"></span>
+							<span class="sr-only">Next</span>
+						</button>
+
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+					<% include ../includes/segment-menu.html.ejs %>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12">
+
+					<div id="news-carousel" class="carousel slide news" data-ride="false">
+
+						<strong>Home Buyer Help:</strong>
+
+						<!-- Wrapper for slides -->
+						<ol class="carousel-inner">
+
+							<li id="news-carousel-slide-1" class="item active">
+								<div class="content">
+									<a href="#"><div class="h2"><span>1 How to Manage Your Money: The 10 Biggest Financial Mistakes.</span></div></a>
+								</div>
+							</li>
+
+							<li id="news-carousel-slide-2" class="item">
+								<div class="content">
+									<a href="#"><div class="h2"><span>2 Boosting Credit Before You Apply for a Home Loan: Possible?.</span></div></a>
+								</div>
+							</li>
+
+							<li id="news-carousel-slide-3" class="item">
+								<div class="content">
+									<a href="#"><div class="h2"><span>3 Ways to Win a Multiple-Offer Bidding War.</span></div></a>
+								</div>
+							</li>
+
+							<li id="news-carousel-slide-4" class="item">
+								<div class="content">
+									<a href="#"><div class="h2"><span>4 How to Evaluate a Home with Structural Damage.</span></div></a>
+								</div>
+							</li>
+
+						</ol>
+
+						<div class="carousel-buttons">
+							<div class="pagination">
+								<span class="page">1</span> of <span class="of">4</span>
+							</div>
+
+							<!-- Controls -->
+							<button type="button" class="right carousel-control"
+								aria-controls="news-carousel"
+								data-target="#news-carousel" data-slide="next">
+								<span class="icon-wmkCircleArrowRight" aria-hidden="true"></span><span
+									class="sr-only">Next</span></button>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

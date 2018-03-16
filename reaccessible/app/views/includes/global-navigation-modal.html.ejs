@@ -1,0 +1,232 @@
+<div id="global-navigation-modal" class="modal fade" tabindex="-1" role="dialog"
+	aria-labelledby="gn-modal-label" aria-describedby="gn-modal-description" aria-hidden="true"
+	data-push-page>
+	<div class="modal-dialog" role="document">
+		<div class="sr-only" id="gn-modal-description">Beginning of dialog</div>
+		<div class="modal-content<%= (param('authenticated'))? ' is-authenticated' : '' %>">
+			<div class="modal-header">
+				<div class="h2 modal-title" id="gn-modal-label" role="heading" aria-level="1">Main Menu</div>
+			</div>
+			<button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close" data-autofocus>
+				<span class="sr-only">Close</span><span class="icon-wmkCircleClose" aria-hidden="true"></span>
+			</button>
+			<div class="modal-body">
+				<div class="container-fluid">
+
+					<div class="row">
+						<div class="col-xs-12 col-sm-4">
+
+							<div class="visible-xs nav-tabs">
+								<a id="gn-for-consumers-opener" href="#gn-for-consumers" class="collapsed"
+									aria-expanded="false" aria-controls="gn-for-consumers"
+									data-toggle="collapse">
+									<h2>For Consumers</h2>
+									<span class="icon" aria-hidden="true"></span></a>
+
+								<div id="gn-for-consumers" class="collapse gnmenu" role="region">
+									<ul aria-labelledby="gn-for-consumers-opener">
+										<li>
+											<a href="#">
+												<span class="icon-wmkBullet" aria-hidden="true"></span>
+												<span>Consumer Segment One</span></a></li>
+										<li>
+											<a href="#">
+												<span class="icon-wmkBullet" aria-hidden="true"></span>
+												<span>Consumer Segment Two</span></a></li>
+										<li>
+											<a href="#">
+												<span class="icon-wmkBullet" aria-hidden="true"></span>
+												<span>Consumer Segment Three</span></a></li>
+										<li>
+											<a href="#">
+												<span class="icon-wmkBullet" aria-hidden="true"></span>
+												<span>Consumer Segment Four</span></a></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="hidden-xs gnmenu">
+								<h2 id="gn-for-consumers-title">For Consumers</h2>
+
+								<ul aria-labelledby="gn-for-consumers-title">
+									<li>
+										<a href="#">
+											<span class="icon-wmkBullet" aria-hidden="true"></span>
+											<span>Consumer Segment One</span></a></li>
+									<li>
+										<a href="#">
+											<span class="icon-wmkBullet" aria-hidden="true"></span>
+											<span>Consumer Segment Two</span></a></li>
+									<li>
+										<a href="#">
+											<span class="icon-wmkBullet" aria-hidden="true"></span>
+											<span>Consumer Segment Three</span></a></li>
+									<li>
+										<a href="#">
+											<span class="icon-wmkBullet" aria-hidden="true"></span>
+											<span>Consumer Segment Four</span></a></li>
+								</ul>
+							</div>
+
+						</div>
+						<div class="col-xs-12 col-sm-4">
+
+							<div class="visible-xs nav-tabs">
+								<a id="gn-for-professionals-opener" href="#gn-for-professionals" class="collapsed"
+									aria-expanded="false" aria-controls="gn-for-professionals"
+									data-toggle="collapse">
+									<h2>For Professionals</h2>
+									<span class="icon" aria-hidden="true"></span></a>
+
+								<div id="gn-for-professionals" class="collapse gnmenu" role="region">
+									<ul aria-labelledby="gn-for-professionals-opener">
+										<li>
+											<a href="/employer">
+												<span class="icon-wmkBullet" aria-hidden="true"></span>
+												<span>Employer</span></a></li>
+										<li>
+											<a href="/producer">
+												<span class="icon-wmkBullet" aria-hidden="true"></span>
+												<span>Producer</span></a></li>
+										<li>
+											<a href="/provider">
+												<span class="icon-wmkBullet" aria-hidden="true"></span>
+												<span>Provider</span></a></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="hidden-xs gnmenu">
+								<h2 id="gn-for-professionals-title">Guides</h2>
+
+								<ul aria-labelledby="gn-for-professionals-title">
+									<li>
+										<a href="https://www.realestate.com/first-time-home-buyers/">
+											<span class="icon-wmkBullet" aria-hidden="true"></span>
+											<span>First Time Home Buyer Guide</span></a></li>
+									<li>
+										<a href="https://www.realestate.com/veteran-home-buyers/">
+											<span class="icon-wmkBullet" aria-hidden="true"></span>
+											<span>Veterans Home Buyer Guide</span></a></li>
+								
+								</ul>
+							</div>
+
+						</div>
+						<div class="col-xs-12 col-sm-4">
+
+							<div class="visible-xs nav-tabs">
+								<a id="gn-quick-links-opener" href="#gn-quick-links" class="collapsed"
+									aria-expanded="false" aria-controls="gn-quick-links"
+									data-toggle="collapse">
+									<h2>Quick Links</h2>
+									<span class="icon" aria-hidden="true"></span></a>
+
+								<div id="gn-quick-links" class="collapse gnmenu" role="region">
+									<ul aria-labelledby="gn-quick-links-opener">
+										<li>
+											<a href="#">
+												<span class="icon-wmkBullet" aria-hidden="true"></span>
+												<span>Find a Doctor or Hospital</span></a></li>
+										<li>
+											<a href="#">
+												<span class="icon-wmkBullet" aria-hidden="true"></span>
+												<span>Find an Agent</span></a></li>
+										<li>
+											<a href="/glossary">
+												<span class="icon-wmkBullet" aria-hidden="true"></span>
+												<span>Glossary of Health Care Terms</span></a></li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="hidden-xs gnmenu">
+								<h2 id="gn-quick-links-title">Quick Links</h2>
+
+								<ul aria-labelledby="gn-quick-links-title">
+									<li>
+										<a href="https://www.realestate.com/articles/buying-a-house/10-steps-to-buying-a-house-steps#utm_source=homepage&utm_medium=post">
+											<span class="icon-wmkBullet" aria-hidden="true"></span>
+											<span>How to buy a House</span></a></li>
+									<li>
+										<a href="https://www.realestate.com/articles/finance/how-to-live-on-half-your-income#utm_source=homepage&utm_medium=post">
+											<span class="icon-wmkBullet" aria-hidden="true"></span>
+											<span>Live on Half your Salary</span></a></li>
+									<li>
+										<a href="https://www.realestate.com/articles/finance/how-to-live-on-half-your-income#utm_source=homepage&utm_medium=post">
+											<span class="icon-wmkBullet" aria-hidden="true"></span>
+											<span>Credit Score Hack</span></a></li>
+								</ul>
+							</div>
+
+						</div>
+					</div>
+
+					<% if (!param('authenticated')) { %>
+					<div class="row unauthenticated">
+						<div class="col-xs-12 col-lg-8">
+							<div class="legend">
+								<h2>Already a RealEstate Member?</h2>
+								<div class="required-info">
+									All fields are required
+								</div>
+							</div>
+
+							<form id="gn-loginForm" name="loginForm" class="form-inline login" action="?TODO" method="POST"
+								data-validator data-disable="false" data-focus="false">
+								<div class="errors" aria-hidden="true" role="alert" aria-live="assertive" aria-atomic="true"><div class="errors-focus" tabindex="-1">
+									<span class="icon-warning pull-left" aria-hidden="true"></span>
+									<div class="h4">Please correct the following error(s):</div>
+									<div class="list-unstyled"></div>
+								</div></div>
+
+								<div class="fields">
+									<div class="form-group">
+										<label for="gn-login-user-input">User ID or Email</label>
+										<input id="gn-login-user-input" name="userid" type="text" class="form-control input-lg"
+											required data-native-error="User ID or Email cannot be empty" />
+										<div class="help-block with-errors" aria-hidden="true"></div>
+									</div>
+									<div class="form-group">
+										<label for="gn-login-password-input">Password</label>
+										<input id="gn-login-password-input" name="password" type="password" class="form-control input-lg"
+											required data-native-error="Password cannot be empty" />
+										<div class="help-block with-errors" aria-hidden="true"></div>
+									</div>
+									<div class="actions">
+										<button type="submit" form="gn-loginForm" class="btn btn-nav-primary btn-xl">Log In</button>
+									</div>
+								</div>
+
+								<div class="forgot">
+									<a href="/login-help">Forgot ID or Password?</a>
+								</div>
+							</form>
+						</div>
+
+						<div class="col-xs-12 col-lg-4">
+							<% include ../includes/register.html.ejs %>
+						</div>
+					</div>
+					<%
+					}
+					else {
+					%>
+					<div class="row authenticated hidden-lg hidden-xl">
+						<div class="col-xs-12">
+							<div>
+								<a href="/logout" class="btn btn-nav-primary btn-xl">Log Out</a>
+							</div>
+							<a href="#" class="backto-link">Back to MyRealEstate</a>
+						</div>
+					</div>
+					<%
+					}
+					%>
+
+				</div>
+			</div>
+		</div>
+		<span class="sr-only">End of dialog</span>
+	</div>
+</div>

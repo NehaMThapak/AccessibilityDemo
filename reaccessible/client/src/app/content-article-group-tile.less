@@ -1,0 +1,61 @@
+.content-article-group-tile {
+	font-weight: @font-weight-sans-serif-condensed-bold;
+
+	a {
+		font-size: @font-size-large;
+	}
+
+	ul.list-unstyled {
+		li {
+			margin-bottom: 40px; border-top: 2px solid @gray-lighter-alt; padding-top: 40px;
+
+			&:first-child {
+				border-top: 0 none; padding-top: 0;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	.title {
+		font-size: @font-size-large;
+	}
+
+	.date {
+		font-size: @font-size-semilarge; text-transform: uppercase;
+	}
+
+	// // Small devices (tablets, 768px and up)
+	// @media (min-width: @screen-sm-min) {
+
+	// }
+
+	// //  Medium devices (desktops, 992px and up)
+	// @media (min-width: @screen-md-min) {
+
+	// }
+
+	//  Large devices (large desktops, 1200px and up)
+	@media (min-width: @screen-lg-min) {
+		a {
+			font-size: @font-size-large  + 1;
+		}
+	}
+
+	// //  Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+}
+
+.primary {
+	.content-article-group-tile {
+		ul.list-unstyled {
+			li {
+				border-top-color: rgba(255,255,255,0.3);
+			}
+		}
+	}
+}

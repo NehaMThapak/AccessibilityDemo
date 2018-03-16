@@ -1,0 +1,1 @@
+!function(a){"use strict";function b(){a(document).on("click","a[disabled],a.disabled",c).on("click","a.print-page",d).on("change",'select[name="magsubnav"]',e)}function c(a){a.preventDefault(),a.stopImmediatePropagation()}function d(a){a.preventDefault(),window.print()}function e(b){window.location=a(this).find("option:selected").val()}b()}(jQuery);

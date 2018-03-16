@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'Careers';
+		var backLinkUrl = '/about/careers';
+		var pageTitle = 'Have a Question?';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+								<small>Lorem ipsum dolor sit amet.</small>
+							</h1>
+
+							<p>
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+								Nam vitae magna sagittis, pulvinar dui a, convallis dolor.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<%
+							var collapseId;
+							var collapseTitle;
+							[
+								'How do I apply for a job?',
+								'Do you have any job openings in (specifc area)?',
+								'Will I get called aftert an interview even if I don\'t get the position?',
+								'How do I know where I am in the application process?',
+								'How can I rescedule an interview?'
+							].forEach(function(title, idx) {
+								collapseId = 'collapse-' + (idx + 1);
+								collapseTitle = title;
+							%>
+							<% include ../includes/collapse-content-tile.html.ejs %>
+							<%
+							});
+							%>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

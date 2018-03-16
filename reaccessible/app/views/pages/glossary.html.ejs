@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content">
+		<%
+		var alphabet = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
+		var glossary = {};
+		var termCounter = 0;
+
+		alphabet.forEach(function (letter) {
+			glossary[letter] = {};
+
+			[1,2,3].forEach(function (num) {
+				termCounter++;
+
+				if (letter === 'c' && num === 2) {
+					glossary[letter]['term' + termCounter] = {
+						term: 'Coinsurance',
+						definition: 'Your share of the costs of a covered health care service, calculated as a percentage (for example, 20%) of the allowed amount for the service. You pay coinsurance after you\'ve met your deductible. For example, if the health insurance plan\'s allowed amount for an office visit.......'
+					}
+				}
+				else {
+					glossary[letter]['term' + termCounter] = {
+						term: 'Term' + termCounter,
+						definition: 'Definition for ' + letter.toUpperCase() + ' Term' + termCounter
+					};
+				}
+			});
+		});
+		%>
+
+		<div class="glossary-nav">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-xs-12">
+						<h1>Glossary of Terms</h1>
+
+						<div class="letters">
+							<select name="letter" id="letter" aria-label="Letter" data-jcf="{&quot;wrapNative&quot;:true,&quot;wrapNativeOnMobile&quot;:true,&quot;fakeDropInBody&quot;:false,&quot;maxVisibleItems&quot;:7,&quot;useCustomScroll&quot;:false}">
+							<%
+							alphabet.forEach(function (letter) {
+							%>
+								<option value="<%= letter %>"><%= letter.toUpperCase() %></option>
+							<%
+							});
+							%>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="content-tile">
+						<ul class="list-unstyled letters">
+						<%
+						alphabet.forEach(function (letter) {
+						%>
+							<li>
+								<a id="<%= letter %>" class="anchor"></a>
+								<h2><span class="text"><%= letter.toUpperCase() %></span></h2>
+
+								<ul class="list-unstyled terms">
+								<%
+								for (var term in glossary[letter]) {
+								%>
+									<li>
+										<a id="<%= glossary[letter][term].term.toLowerCase() %>" class="anchor"></a>
+										<div class="term">
+											<h3><%= glossary[letter][term].term %></h3>
+										</div>
+
+										<div class="definition">
+											<%= glossary[letter][term].definition %>
+										</div>
+									</li>
+								<%
+								}
+								%>
+								</ul>
+							</li>
+						<%
+						});
+						%>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

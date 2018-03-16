@@ -1,0 +1,125 @@
+.content-preview-tile {
+	padding-bottom: 20px;
+
+	>div {
+		padding: 25px; .border-radius(6px);
+		background-color: #fff;
+		color: @text-color;
+
+		a {
+			text-decoration: none;
+		}
+
+		.image {
+			text-align: center;
+
+			img {
+				width: 150px; height: 120px;
+			}
+		}
+
+		h3 {
+			margin-top: 10px;
+			font-weight: @font-weight-sans-serif-condensed-bold; font-size: @font-size-largest; text-transform: none;
+			>a {
+				color: inherit;
+				
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+
+		p {
+			font-size: @font-size-semilarge;
+			>a {
+				color: @brand-primary;
+				text-decoration: @link-hover-decoration;
+			}
+		}
+
+		.link {
+			// TODO:  remove this once content is updated.
+			color: red;
+			background-color: yellow;
+			text-decoration: @link-hover-decoration;
+		}
+
+		.action {
+			margin-top: 10px;
+			text-align: center;
+		}
+
+		.icon {
+			color: @brand-primary;
+			&:hover {
+				color: darken(@brand-primary, 10%);
+			}
+		}
+
+		.icon-wmkCircleArrowRight {
+			font-size: 28px;
+		}
+
+		.icon-wmkExternalLinkBig {
+			font-size: 38px;
+		}
+	}
+
+
+
+	// Small devices (tablets, 768px and up)
+	@media (min-width: @screen-sm-min) {
+		>div {
+			position: relative;
+			min-height: 220px;
+			padding: 55px 100px 55px 270px;
+
+			h3 {
+				margin-top: 0; margin-bottom: 20px;
+			}
+
+			.image {
+				position: absolute;
+				top: 50%; left: 45px;
+				height: 160px;
+				margin-top: -78px;
+				text-align: left;
+
+				img {
+					width: 200px; height: inherit;
+				}
+			}
+
+			.action {
+				margin-top: 0;
+				text-align: left;
+				a {
+					position: absolute;
+					top: 50%; right: 25px;
+					margin-top: -15px;
+					line-height: 0;
+				}
+			}
+
+			.icon-wmkCircleArrowRight {
+				font-size: 34px;
+			}
+		}
+	}
+							
+	// // Medium devices (desktops, 992px and up)
+	// @media (min-width: @screen-md-min) {
+
+	// }
+
+	// Large devices (large desktops, 1200px and up)
+	@media (min-width: @screen-lg-min) {
+		padding-bottom: 30px;
+	}
+
+	// // Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+}

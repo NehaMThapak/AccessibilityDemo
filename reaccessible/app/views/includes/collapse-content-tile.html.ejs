@@ -1,0 +1,40 @@
+<%
+guid = uuid();
+guid_2 = uuid();
+%>
+<div class="collapse-content-tile">
+	<h4 class="collapse-content-tile-header">
+		<button id="<%= guid_2 %>" type="button" class="btn"
+			aria-expanded="false" aria-controls="<%= guid %>"
+			data-toggle="collapse" data-target="#<%= guid %>">
+			<span class="text"><%- collapseTitle %></span>
+			<span class="icon" aria-hidden="true"></span>
+		</button>
+	</h4>
+	<div id="<%= guid %>" class="collapse" role="region" aria-labelledby="<%= guid_2 %>">
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.</p>
+		<h4 aria-level="5">Curabitur Ex Nisl, Gravida Ac</h4>
+		<ul class="unstyled">
+				<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.</li>
+				<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.<br/>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.
+				<br/><br/></li>
+		</ul>
+		<h4 aria-level="5">Mauris Nec Eleifend Lorem</h4>
+		<ul class="unstyled">
+			<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.</li>
+			<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit.Etiam at gravida est, vitae lobortis nisl. Proin bibendum mauris eget sollicitudin.</li>
+		</ul>
+	</div>
+</div>

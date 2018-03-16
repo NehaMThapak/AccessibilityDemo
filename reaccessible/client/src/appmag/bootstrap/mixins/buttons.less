@@ -1,0 +1,48 @@
+.button-variant-hover(@color; @background; @border; @hoverColor; @hoverBackground; @hoverBorder) {
+  color: @color;
+  background-color: @background;
+  border-color: @border;
+
+  &:focus,
+  &.focus {
+    color: @hoverColor;
+    background-color: @hoverBackground;
+        border-color: @hoverBorder;
+  }
+  &:hover {
+    color: @hoverColor;
+    background-color: @hoverBackground;
+        border-color: @hoverBorder;
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    color: @hoverColor;
+    background-color: @hoverBackground;
+        border-color: @hoverBorder;
+
+    &:hover,
+    &:focus,
+    &.focus {
+      color: @hoverColor;
+      background-color: @hoverBackground;
+      	  border-color: @hoverBorder;
+    }
+  }
+  &:active,
+  &.active,
+  .open > .dropdown-toggle& {
+    background-image: none;
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: @background;
+          border-color: @border;
+    }
+  }
+
+}

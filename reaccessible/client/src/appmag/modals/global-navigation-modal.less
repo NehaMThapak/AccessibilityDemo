@@ -1,0 +1,218 @@
+// Global Navigation Modal
+.modal#global-navigation-modal {
+	.modal-dialog {
+		height: 100%;
+		margin: 0;
+	}
+
+	.modal-content {
+		height: 100%;
+		border: 0 none; .border-radius(0);
+		// background-color: darken(@brand-primary, 3%);
+		background-color: darken(@brand-primary, 2%);
+	}
+
+	.modal-header {
+		border-bottom: 0 none; padding: 11px 20px;
+		background-color: darken(@brand-primary, 2%);
+		a {
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.modal-body {
+		background-color: @brand-primary;
+	}
+
+	.modal-header,
+	.modal-body,
+	a {
+		color: #fff;
+	}
+
+	.modal-title,
+	h2 {
+		font-weight: @font-weight-sans-serif-condensed-bold; white-space: nowrap;
+	}
+
+	.modal-title {
+		font-weight: 400;
+		text-transform: none;
+		font-size: 16px;
+		margin-top: 5px;
+		margin-bottom: 6px;
+	}
+
+	h2 {
+		display: inline-block;
+		margin: 0 0 20px 0; padding: 20px 0 10px 0;
+		font-size: 20px;
+	}
+
+	.modal-footer {
+		display: none;
+	}
+
+// border-left: 1px solid lighten(@brand-primary, 15%);
+
+	.modal-body {
+		padding: 0;
+
+		a {
+			text-decoration: none;
+			&:hover,
+			&:focus {
+				text-decoration: @link-hover-decoration;
+			}
+		}
+
+		.magnav {
+			.row();
+
+			> ul {
+				border-top: 1px solid lighten(@brand-primary, 15%);
+				padding:0;
+				margin: 0;
+
+				> li {
+					list-style: none;
+					border-bottom: 1px solid lighten(@brand-primary, 15%);
+					position: relative;
+					a {
+						display: block;
+						font-size: 20px;
+						font-weight: 600;
+						text-transform: uppercase;
+						padding: 20px;
+						&:hover {
+							background: rgba(0,0,0,0.2);
+						}
+					}
+					.icon {
+						position: absolute;
+						top: 50%; right: 20px; z-index: 5;
+						margin-top: -10px;
+						font-size: 20px;
+						.icon-wmkCaretRight();
+						text-align: right;
+					}
+					&:last-child {
+						border-bottom: none;
+
+						a {
+							padding-left: 35px;
+							font-weight: 400;
+							text-transform: none;
+							font-size: 16px;
+							line-height: 1;
+							background: darken(@brand-primary, 2%);
+							&:hover {
+								background: darken(@brand-primary, 2%);
+							}
+						}
+						.icon {
+							left: 15px;
+							right: auto;
+							top: 30px;
+
+							&:after {
+								content: "\e906";
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+
+	.btn-close {
+		line-height: 1;
+		position: absolute;
+		top: 5px; right: 5px; z-index: 10;
+		width: 42px; height: 41px;
+		border: 0 none; padding: 0;
+		background: transparent none;
+		color: #fff;
+		font-size: 35px; text-align: center;
+	}
+
+	// Small devices (tablets, 768px and up)
+
+	@media (min-width: @screen-sm-min) {
+		.modal-title {
+			margin-top: 14px;
+			margin-bottom: 14px;
+		}
+		.btn-close {
+			top: 14px
+		}
+	}
+
+	// //  Medium devices (desktops, 992px and up)
+	@media (min-width: @screen-md-min) {
+		display: none;
+		// display: block !important;
+		// opacity: 1;
+		// top:98px;
+
+		padding-top: 28px;
+		height: 74px;
+		background-color: @brand-primary;
+		position: static;
+		order: -1;
+		z-index: 0;
+
+		.modal-dialog {
+			height: auto;
+
+			.modal-content {
+				background: none;
+				box-shadow: none;
+
+				.modal-header {background: none; display: none;}
+				.modal-body {
+					background: none;
+					.magnav > ul {
+						width: 46%;
+						margin: 0 auto;
+						padding-bottom: 22px;
+						border-top: none;
+						border-bottom: 1px solid lighten(@brand-primary, 15%);
+						display: flex;
+						justify-content: space-between;
+
+						> li {
+							border-bottom: none;
+							display: inline;
+							a {
+								display: inline-block;
+								font-size: 16px;
+								font-weight: 500;
+								text-transform: none;
+								padding: 0;
+							}
+							.icon { display: none; }
+
+							&:last-child {display: none;}
+						}
+					}
+				}
+			}
+		}
+		.btn-close { display: none;}
+	}
+
+	//  Large devices (large desktops, 1200px and up)
+	//@media (min-width: @screen-lg-min) {
+
+	//}
+
+	// //  Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+}

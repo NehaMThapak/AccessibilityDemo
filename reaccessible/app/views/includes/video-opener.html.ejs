@@ -1,0 +1,11 @@
+<div class="video-opener">
+	<h4 class="video-title"><%- videoTitle %></h4>
+	<button type="button" class="btn"
+		aria-controls="video-modal"
+		data-toggle="modal" data-target="#video-modal"
+		data-video-url="<%- /.[?&]enablejsapi/.test(videoUrl) ? videoUrl : videoUrl + (videoUrl.indexOf('?') >= 0 ? '&' : '?') + 'enablejsapi=1' %>">
+		<img src="http://fpoimg.com/398x223?bg_color=000000&text_color=666666" alt="Play Video <%- videoTitle %>" />
+		<span class="video-play-icon" aria-hidden="true">
+			<span class="icon-play"></span></span>
+	</button>
+</div>

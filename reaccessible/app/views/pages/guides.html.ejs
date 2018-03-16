@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'About RealEstate';
+		var backLinkUrl = '/about';
+		var pageTitle = 'Guides';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+							</h1>
+
+							<p>
+									First-Time Home Buyers
+									Shopping. Buying. Owning for the first time.
+									Veteran Home Buyers
+									Helping service members and their families buy homes
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<%
+							var contentPreviewTitle;
+							var contentPreviewHeaderColor;
+							var contentPreviewLink;
+							var contentPreviewIsExternal;
+							[
+								{
+									title: 'First-Time Home Buyers',
+									headerColor: 'orange',
+									link: '/about/guides/first-time-buyer'
+								},
+								{
+									title: 'Veteran Home Buyers',
+									headerColor: 'aqua',
+									link: '/about/guides/venture-capital'
+								}
+							].forEach(function (item) {
+								contentPreviewTitle = item.title;
+								contentPreviewHeaderColor = item.headerColor;
+								contentPreviewLink = item.link;
+								contentPreviewIsExternal = !!item.isExternal;
+							%>
+							<% include ../includes/content-preview-tile.html.ejs %>
+							<%
+							});
+							%>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

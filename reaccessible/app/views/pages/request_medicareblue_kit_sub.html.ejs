@@ -1,0 +1,51 @@
+<% extraStyles = ['WellmarkWFFM','Custom']; %>
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'Medicare Explained';
+		var backLinkUrl = '/individual-family';
+		var pageTitle = 'Enrollment';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile " style="padding-top: 0;">
+							<!-- Paste in start -->
+							<form action="/form/Index?wffm.FormItemId=e8a65f40-d47c-4259-8440-17b69860bd58&amp;wffm.Id=c82fd893-ed3e-45e1-96c2-3c6a168dbf2a" class="text-left" data-wffm="{E8A65F40-D47C-4259-8440-17B69860BD58}" data-wffm-ajax="True" enctype="multipart/form-data" id="wffmc82fd893ed3e45e196c23c6a168dbf2a" method="post">
+								<div class="page-header">
+									<h1>Thank you for your request.</h1>
+								</div>
+								<p>A Wellmark representative will contact you shortly.</p>
+							</form>
+							<!-- Paste in end -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

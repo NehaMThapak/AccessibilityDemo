@@ -1,0 +1,113 @@
+@import "../app/bootstrap/variables.less";
+@import "../app/bootstrap/mixins.less";
+@import "../app/font-icons.less";
+
+#global-content {
+	// Default / Extra-Small devices (mobile, 320px and up)
+
+	>.container-fluid > .row:first-child {
+		padding: 0 30px 30px 30px;
+		@media (min-width: @screen-md-min) {
+			padding-top: 30px;
+		}
+	}
+
+	> .container-fluid > .row > [class^="col-"],
+	> .container-fluid > .row > [class*=" col-"] {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	form {
+		position: relative;
+	}
+
+	.form-group {
+		margin-bottom: 0;
+	}
+
+	.icon-search {
+		position: absolute;
+		top: 50%; left: 4px; z-index: 5;
+		width: 40px; height: 20px;
+		margin-top: -10px;
+		color: @nav-primary-btn-bg;
+		font-size: 20px; text-align: center;
+	}
+
+	input[type="search"] {
+		height: 42px;
+		padding: 10px 12px;
+		font-size: @font-size-semilarge;
+	}
+
+	h1 {
+		font-size: 20px;
+	}
+
+	@media (max-width: @screen-sm-max) {
+		input[type="search"] {
+			padding-left: 48px;
+		}
+	}
+
+	// // Small devices (tablets, 768px and up)
+	// @media (min-width: @screen-sm-min) {
+
+	// }
+
+	// Medium devices (desktops, 992px and up)
+	@media (min-width: @screen-md-min) {
+		h1 {
+			margin: 0 0 0 0; padding-right: 25px;
+			color: #fff;
+			font-size: 40px; text-align: right; white-space: nowrap;
+		}
+
+		form {
+			padding-right: 160px;
+		}
+
+		.btn-search-form {
+			position: absolute;
+			top: 0; right: 0; z-index: 5;
+			text-transform: uppercase;
+		}
+
+		.icon-search {
+			display: none;
+		}
+
+		input[type="search"] {
+			height: 50px;
+			padding: 14px 22px;
+			font-size: 20px;
+		}
+	}
+
+	// // Large devices (large desktops, 1200px and up)
+	// @media (min-width: @screen-lg-min) {
+
+	// }
+
+	// // Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+}
+
+.search-content {
+	padding: 30px 15px 15px 15px;
+	font-size: 16px;
+	line-height: 1.6;
+
+	@media (min-width: @screen-sm-min) {
+		padding: 30px 20px;
+	}
+
+	@media (min-width: @screen-md-min) {
+		padding: 30px 50px;
+		line-height: 1.8;
+	}
+
+}

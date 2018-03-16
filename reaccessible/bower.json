@@ -1,0 +1,31 @@
+{
+  "name": "reaccessible",
+  "version": "0.0.0-1",
+  "private": true,
+  "description": "RealEstate dummy Website",
+  "homepage": "localhost:3009",
+  "author": "Neha Thapaqk",
+  "contributors": [
+    {
+      "name": "Neha Thapak",
+      "email": "nehat@zillowgroup.com"
+    }
+  ],
+  "dependencies": {
+    "accdc-bootstrap": "https://github.com/accdc/bootstrap.git#master",
+    "bootstrap": "3.3.x",
+    "bootstrap-formhelpers": "2.3.x",
+    "bootstrap-slider": "https://github.com/seiyria/bootstrap-slider.git#v7.0.3",
+    "bootstrap-validator": "0.10.x",
+    "jcf": "https://github.com/Genex/jcf.git#alternate",
+    "jquery": "2.2.x",
+    "jquery-hammerjs": "1.1.x",
+    "picturefill": "3.0.x",
+    "lodash": "3.10.x",
+    "matchheight": "0.7.0"
+  },
+  "resolutions": {
+    "jquery": "2.2.x",
+    "bootstrap": "3.3.x"
+  }
+}

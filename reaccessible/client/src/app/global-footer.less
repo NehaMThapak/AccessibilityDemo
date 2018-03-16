@@ -1,0 +1,137 @@
+#global-footer {
+	//margin-bottom: 50px;
+	padding: @padding-large-horizontal;
+	background-color: @gray;
+
+	&,
+	a {
+		color: #fff;
+	}
+
+	a {
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			text-decoration: @link-hover-decoration;
+		}
+	}
+	
+	li {
+		list-style: none;
+	}
+
+	#related-sites-opener[aria-expanded="true"] .icon-reaCaretDown {
+		.icon-wmkCaretUp();
+	}
+
+	.row {
+		margin-right: 0; margin-left: 0;
+
+		&:first-child {
+			.h4 {
+				margin-bottom: 15px;
+			}
+
+			.list-unstyled,
+			.list-inline {
+				>li {
+					margin-bottom: 15px;
+					font-size: @font-size-semilarge;
+				}
+			}
+
+			.list-inline > li {
+				border-right: 1px solid rgba(255,255,255,0.3); padding-right: 5px;
+
+				&:last-child {
+					border-right: 0 none; padding-right: 0;
+				}
+			}
+		}
+
+		+ .row {
+			margin-top: 25px;
+
+			>.col-md-4 {
+				margin-top: 20px;
+			}
+		}
+	}
+
+	.copyright a {
+		font-weight: @font-weight-sans-serif-condensed-bold; text-transform: uppercase;
+	}
+
+	.social-links {
+		.clearfix();
+
+		.nav > li {
+			margin-right: 7px; margin-bottom: 7px; margin-left: 0;
+		}
+
+		.nav-pills > li > a {
+			.border-radius(@border-radius-small);
+		}
+
+		.nav > .list-inline > li {
+			border-left: 1px solid #fff;
+
+			&:first-child {
+				border-left: 0 none;
+			}
+		}
+
+		a {
+			width: 40px; height: 40px;
+			padding: 0;
+			background-color: @gray-dark;
+			text-align: center;
+
+			&:hover {
+				background-color: #fff;
+				color: @gray-dark;
+				text-decoration: none;
+			}
+		}
+
+		*[class^="icon-"],
+		*[class*=" icon-"] {
+			font-size: 22px; line-height: 1.8;
+		}
+	}
+
+	// Small devices (tablets, 768px and up)
+	@media (min-width: @screen-sm-min) {
+		position: relative;
+		z-index: 10;
+
+		.row + .row {
+			margin-top: 75px;
+
+			>.col-md-4 {
+				margin-top: 0;
+			}
+		}
+
+		.nav {
+			.pull-right();
+		}
+	}
+
+	// // Medium devices (desktops, 992px and up)
+	// @media (min-width: @screen-md-min) {
+
+	// }
+
+	// // Large devices (large desktops, 1200px and up)
+	// @media (min-width: @screen-lg-min) {
+
+	// }
+
+	// // Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+
+}

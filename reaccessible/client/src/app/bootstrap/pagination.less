@@ -1,0 +1,56 @@
+@import "bower_components/bootstrap/less/pagination.less";
+
+//
+// Bootstrap Pagination Overrides
+// --------------------------------------------------
+
+.pagination {
+	list-style: none;
+	> li {
+		&.skip > span {
+			top: 4px;
+		}
+		&.skip > span:hover {
+			color: @pagination-color;
+		}
+		&:first-child, &:last-child, &.skip {
+			> span,
+			> span:hover,
+			> span:focus,
+			> a,
+			> a:hover,
+			> a:focus {
+				border: none;
+				background-color: transparent;
+				margin: 0;
+				&.icon-wmkCarouselArrowRight, &.icon-wmkCarouselArrowLeft {
+					top: 2px;
+				}
+				&.icon-wmkCarouselArrowLeft {
+					padding-left:0;
+				}
+				&.icon-wmkCarouselArrowRight {
+					padding-right:0;
+				}
+			}
+			> .active, > .disabled {
+				> span,
+				> span:hover,
+				> span:focus,
+				> a,
+				> a:hover,
+				> a:focus {
+					border: none;
+					background-color: transparent;
+					margin: 0;
+				}
+			}
+		}
+		> a, > span {
+			margin: 0 5px;
+			border-radius: 2px;
+			font-weight: bold;
+			padding: 3px 8px;
+		}
+	}
+}

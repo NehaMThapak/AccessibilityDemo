@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'About RealEstate';
+		var backLinkUrl = '/about';
+		var pageTitle = 'Careers';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+							</h1>
+							<p>
+								Find your purpose at RealEstate.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<%
+							var contentPreviewTitle;
+							var contentPreviewHeaderColor;
+							var contentPreviewLink;
+							var contentPreviewIsExternal;
+							[
+								{
+									title: 'Find a Job',
+									headerColor: 'green',
+									link: '/about/careers/find-job'
+								},
+								{
+									title: 'Benefits, Culture &amp; Diversity',
+									headerColor: 'orange',
+									link: '/about/careers/benefits'
+								},
+								{
+									title: 'Have a Question?',
+									headerColor: 'torquise',
+									link: '/about/careers/questions'
+								}
+							].forEach(function (item) {
+								contentPreviewTitle = item.title;
+								contentPreviewHeaderColor = item.headerColor;
+								contentPreviewLink = item.link;
+								contentPreviewIsExternal = !!item.isExternal;
+							%>
+								<% include ../includes/content-preview-tile.html.ejs %>
+							<%
+							});
+							%>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

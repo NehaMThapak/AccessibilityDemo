@@ -1,0 +1,109 @@
+// Search Modal
+.modal#search-modal {
+
+	.modal-dialog {
+		margin: 0;
+	}
+
+	.modal-content {
+		height: 50px;
+		border: 0 none; .border-radius(0);
+		background-color: @brand-primary;
+	}
+
+	.modal-header,
+	.modal-footer {
+		display: none;
+	}
+
+	.modal-body {
+		padding: 4px 50px 4px 4px;
+	}
+
+	.form-group {
+		margin-bottom: 0;
+		max-width: 100%;
+	}
+
+	.icon-search {
+		position: absolute;
+		top: 50%; left: 4px; z-index: 5;
+		width: 40px; height: 20px;
+		margin-top: -10px;
+		color: @nav-primary-btn-bg;
+		font-size: 20px; text-align: center;
+	}
+
+	input[type="search"] {
+		height: 42px;
+		padding: 5px 12px;
+		font-size: @font-size-semilarge;
+	}
+
+	.btn-close {
+		position: absolute;
+		top: 5px; right: 4px; z-index: 10;
+		width: 42px; height: 41px;
+		border: 0 none; padding: 0;
+		background: transparent none;
+		color: #fff;
+		font-size: 30px; text-align: center;
+	}
+
+	@media (max-width: @screen-xs-max) {
+		input[type="search"] {
+			padding-left: 48px;
+		}
+	}
+
+	// Small devices (tablets, 768px and up)
+	@media (min-width: @screen-sm-min) {
+		.modal-dialog {
+			width: 100%;
+		}
+		.modal-content {
+			height: 135px;
+		}
+
+		.modal-body {
+			padding: 42px 244px 42px 68px;
+		}
+
+		.icon-search {
+			display: none;
+		}
+
+		input[type="search"] {
+			height: 50px;
+			padding: 5px 22px;
+			font-size: 20px;
+		}
+
+		.btn-search-form {
+			position: absolute;
+			top: 41px; right: 82px; z-index: 5;
+			width: 141px;
+		}
+
+		.btn-close {
+			top: 13px;
+			right: 11px;
+			font-size: 35px;
+		}
+	}
+
+	// //  Medium devices (desktops, 992px and up)
+	// @media (min-width: @screen-md-min) {
+
+	// }
+
+	// //  Large devices (large desktops, 1200px and up)
+	// @media (min-width: @screen-lg-min) {
+
+	// }
+
+	// //  Extra-Large devices (large desktops, 1300px and up)
+	// @media (min-width: @screen-xl-min) {
+
+	// }
+}

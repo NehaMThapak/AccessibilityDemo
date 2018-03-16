@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'Guides';
+		var backLinkUrl = '/about/guides';
+		var pageTitle = 'BluesCare Giving&trade;';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+							</h1>
+
+							<p>
+								Wellmark employees are invested in their communities. Since 2011, our employees have volunteered more than XXX,XXX hours to qualifying organizations. The Wellmark Foundation matches these hours with contributions to the employees' designated organizations. For every 24 hours an employee volunteers, the employee can designate $1,000 to the nonprofit of his or her choice.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'primary'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12 col-md-6 middle" style="background-color:white;">
+						<img src="http://fpoimg.com/515x300?bg_color=ffffff&text_color=0079bc&text=FPO" alt="" style="width:100%;" />
+					</div>
+					<div class="col-xs-12 col-md-6">
+						<div class="content-tile content-rich-text-tile">
+							<p>
+								The Wellmark Foundation also matches Wellmark employee personal contributions dollar-for-dollar to eligible nonprofit organizations.
+							</p>
+
+							<p>
+								Through this signature initiative, over $XX million has been distributed to nonprofits in Iowa and South Dakota.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<h3>bluescare giving in action</h3>
+							<p>See how Wellmark employees use the programs offered by The Wellmark Foundation.</p>
+
+							<div class="row">
+								<%
+								var videoUrl;
+								var videoTitle;
+								[
+									{
+										title: 'Introduction to Superposition',
+										url: 'https://www.youtube.com/embed/lZ3bPUKo5zc'
+									},
+									{
+										title: 'Algorithmic Thinking, Peak Finding',
+										url: 'https://www.youtube.com/embed/HtSuA80QTyo'
+									}
+								].forEach(function (video) {
+									videoUrl = video.url;
+									videoTitle = video.title;
+								%>
+								<div class="col-xs-12 col-lg-6">
+									<% include ../includes/video-opener.html.ejs %>
+								</div>
+								<%
+								});
+								%>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = ''; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<% include ../includes/about-next.html.ejs %>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

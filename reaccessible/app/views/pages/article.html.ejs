@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'Newsroom';
+		var backLinkUrl = '/about/newsroom';
+		var pageTitle = 'News Article';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = 'primary'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+								<small>Lorem ipsum dolor sit amet.</small>
+							</h1>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'default'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<div class="content-rich-text-tile">
+								<div class="date">January 28, 2016</div>
+
+								<p>
+									DES MOINES, Iowa – The Iowa Healthiest State Initiative announced today, Iowa ranks 14th in the nation in the Gallup-Healthways Well-Being Index&reg;, up from 16th a year ago.
+								</p>
+
+								<p>
+									In addition to capturing aspects of physical health, the Gallup-Healthways Well-Being Index examines Americans' perceptions on topics that span individuals' sense of purpose, social relationships, financial security and relationship to their community. These five interrelated elements are proven to directly influence quality of life, health care costs and workplace productivity.
+								</p>
+
+								<p>
+									&quot;This report reveals a moderate improvement in overall well-being of Iowans,&quot; said Jami Haberl, Iowa Healthiest State Initiative executive director. &quot;It is encouraging to see Iowa move up in the rankings and make strides in our goal to become the healthiest state.&quot;
+								</p>
+
+								<h3>Iowa's ranking explained</h3>
+								<p>
+									Iowa's overall score improved in all elements except community. Iowa's highest rank is in the financial well-being element, at 5th in the nation. Iowans report they generally have enough resources to buy food and do everything they want to do. The area where there is the greatest potential for improvement is the physical element. Iowa ranks last in terms of fruit and vegetable consumption, 38th in obesity and 36th in smokeless tobacco.
+								</p>
+
+								<p>
+									&quot;While we are excited about the improvements shown, there is still a lot of work to be done,&quot; said Haberl. &quot;In the coming year, the Healthiest State Initiative will be focusing on increasing the number of Iowans living an active and healthy lifestyle.&quot;
+								</p>
+
+								<p>
+									The Healthiest State Initiative promotes getting Iowans moving and eating better through activities such as the Healthiest State Walk, Live Healthy Iowa challenges, the Smarter Plate and Blue Zones Project&reg; programs.
+								</p>
+
+								<h3>Official measurement tool</h3>
+								<p>
+									The Well-Being Index is the official measurement tool of the Iowa Healthiest State Initiative and Blue Zones Project&reg;. Wellmark is sponsoring Blue Zones Project in Iowa, which is a centerpiece of the Healthiest State Initiative. In Iowa, Blue Zones Project represents the largest community well-being improvement initiative ever launched. The project is based on Blue Zones&reg; principles gathered from places around the world where people naturally live longer, happier and more productive lives with lower rates of chronic disease and a higher quality of life.
+								</p>
+
+								<p>
+									&quot;Iowa communities have made many improvements over the past few years,&quot; said Laura Jackson, Wellmark executive vice president and Healthiest State Initiative board member. &quot;However, a sustained transformation requires changes in policies, built environments and social networks, which takes time. The Iowa communities that have achieved Blue Zones Certification are great examples of the work that needs to be done to improve the overall well-being of Iowans.&quot;
+								</p>
+
+								<p>
+									Thirteen communities including Algona, Cedar Falls, Fairfield, Harlan, Marion, Mason City, Muscatine, Oskaloosa, Sioux City, Spencer, Spirit Lake, Waterloo and Woodbine have achieved Blue Zones Community&reg; certification. Iowa City and Cedar Rapids are working toward certification in early 2016. Statewide more than 215,000 Iowans have pledged their support for Blue Zones Project, and all Iowa businesses can access resources and tools online at <a href="http://www.bluezonesproject.com">www.bluezonesproject.com</a> to become involved.
+								</p>
+
+								<p>
+									&quot;Iowans have several tools available to them to become the healthiest state, but we have a long road ahead of us,&quot; Jackson said.
+								</p>
+
+								<p>
+									To access the &quot;State of American Well-Being: 2015 State Well-Being Rankings,&quot; visit <a href="http://www.well-beingindex.com/2015-state-rankings">www.well-beingindex.com/2015-state-rankings</a>.
+								</p>
+
+								<h3>About Iowa Healthiest State Initiative</h3>
+								<p>
+									The Iowa Healthiest State Initiative is the nation's first statewide comprehensive well-being improvement program. This business-led, government-endorsed effort is expected to help Iowans live longer, healthier and more productive lives, while also enabling the state to redirect billions of dollars currently spent on health care to efforts that will further grow the state's economy. The Healthiest State Initiative is designed to help Iowa become the number one ranked state for well-being within five years as measured by the WBI. For more information, visit <a href="http://www.iowahealthieststate.com">www.iowahealthieststate.com</a>.
+								</p>
+
+								<h3>About Blue Zones</h3>
+								<p>
+									Blue Zones employs evidence-based ways to help people live longer, better. The Company's work is rooted in the New York Times best-selling books The Blue Zones and Thrive — both published by National Geographic books. In 2009, Blue Zones applied the tenets of the books to Albert Lea, MN and successfully raised life expectancy and lowered health care costs for city workers by 40%. Blue Zones takes a systematic, environmental approach to well-being, which focuses on optimizing policy, building design, social networks, and the built environment. The Blue Zones Project is based on this innovative approach. For more information, visit <a href="http://www.bluezones.com">www.bluezones.com</a>.
+								</p>
+
+								<h3>About Wellmark</h3>
+								<p>
+									Wellmark, Inc. does business as Wellmark Blue Cross and Blue Shield of Iowa. Wellmark and its subsidiaries and affiliated companies, including Wellmark Blue Cross and Blue Shield of South Dakota and Wellmark Health Plan of Iowa, Inc., insure or pay health benefit claims for more than 2 million members in Iowa and South Dakota. Wellmark Blue Cross and Blue Shield of Iowa, Wellmark Blue Cross and Blue Shield of South Dakota, and Wellmark Health Plan of Iowa, Inc. are independent licensees of the Blue Cross and Blue Shield Association.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

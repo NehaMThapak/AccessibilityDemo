@@ -1,0 +1,416 @@
+<%
+var menuItems = {};
+
+switch (segment) {
+	case ('about'):
+		menuItems = {
+			companyInformation: {
+				id: 'companyInformation',
+				href: config.rootPath + 'about/company-information',
+				text: 'Company Information',
+				iconUrl: config.assetPath + 'img/icon-segment-one.png',
+				subMenuIds: ['who', 'basics', 'directorsOfficers', 'bio'],
+				subMenuItems: [
+					{
+						id: 'who',
+						href: '/about/company-information/who',
+						text: 'Who We Are',
+						navTitle: 'Who We Are'
+					},
+					{
+						id: 'basics',
+						href: '/about/company-information/basics',
+						text: 'The RealEstate Basics'
+					},
+					{
+						id: 'directorsOfficers',
+						href: '/about/company-information/directors-officers',
+						text: 'Directors &amp; Officers',
+						subMenuIds: ['bio']
+					}
+				]
+			},
+			newsroom:	{
+				id: 'newsroom',
+				href: config.rootPath + 'about/newsroom',
+				text: 'Newsroom',
+				navTitle: 'Newsroom',
+				iconUrl: config.assetPath + 'img/newsroom.png',
+				subMenuIds: ['article']
+			},
+			contact: {
+				id: 'contact',
+				href: config.rootPath + 'about/contact',
+				text: 'Support'
+			},
+			guides: {
+				id: 'guides',
+				href: config.rootPath + 'about/guides',
+				text: 'Guides',
+				subMenuIds: ['healthImprovement', 'ventureCapital'],
+				subMenuItems: [
+					{
+						id: 'healthImprovement',
+						href: config.rootPath + 'about/guides/first-time-buyer',
+						text: 'First Time Home Buyer Guide'
+					},
+					{
+						id: 'ventureCapital',
+						href: config.rootPath + 'about/guides/venture-capital',
+						text: 'Veterans Home Buyer Guide',
+						navTitle: 'Veterans Home Buyer Guide'
+					}
+				]
+			},
+			careers: {
+				id: 'careers',
+				href: 'https://www.zillow.com/careers/jobs/irvine/',
+				text: 'Careers'
+			},
+			privacyLegal: {
+				id: 'privacyLegal',
+				href: 'https://www.zillowgroup.com/terms-of-use-privacy-policy/privacy-policy/',
+				text: 'Privacy &amp; Legal'
+			}
+		};
+		break;
+	case ('segment-one'):
+		menuItems = {
+			individualFamilyFpo: {
+				id: 'individualFamilyFpo',
+				href: config.rootPath + 'individual-family/individual-family-fpo',
+				text: 'Individual &amp; Family FPO',
+				iconUrl: config.assetPath + 'img/icon-segment-one.png',
+				subMenuIds: ['individualFamilyFpoOne', 'individualFamilyFpoTwo', 'individualFamilyFpoThree', 'individualFamilyFpoThreeSub'],
+				subMenuItems: [
+					{
+						id: 'individualFamilyFpoOne',
+						href: '/individual-family/individual-family-fpo/individual-family-fpo-one',
+						text: 'Individual &amp; Family FPO One',
+						navTitle: 'Individual &amp; Family FPO 1'
+					},
+					{
+						id: 'individualFamilyFpoTwo',
+						href: '/individual-family/individual-family-fpo/individual-family-fpo-two',
+						text: 'Individual &amp; Family FPO Two',
+						navTitle: 'Individual &amp; Family FPO 2'
+					},
+					{
+						id: 'individualFamilyFpoThree',
+						href: '/individual-family/individual-family-fpo/individual-family-fpo-three',
+						text: 'Individual &amp; Family FPO Three',
+						navTitle: 'Individual &amp; Family FPO 3',
+						subMenuIds: ['individualFamilyFpoThreeSub']
+					}
+				]
+			},
+			itemTwo:	{
+				id: 'newsroom',
+				href: config.rootPath + 'about/newsroom',
+				text: 'Newsroom',
+				navTitle: 'Newsroom',
+				iconUrl: config.assetPath + 'img/newsroom.png',
+				subMenuIds: ['article']
+			}
+		};
+		break;
+	case ('segment-two'):
+		menuItems = {
+			employerFpo: {
+				id: 'employerFpo',
+				href: config.rootPath + 'employer/employer-fpo',
+				text: 'Employer FPO',
+				iconUrl: config.assetPath + 'img/icon-segment-two.png',
+				subMenuIds: ['employerFpoOne', 'employerFpoTwo', 'employerFpoThree', 'employerFpoThreeSub'],
+				subMenuItems: [
+					{
+						id: 'employerFpoOne',
+						href: '/employer/employer-fpo/employer-fpo-one',
+						text: 'Employer FPO One',
+						navTitle: 'Employer FPO 1'
+					},
+					{
+						id: 'employerFpoTwo',
+						href: '/employer/employer-fpo/employer-fpo-two',
+						text: 'Employer FPO Two',
+						navTitle: 'Employer FPO 2'
+					},
+					{
+						id: 'employerFpoThree',
+						href: '/employer/employer-fpo/employer-fpo-three',
+						text: 'Employer FPO Three',
+						navTitle: 'Employer FPO 3',
+						subMenuIds: ['employerFpoThreeSub']
+					}
+				]
+			},
+			itemTwo:	{
+				id: 'newsroom',
+				href: config.rootPath + 'about/newsroom',
+				text: 'Newsroom',
+				navTitle: 'Newsroom',
+				iconUrl: config.assetPath + 'img/newsroom.png',
+				subMenuIds: ['article']
+			}
+		};
+		break;
+	case ('segment-three'):
+		menuItems = {
+			producerFpo: {
+				id: 'producerFpo',
+				href: config.rootPath + 'producer/producer-fpo',
+				text: 'Producer FPO',
+				iconUrl: config.assetPath + 'img/icon-segment-three.png',
+				subMenuIds: ['producerFpoOne', 'producerFpoTwo', 'producerFpoThree', 'producerFpoThreeSub'],
+				subMenuItems: [
+					{
+						id: 'producerFpoOne',
+						href: '/producer/producer-fpo/producer-fpo-one',
+						text: 'Producer FPO One',
+						navTitle: 'Producer FPO 1'
+					},
+					{
+						id: 'producerFpoTwo',
+						href: '/producer/producer-fpo/producer-fpo-two',
+						text: 'Producer FPO Two',
+						navTitle: 'Producer FPO 2'
+					},
+					{
+						id: 'producerFpoThree',
+						href: '/producer/producer-fpo/producer-fpo-three',
+						text: 'Producer FPO Three',
+						navTitle: 'Producer FPO 3',
+						subMenuIds: ['producerFpoThreeSub']
+					}
+				]
+			},
+			itemTwo:	{
+				id: 'newsroom',
+				href: config.rootPath + 'about/newsroom',
+				text: 'Newsroom',
+				navTitle: 'Newsroom',
+				iconUrl: config.assetPath + 'img/newsroom.png',
+				subMenuIds: ['article']
+			}
+		};
+		break;
+	case ('segment-four'):
+		menuItems = {
+			providerFpo: {
+				id: 'providerFpo',
+				href: config.rootPath + 'provider/provider-fpo',
+				text: 'Provider FPO',
+				iconUrl: config.assetPath + 'img/icon-segment-four.png',
+				subMenuIds: ['providerFpoOne', 'providerFpoTwo', 'providerFpoThree', 'providerFpoThreeSub'],
+				subMenuItems: [
+					{
+						id: 'providerFpoOne',
+						href: '/provider/provider-fpo/provider-fpo-one',
+						text: 'Provider FPO One',
+						navTitle: 'Provider FPO 1'
+					},
+					{
+						id: 'providerFpoTwo',
+						href: '/provider/provider-fpo/provider-fpo-two',
+						text: 'Provider FPO Two',
+						navTitle: 'Provider FPO 2'
+					},
+					{
+						id: 'providerFpoThree',
+						href: '/provider/provider-fpo/provider-fpo-three',
+						text: 'Provider FPO Three',
+						navTitle: 'Provider FPO 3',
+						subMenuIds: ['providerFpoThreeSub']
+					}
+				]
+			},
+			itemTwo:	{
+				id: 'newsroom',
+				href: config.rootPath + 'about/newsroom',
+				text: 'Newsroom',
+				navTitle: 'Newsroom',
+				iconUrl: config.assetPath + 'img/newsroom.png',
+				subMenuIds: ['article']
+			}
+		};
+		break;
+}
+%>
+<div id="segment-nav" class="hidden-print">
+<%
+var navTitle = pageTitle;
+var sectionMenuId;
+var subMenuId;
+
+if (menuItems[pageId]) {
+	sectionMenuId = pageId;
+
+	if (menuItems[pageId].navTitle) {
+		navTitle = menuItems[pageId].navTitle;
+	}
+}
+else {
+	for (var id in menuItems) {
+		if (menuItems[id].subMenuIds && menuItems[id].subMenuIds.indexOf(pageId) !== -1) {
+			sectionMenuId = id;
+			break;
+		}
+	}
+}
+if (sectionMenuId) {
+
+	if (menuItems[sectionMenuId].subMenuItems) {
+		menuItems[sectionMenuId].subMenuItems.forEach(function (subMenuItem) {
+			if (
+				subMenuItem.id === pageId ||
+				(subMenuItem.subMenuIds && subMenuItem.subMenuIds.indexOf(pageId) !== -1)
+			) {
+				subMenuId = subMenuItem.id;
+
+				if (subMenuItem.navTitle) {
+					navTitle = subMenuItem.navTitle;
+				}
+
+				return false;
+			}
+		});
+	}
+	else {
+		if (menuItems[sectionMenuId].navTitle) {
+			navTitle = menuItems[sectionMenuId].navTitle;
+		}
+	}
+}
+
+%>
+	<div class="visible-xs-block visible-sm-block">
+		<a href="<%- backLinkUrl %>" class="btn btn-segment-nav">
+			<span class="icon-wmkCaretLeft" aria-hidden="true"></span>
+			<span class="sr-only"><%- backLinkText %></span></a>
+
+		<%
+		var dropdownMenu = [];
+
+		if (menuItems[pageId] && menuItems[pageId].subMenuItems) {
+			for (var id in menuItems[pageId].subMenuItems) {
+				dropdownMenu.push(menuItems[pageId].subMenuItems[id]);
+			}
+		}
+		else {
+			for (var id in menuItems) {
+				if (menuItems[id].subMenuItems) {
+					menuItems[id].subMenuItems.forEach(function (subMenuItem) {
+						if (subMenuItem.id === pageId) {
+							dropdownMenu = menuItems[id].subMenuItems;
+							return false;
+						}
+					});
+					if (dropdownMenu.length) {
+						break;
+					}
+				}
+			}
+		}
+
+		if (!dropdownMenu.length) {
+		%>
+		<h2><%- navTitle %></h2>
+		<%
+		}
+		else {
+		%>
+		<div class="dropdown">
+			<a id="content-nav-opener" href="#" role="button" class="btn"
+				aria-expanded="false"
+				data-toggle="dropdown">
+				<span class="h2">
+					<span class="text"><%- navTitle %></span>
+				</span>
+				<span class="icon icon-reaCaretDown" aria-hidden="true"></span>
+			</a>
+
+			<ul class="dropdown-menu" role="region" aria-labelledby="content-nav-opener">
+			<%
+			dropdownMenu.forEach(function (item) {
+				// do not display current page in mobile drop down
+				if (item.id === pageId) {
+					return;
+				}
+			%>
+				<li>
+					<a href="<%= item.href %>" <%- (item.id === pageId)? ' class="disabled"' : '' %><% if (item.isExternal) {%> target="_blank"<%} %>><span><%- item.text %></span><% if (item.isExternal) {%><span class="sr-only"> External Link</span><span class="icon-wmkExternalLinkBig" aria-hidden="true"></span><%} %></a>
+				</li>
+			<%
+			});
+			%>
+			</ul>
+		</div>
+		<%
+		}
+		%>
+	</div>
+
+	<div class="hidden-xs hidden-sm">
+		<a href="<%- backLinkUrl %>" class="btn btn-segment-nav">
+			<span class="icon-wmkCaretLeft" aria-hidden="true"></span>
+			<span class="text"><%- backLinkText %></span></a>
+		<div>
+			<h2><%- navTitle %></h2>
+
+			<nav>
+				<ul class="list-unstyled<%= (subMenuId)? ' has-subnav' : '' %>">
+					<%
+					for (var id in menuItems) {
+						var classNames = [];
+						var isCurrentSection = (id === sectionMenuId);
+						var isSelected = (id === pageId || isCurrentSection && (!menuItems[id].subMenuItems || !menuItems[id].subMenuItems.length));
+						var isDisabled = (isSelected);
+						if (isSelected) {
+							classNames.push('selected');
+						}
+						if (isCurrentSection) {
+							classNames.push('current-section');
+						}
+						classNames = classNames.join(' ');
+					%>
+						<li <% if (classNames.length) { %> class="<%= classNames %>"<% } %>>
+							<a href="<%= menuItems[id].href %>"<%- (isDisabled)? 'class="disabled" tabindex="-1"' : '' %>>
+								<%
+								if (isCurrentSection && menuItems[id].iconUrl) {
+								%><img src="<%= menuItems[id].iconUrl %>" alt="" /><%
+								}
+								%> <span><%- menuItems[id].text %></span><span class="icon-wmkArrowRight" aria-hidden="true"></span></a>
+							<%
+							if (isCurrentSection && menuItems[id].subMenuItems && menuItems[id].subMenuItems.length) {
+							%>
+							<ul class="list-unstyled">
+								<%
+								menuItems[id].subMenuItems.forEach(function (subMenuItem) {
+								%>
+								<li <%- (subMenuItem.id === subMenuId)? ' class="selected"' : '' %>>
+									<a href="<%= subMenuItem.href %>"<%- (subMenuItem.id === pageId)? ' class="disabled" tabindex="-1"' : '' %><%- (subMenuItem.isExternal)? ' target="_blank"' : '' %>><span><%- subMenuItem.text %></span><span class="icon-wmkArrowRight" aria-hidden="true"></span><%
+									if (subMenuItem.isExternal) {
+									%><span class="sr-only"> External Link</span><span class="icon-wmkExternalLinkBig"></span><%
+									}
+								%></a>
+								</li>
+								<%
+								});
+								%>
+							</ul>
+							<%
+							}
+							%>
+						</li>
+					<%
+					}
+					%>
+				</ul>
+			</nav>
+
+			<div class="promo">
+				<img src="http://fpoimg.com/286x160?bg_color=eeeeee&amp;text_color=666666&amp;text=PROMO" alt="promotion"/>
+			</div>
+		</div>
+	</div>
+</div>

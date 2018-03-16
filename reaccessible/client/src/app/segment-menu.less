@@ -1,0 +1,372 @@
+.segment-menu {
+	color: #fff;
+
+	>.row {
+		>[class^="col-"],
+		>[class*=" col-"] {
+			padding-right: 0; padding-left: 0;
+		}
+	}
+
+	a {
+		text-decoration: none;
+
+		&:focus {
+			.tab-focus();
+		}
+
+		&:not(.btn) {
+			color: #fff;
+		}
+	}
+
+	>.row {
+		>[class^="col-"],
+		>[class*=" col-"] {
+			min-height: 110px;
+			padding-right: 0; padding-left: 0;
+		}
+	}
+
+	.menu-item-container {
+		position: relative;
+		z-index: 20;
+		min-height: 110px;
+		background-color: inherit;
+
+		.close-button {
+			position: absolute; display: none;
+			top: 20px; right: 15px; z-index: 10;
+			width: 30px; height: 70px;
+			margin: 0; border: 0 none; padding: 0;
+			background: transparent none;
+			font-size: 34px;
+			cursor: pointer; .user-select(none); touch-action: manipulation;
+
+			&:focus {
+				.tab-focus();
+			}
+
+			>.icon-reaCaretDown {
+				position: absolute;
+				top: 50%; left: 0;
+			}
+		}
+
+		>a {
+			.flex-flow(row nowrap, flex-start, flex-start, flex-start);
+			padding: 20px 0 20px 25px;
+			color: #fff;
+
+			&:focus {
+				.tab-focus();
+			}
+
+			>h2 {
+				position: relative; .flex(1 1 auto); -ms-flex: 1;
+				z-index: 5;
+				height: 70px;
+				margin: 0; padding: 0 20px 0 85px;
+				background-repeat: no-repeat; background-position: left top; background-size: 70px 70px;
+				font-size: 24px;
+
+				>span {
+					.flex-flow(column nowrap);
+					height: 100%;
+					line-height: 1;
+
+					&:after,
+					&:before {
+						display: block; flex: auto; content: '';
+					}
+					small {
+						line-height: .75;
+					}
+				}
+			}
+
+			>.icon {
+				position: relative; .flex-flow(row nowrap, center, center, center);
+				z-index: 5;
+				width: 50px; height: 70px;
+			}
+
+			.icon-reaCaretDown {
+				font-size: 24px;
+
+				.transition-transform(0.1s linear);
+			}
+
+			&:hover .icon-reaCaretDown {
+				 .rotate(180deg);
+			}
+
+			&[aria-expanded="true"] {
+				padding-top: 20px; padding-bottom: 20px;
+
+				.icon-reaCaretDown {
+					display: none;
+				}
+
+				+.close-button {
+					display: block;
+				}
+			}
+		}
+
+		.segment-menu-submenu > ul {
+			margin: 0;
+
+			>li {
+				border-top: 1px solid rgba(255,255,255,0.2); padding: 0;
+				font-size: 18px;
+
+				&:first-child {
+					border-top: 0 none;
+				}
+
+				&.segment-item > a {
+					display: block;
+					padding: 20px 30px;
+
+					&:hover {
+						background-color: rgba(0,0,0,0.2);
+
+						>span{
+							text-decoration: underline;
+						}
+					}
+
+					&.indent {
+						.icon-wmkBullet();
+					}
+				}
+
+				&.action {
+					position: relative;
+					min-height: 160px;
+					padding: 20px 30px 30px 165px;
+					font-size: 16px; text-align: right;
+
+					>img {
+						position: absolute;
+						bottom: 0; left: 15px;
+					}
+				}
+
+				&.promo {
+					display: none;
+				}
+
+
+			}
+		}
+	}
+
+	.segment-one {
+		background-color: @brand-segment-one-light;
+
+		&:hover {
+			background-color: darken(@brand-segment-one-light, 5%);
+		}
+
+		.menu-item-container {
+
+			>a {
+				&[aria-expanded="true"] {
+					background-color: @brand-segment-one-light;
+				}
+			}
+
+			.segment-menu-submenu {
+				background-color: @brand-segment-one;
+
+				>ul > li {
+					border-color: @brand-segment-one-light;
+
+					.indent:before {
+						color: @brand-segment-one-contrast;
+					}
+				}
+			}
+		}
+	}
+
+	.segment-two {
+		background-color: @brand-segment-two-light;
+
+		&:hover {
+			background-color: darken(@brand-segment-two-light, 5%);
+		}
+
+		.menu-item-container {
+
+			>a {
+				&[aria-expanded="true"] {
+					background-color: @brand-segment-two-light;
+				}
+			}
+
+			.segment-menu-submenu {
+				background-color: @brand-segment-two;
+
+				>ul > li {
+					border-color: @brand-segment-two-light;
+
+					.indent:before {
+						color: @brand-segment-two-contrast;
+					}
+				}
+			}
+		}
+	}
+
+	.segment-three {
+		background-color: @brand-segment-three-light;
+
+		&:hover {
+			background-color: darken(@brand-segment-three-light, 5%);
+		}
+
+		.menu-item-container {
+
+			>a {
+				&[aria-expanded="true"] {
+					background-color: @brand-segment-three-light;
+				}
+			}
+
+			.segment-menu-submenu {
+				background-color: @brand-segment-three;
+
+				>ul > li {
+					border-color: @brand-segment-three-light;
+
+					.indent:before {
+						color: @brand-segment-three-contrast;
+					}
+				}
+			}
+		}
+	}
+
+	.segment-four {
+		background-color: @brand-segment-four-light;
+
+		&:hover {
+			background-color: darken(@brand-segment-four-light, 5%);
+		}
+
+		.menu-item-container {
+
+			>a {
+				&[aria-expanded="true"] {
+					background-color: @brand-segment-four-light;
+				}
+			}
+
+			.segment-menu-submenu {
+				background-color: @brand-segment-four;
+
+				>ul > li {
+					border-color: @brand-segment-four-light;
+					.indent:before{
+						color: @brand-segment-four-contrast;
+					}
+				}
+			}
+		}
+	}
+
+	// // Small devices (tablets, 768px and up)
+	// @media (min-width: @screen-sm-min) {
+
+	// }
+
+	// Medium devices (desktops, 992px and up)
+	@media (min-width: @screen-md-min) {
+		>.row {
+			>[class^="col-"],
+			>[class*=" col-"] {
+				height: 220px;
+			}
+		}
+
+		.menu-item-container {
+			position: absolute;
+			right: 0; bottom: 0; left: 0;
+			min-height: 220px;
+
+			&.open {
+				.border-radius(10px 10px 0 0);
+
+				>a {
+					.border-radius(10px 10px 0 0);
+				}
+			}
+
+			>a {
+				padding-top: 30px; padding-bottom: 30px;
+
+				>h2 {
+					font-size: 18px;
+				}
+			}
+
+			>.segment-menu-submenu > ul > li {
+				&.action {
+					min-height: 140px;
+					padding: 10px 10px 30px 105px;
+
+					>img {
+						width: 100px;
+					}
+				}
+
+				&.promo {
+					display: block;
+					height: 140px;
+				}
+			}
+		}
+	}
+
+	// Medium devices just over breakpoint (desktops, 992px - 1092px)
+	@media (min-width: @screen-md-min ) and (max-width: (@screen-md-min + 100) ) {
+		.menu-item-container {
+			>a {
+				padding-left: 15px;
+				>h2 {
+					padding-left: 80px;
+				}
+			}
+		}
+	}
+
+	// Large devices (large desktops, 1200px and up)
+	@media (min-width: @screen-lg-min) {
+		.menu-item-container {
+			>a > h2 {
+				font-size: 25px;
+			}
+
+			>.segment-menu-submenu > ul > li {
+				&.action {
+					padding: 20px 30px 30px 145px;
+
+					>img {
+						width: auto;
+					}
+				}
+			}
+		}
+	}
+
+	// Extra-Large devices (large desktops, 1300px and up)
+	@media (min-width: @screen-xl-min) {
+		.menu-item-container > .segment-menu-submenu > ul > li.action {
+			padding-left: 165px;
+		}
+	}
+
+}

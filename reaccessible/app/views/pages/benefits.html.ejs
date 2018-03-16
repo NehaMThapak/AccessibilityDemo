@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'Careers';
+		var backLinkUrl = '/about/careers';
+		var pageTitle = 'Benefits, Culture &amp; Diversity';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+							</h1>
+							<p>
+								Most Wellmark employees have been with us for many years. The reason is simple: It's a great place to work. And when you work at Wellmark, you have the opportunity to be an integral part of creating a health care system that assures quality care and controls costs—for generations to come.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'primary'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<h3>Why Choose Wellmark?</h3>
+
+							<p>
+								People who work for Wellmark care about making a difference in the lives of our members and their communities. If you're looking to be a part of a company where Promises Matter and you can make a difference, Wellmark delivers.
+							</p>
+
+							<div class="row">
+								<%
+								var videoUrl;
+								var videoTitle;
+								[
+									{
+										title: 'Mary Jane\'s Story',
+										url: 'https://www.youtube.com/embed/p46dusnr7Rw?autoplay=1'
+									},
+									{
+										title: 'Dan Dare\'s Story',
+										url: 'https://www.youtube.com/embed/p46dusnr7Rw?autoplay=1'
+									},
+									{
+										title: 'Corporate Recruiting Video Header',
+										url: 'https://www.youtube.com/embed/p46dusnr7Rw?autoplay=1'
+									}
+								].forEach(function (video) {
+									videoUrl = video.url;
+									videoTitle = video.title;
+								%>
+								<div class="col-xs-12 col-lg-6">
+									<% include ../includes/video-opener.html.ejs %>
+								</div>
+								<%
+								});
+								%>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'default'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile content-rich-text-tile" style="padding-bottom:0;">
+							<h3>Working at Wellmark</h3>
+							<p>Come for the benefits. Stay for the culture.</p>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12 col-md-6" style="padding-top:0;">
+								<div class="content-tile content-rich-text-tile" style="padding-top:0;padding-bottom:0;">
+									<h4>A great career is about flourishing—in your work, health and life. </h4>
+									<p>
+										At Wellmark, we equip you with the tools to do just that. First, financially: Our competitive compensation program inspires excellence and rewards performance. A Performance Incentive Program gives employees the opportunity to earn extra compensation for attaining member-focused goals. In other words, when you do good things for our members, Wellmark does good things for you. The program not only challenges us to focus on our top priority, but also encourages us to be administratively efficient and drive down rising health care costs. With an eye to your future, we also provide a variety of retirement benefit options, including a very competitive 401(k) and cash balance pension plan.
+									</p>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6" style="text-align:right;">
+								<img src="http://fpoimg.com/400x300?bg_color=cccccc&text_color=666666&text=Image%20FPO" alt="" style="width:100%;" />
+							</div>
+						</div>
+
+						<div class="content-tile content-rich-text-tile" style="padding-top:0;padding-bottom:0;">
+							<p>
+								As a company, we love to learn. We encourage it at every level, from e-learning options to industry training and more. Employees can continue their education through an Educational Assistance program. We reimburse up to $15,000 for tuition, books, and course fees each year and up to $5,000 for qualified college student loans for credit-bearing classes from an accredited learning institution annually.
+							</p>
+
+							<p>
+								Not surprisingly, our employees enjoy pretty incredible, very affordable health insurance, with balanced plan designs and competitive employer contribution. Onsite fitness and numerous programs empower our employees to get and stay healthy.
+							</p>
+
+							<p>
+								We believe time off is as important as time on. We know finding that right work/life blend is critical to our employees' success, both in the office and at home. But we recognize it's different for a father of four than for a junior project manager just out of college. So we offer a flexible Paid Time Off (PTO) program that combines vacation, personal leave and sick leave into a single &quot;time bank&quot;. With time in the bank, our employees make the withdrawals that give them the balance they need.
+							</p>
+						</div>
+
+						<div class="row">
+							<div class="col-xs-12 col-md-6">
+								<div class="content-tile content-rich-text-tile" style="padding-top:0;padding-bottom:0;">
+									<h4>Many companies provide a healthy work environment. Few take it as far as Wellmark.</h4>
+									<p>
+										Here, everything starts with health and wellness, for our employees, members and communities. It's at the core of who we are and what we do.
+									</p>
+
+									<p>
+										As an employee, you'll enjoy a state of the art fitness center, with dozens of classes and free personal training. The onsite cafeteria, along with our convenience store and vending machines, offer plenty of healthy options. (Don't worry there's chocolate, too.) Of course, the entire campus is tobacco-free.
+									</p>
+								</div>
+							</div>
+							<div class="col-xs-12 col-md-6" style="text-align:right;">
+								<img src="http://fpoimg.com/400x300?bg_color=cccccc&text_color=666666&text=Image%20FPO" alt="" style="width:100%;" />
+							</div>
+						</div>
+
+						<div class="content-tile content-rich-text-tile">
+							<h4>If you enjoy volunteering and working with non-profits, we'll match you step-for-step.</h4>
+
+							<p>
+								For every 24 hours you volunteer in the community, you can designate $1,000 to the qualifying non-profit of your choice. It's a big part of the reason Wellmark employees volunteer over 35,000 hours annually. We also support what you support, matching your financial contributions to eligible non-profits, dollar-for-dollar.
+							</p>
+
+							<p>
+								The goal of every Wellmark employee is to help transform the healthcare industry. By improving the health of ourselves, our members and our communities and upgrading the delivery of care, we can measurably reduce the rate of future health care cost increases. Flexible benefit designs, competitive prices, a vast provider network, and exceptional service help ensure more people have access to quality health care. It's a culture of health worth committing to.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'default'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<% include ../includes/content-image-full-tile.html.ejs %>
+					</div>
+				</div>
+
+				<% rowType = 'primary'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<h3>Career Paths</h3>
+
+							<p>
+								From an Actuarial Internship to Video Producer to Medical Director, there's a world of opportunity at Wellmark. Regardless of the position, our employees have a passion for making a difference and feel their role is contributing to a greater purpose. Here you can learn more about the various teams and responsibilities, so you can find the best fit for your interests and talents.
+							</p>
+
+							<%
+							var collapseId;
+							var collapseTitle;
+							[
+								'Finance',
+								'Health Care Innovation and Business Development',
+								'Human Resources and Process Excellence',
+								'Information Technology',
+								'Legal, Audit and Compliance',
+								'Operations'
+							].forEach(function(title, idx) {
+								collapseId = 'collapse-' + (idx + 1);
+								collapseTitle = title;
+							%>
+							<% include ../includes/collapse-content-tile.html.ejs %>
+							<%
+							});
+							%>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<% include ../includes/content-large-image-tile.html.ejs %>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'default'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<% isQuotePrimary = true; %>
+							<% include ../includes/content-quote-tile.html.ejs %>
+							<p>
+								Employees can choose to serve on our Inclusion Council, which promotes diversity within our company and throughout our communities.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = ''; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<% include ../includes/about-next.html.ejs %>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

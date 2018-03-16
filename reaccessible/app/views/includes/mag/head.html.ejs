@@ -1,0 +1,58 @@
+<head>
+	<meta charset="utf-8" />
+
+	<title>Blue Spring 2017 | Home</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<!-- Device -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=yes" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<!-- Descriptive MetaData -->
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+
+	<% if (pageId === 'article' || pageId === 'recipe') { %>
+	<!-- Facebook Open Graph -->
+	<meta property="og:url"                content="http://wellmark-blue-ui.herokuapp.com/blue/<%= pageId %>" />
+	<meta property="og:type"               content="article" />
+	<meta property="og:title"              content="<%= pageId %> Title" />
+	<meta property="og:description"        content="<%= pageId %> description goes here..." />
+	<meta property="og:image"              content="localhost:3009/-/media/sites/public/images/global/logo-realestate.png" />
+	<% } %>
+
+	<!-- Robots -->
+	<meta name="robots" content="index,follow" />
+
+	<!-- Document Base -->
+	<base href="<%= path %>" target="_self" />
+
+	<%
+	if (dnsPrefetchDomains.length) {
+	%>
+	<!-- DNS Prefetching -->
+	<%
+		dnsPrefetchDomains.forEach(function(domain) {
+			%>
+			<link rel="dns-prefetch" href="<%= domain %>" />
+			<%
+		});
+	}
+	%>
+
+	<!-- App Styles -->
+	<link type="text/css" rel="stylesheet" href="<%= config.assetPath %>css/appmag/appmag.css" />
+
+	<!-- Page Styles -->
+	<% if (pageStyleExists) { %>
+	<link type="text/css" rel="stylesheet" href="<%= config.assetPath %>css/mag/<%= pageId %>.css" />
+	<% } %>
+	<style>
+	#browsehappy{font-size:16px;text-align:center;position:fixed;top:0;margin-bottom:60px;margin-top:65px;z-index:5000;width:100%;background-color:#d23432;color:white}
+	#browsehappy p{margin-top:10px;margin-bottom:10px}#browsehappy p a{color:white;text-decoration:underline}
+	</style>
+</head>

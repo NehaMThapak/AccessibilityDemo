@@ -1,0 +1,55 @@
+@import "bower_components/bootstrap/less/dropdowns.less";
+
+//
+// Bootstrap Dropdowns Overrides
+// --------------------------------------------------
+
+#global-footer {
+	.dropdown {
+		display: inline-block;
+		margin-top: -5px; margin-bottom: 0 !important; margin-left: -15px; padding: 5px 15px 15px 15px;
+
+		>a {
+			display: inline-block;
+			margin: -5px -15px -15px -15px; padding: 5px 15px 15px 15px;
+			white-space: nowrap;
+		}
+
+		&.open {
+			>a {
+				.border-radius(0 0 4px 4px);
+				background-color: @gray-dark; .box-shadow(0 1px 3px rgba(0,0,0,0.2));
+			}
+		}
+	}
+
+	.dropdown-menu {
+		top: auto; bottom: 100%; right: -1px; left: auto;
+		margin-bottom: -1px; .border-radius(4px 4px 0 4px);
+		background-color: @gray-darker;
+
+		>li {
+			border-bottom: 1px solid @gray-dark-alt;
+
+			&:last-child {
+				border-bottom: 0 none;
+			}
+
+			>a {
+				min-width: 230px;
+				padding-top: 15px; padding-bottom: 15px;
+				font-size: @font-size-semilarge; text-align: center;
+
+				&:hover,
+				&:focus {
+					background-color: @gray-darker;
+				}
+			}
+		}
+
+		// Small devices (tablets, 768px and up)
+		@media (min-width: @screen-sm-min) {
+			//right: auto; left: -25%;
+		}
+	}
+}

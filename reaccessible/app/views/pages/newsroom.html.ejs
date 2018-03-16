@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" class="has-segment-nav <%= segment %>">
+
+		<%
+		var backLinkText = 'About RealEstate';
+		var backLinkUrl = '/about';
+		var pageTitle = 'RealEstate Newsroom';
+		%>
+		<% include ../includes/segment-nav.html.ejs %>
+
+		<div class="content">
+			<div class="container-fluid">
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="page-header">
+							<h1>
+								<%- pageTitle %>
+							</h1>
+
+							<p>
+								Welcome to the RealEstate article. If we have anything official to say, you’ll find it here—including press releases, media kits and our media relations contacts.
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<% rowType = 'default'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<div class="row">
+								<div class="col-xs-12 col-sm-6">
+									<% include ../includes/content-image-padded-tile.html.ejs %>
+								</div>
+								<div class="col-xs-12 col-sm-6">
+									<div class="content-rich-text-tile">
+										<h3>Media Relations Contact</h3>
+
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<div class="person-contact-info">
+													<div class="name">Traci McBee</div>
+													<div class="phone"><a href="tel:1-515-376-4338">515-376-4338</a></div>
+													<div class="email"><a href="mailto:mcbeet@wellmark.com">mcbeet@wellmark.com</a></div>
+
+													<div class="address">
+														<div class="street">1331 Grand Avenue</div>
+														<div class="city-state">Des Moines, IA</div>
+														<div class="zip">50309-2901</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="col-xs-12 col-sm-6">
+												<div class="person-contact-info">
+													<div class="name">Teresa Roof</div>
+													<div class="phone"><a href="tel:1-515-376-5869">515-376-5869</a></div>
+													<div class="email"><a href="mailto:rooft@wellmark.com">rooft@wellmark.com</a></div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% include ../includes/back-to-top-row.html.ejs %>
+
+				<% rowType = 'primary'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<% include ../includes/content-article-group-tile.html.ejs %>
+						</div>
+					</div>
+				</div>
+				<% include ../includes/back-to-top-row.html.ejs %>
+
+				<% rowType = 'default'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<% include ../includes/content-article-group-tile.html.ejs %>
+						</div>
+					</div>
+				</div>
+				<% include ../includes/back-to-top-row.html.ejs %>
+
+				<% rowType = 'alt'; %>
+				<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+					<div class="col-xs-12">
+						<div class="content-tile">
+							<% include ../includes/content-media-kits-tile.html.ejs %>
+						</div>
+					</div>
+				</div>
+				<% include ../includes/back-to-top-row.html.ejs %>
+
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

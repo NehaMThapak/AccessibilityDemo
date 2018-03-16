@@ -1,0 +1,43 @@
+{
+  "name": "jcf",
+  "homepage": "http://psd2html.com/jcf",
+  "authors": [
+    "psd2html"
+  ],
+  "description": "This script allows smooth cross-browser customization of form elements with CSS",
+  "main": "./js/jcf.js",
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "jQuery",
+    "JCF",
+    "form",
+    "element",
+    "style"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".jshintrc",
+    ".jscsrc",
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7"
+  },
+  "_release": "c2294dced5",
+  "_resolution": {
+    "type": "branch",
+    "branch": "alternate",
+    "commit": "c2294dced53c143ac76cafb0ec35852d80327e41"
+  },
+  "_source": "https://github.com/Genex/jcf.git",
+  "_target": "alternate",
+  "_originalSource": "https://github.com/Genex/jcf.git"
+}

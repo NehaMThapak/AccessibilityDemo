@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header-newsletter.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content" tabindex="-1">
+		<div id="newsletterContainer" class="newsletter-container">
+
+			<div class="section-hero">
+				<video autoplay muted preload loop poster="<%= config.assetPath %>video/ceo-hero.jpg">
+					<source src="<%= config.assetPath %>video/ceo-hero.mp4" type="video/mp4">
+					<source src="<%= config.assetPath %>video/ceo-hero.webm" type="video/webm">
+					<source src="<%= config.assetPath %>video/ceo-hero.ogv" type="video/ogg">
+				</video>
+				<div class="title-container">
+					<h1 class="section-hero-title" aria-label="Wellmarkability">
+						<span aria-hidden="true">Wellmark<span class="ability">ability</span></span>
+					</h1>
+					<p class="section-hero-subtitle">Annual Report 2016</p>
+				</div>
+				<div class="arrow-down" aria-hidden="true"></div>
+			</div>
+
+			<div class="section-sustainability">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="section-content-container">
+								<h2 class="section-title alt section-title-animate" aria-label="Sustainability">
+									<span aria-hidden="true">Sustain<span class="ability">ability</span></span>
+								</h2>
+								<p class="section-subtitle">Securing the future of our industry</p>
+								<p>More than any other health insurance company in Iowa and South Dakota, Wellmark Blue Cross and Blue Shield has the ability to sustain our health care system—by containing rising costs while enhancing service, educating consumers, and encouraging healthy living for our members and communities. To achieve this sustainability imperative, we actively affect transformation both inside and outside the health care system.</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="stretch">
+								<img src="<%= config.assetPath %>img/ceo/inside-hc-system.jpg" alt="" />
+								<img src="<%= config.assetPath %>img/ceo/outside-hc-system.jpg" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="arrow-down" aria-hidden="true"></div>
+			</div>
+
+			<div class="section-ceo">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="stretch">
+								<img class="ceo" src="<%= config.assetPath %>img/ceo/ceo.jpg" alt="" />
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="section-content-container">
+								<blockquote class="blockquote-animate"><span class="begin-quotemark" aria-hidden="true">“</span>I continue to believe we are the best-positioned health plan in the country. I am very confident in the future of our company.<span class="end-quotemark" aria-hidden="true">”</span></blockquote>
+								<img class="signature img-hd" src="<%= config.assetPath %>img/ceo/ceo-signature@2x.png" alt="" />
+								<div class="byline">John Forsyth</div>
+								<div class="title">Chairman &amp; CEO</div>
+								<a href="#letter-modal" class="btn btn-link no-side-pad learn-more" data-toggle="modal">
+									Read Full Letter
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="arrow-down gray" aria-hidden="true"></div>
+			</div>
+
+			<div class="section-inside-hc">
+				<img src="<%= config.assetPath %>img/ceo/inside-hc-system.jpg" alt="" />
+				<div class="card">
+					<h2 class="section-title" aria-label="Inside the Health Care System">
+						<span aria-hidden="true">Inside the<br /> Health Care System</span>
+					</h2>
+				</div>
+				<div class="arrow-down" aria-hidden="true"></div>
+			</div>
+
+			<div class="section-deliverability">
+				<div class="section-content-container">
+					<div class="container-fluid">
+						<h2 class="section-title alt section-title-animate" aria-label="Deliverability">
+							<span aria-hidden="true">Deliver<span class="ability">ability</span></span>
+						</h2>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="center-block text-center">
+									<img class="iconography img-hd deliver-iconography-animate" src="<%= config.assetPath %>img/ceo/iconography/accountable-care-organizations@2x.png" alt="" />
+									<h3 id="deliverabilityHeader1" aria-label="Better care at a lower cost">
+										<span aria-hidden="true">Better care at a<br /> lower cost</span>
+									</h3>
+									<p>See Wellmark's Accountable Care Organization Shared Savings highlights.</p>
+									<button type="button" class="btn btn-link light learn-more" data-toggle="modal" data-target="#aco-modal" aria-describedby="deliverabilityHeader1">
+										Learn More
+									</button>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="center-block text-center">
+									<img class="iconography img-hd deliver-iconography-animate" src="<%= config.assetPath %>img/ceo/iconography/blue-distinction-centers@2x.png" alt="" />
+									<h3 id="deliverabilityHeader2" aria-label="Improved safety, better outcomes">
+										<span aria-hidden="true">Improved safety,<br /> better outcomes</span>
+									</h3>
+									<p>Blue Distinction Centers (BDCs) have a proven track record of excellence.</p>
+									<button type="button" class="btn btn-link light learn-more" data-toggle="modal" data-target="#bdc-modal" aria-describedby="deliverabilityHeader2">
+										Learn More
+									</button>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="center-block text-center last">
+									<img class="iconography img-hd deliver-iconography-animate" src="<%= config.assetPath %>img/ceo/iconography/joint-ventures@2x.png" alt="" />
+									<h3 id="deliverabilityHeader3" aria-label="New plans with trusted care providers">
+										<span aria-hidden="true">New plans with<br /> trusted care providers</span>
+									</h3>
+									<p>Mercy Health Network and the University of Iowa Health System</p>
+									<button type="button" class="btn btn-link light learn-more" data-toggle="modal" data-target="#jv-modal" aria-describedby="deliverabilityHeader3">
+										Learn More
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="arrow-down" aria-hidden="true"></div>
+			</div>
+
+			<div class="section-manageability">
+				<div class="section-content-container">
+					<div class="container-fluid">
+						<h2 class="section-title section-title-animate" aria-label="Manageability">
+							<span aria-hidden="true">Manage<span class="ability">ability</span></span>
+						</h2>
+						<p class="section-subtitle">Managing pharmacy + health = lower cost</p>
+						<p>The cost and usage of prescription drugs are increasing. In fact, it makes up almost 25 percent of Wellmark’s annual health care spending. Because prescriptions and medical services are so intertwined, we take a holistic approach to managing the two. Our members get access to coordinated care that lowers medical costs without raising pharmacy costs and vice versa.</p>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="center-block text-center">
+									<img class="ambulance img-hd" src="<%= config.assetPath %>img/ceo/ambulance@2x.png" alt="" />
+									<div class="text-lg blue">4% LOWER</div>
+									<p class="text-condensed">Emergency room visits</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="center-block text-center">
+									<img class="hospital img-hd" src="<%= config.assetPath %>img/ceo/hospital@2x.png" alt="" />
+									<div class="text-lg green">9% LOWER</div>
+									<p class="text-condensed">Hospitalization events</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="center-block text-center">
+									<img class="wallet img-hd" src="<%= config.assetPath %>img/ceo/wallet@2x.png" alt="" />
+									<div class="text-lg orange">11% LOWER</div>
+									<p class="text-condensed">Per-member per-month medical costs</p>
+								</div>
+							</div>	
+						</div>
+					</div>
+				</div>
+				<div class="arrow-down gray" aria-hidden="true"></div>
+			</div>
+
+			<div class="section-measureability">
+				<div class="section-content-container">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-5">
+								<h2 class="section-title section-title-animate" aria-label="Measureability">
+									<span aria-hidden="true">Measur<span class="ability">ability</span></span>
+								</h2>
+								<p class="section-subtitle">Quantifying quality</p>
+								<p>Just like a <em>Consumer Reports®</em> score, Wellmark’s Value Index Score quantifies the quality of health care provided by a primary care physician. Launched in 2012 and comprised of 18 quality measures, the score helps members understand how well physicians manage their entire patient population. Today, the score is available to Wellmark members on the myWellmark® Care Finder—for more than 1,400 primary care physicians. The five-point scale allows for easy comparison of doctors.</p>		
+							</div>
+							<div class="col-md-7">
+								<div class="infographic text-center infographic-animate">
+									<img class="laptop center-block img-hd" src="<%= config.assetPath %>img/ceo/laptop-quality-score-2x.png" alt="" />							
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="arrow-down gray" aria-hidden="true"></div>
+			</div>
+
+			<div class="section-accountability">
+				<div class="section-content-container">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-5">
+								<h2 class="section-title section-title-animate" aria-label="Accountability">
+									<span aria-hidden="true">Account<span class="ability">ability</span></span>
+								</h2>
+								<p class="section-subtitle">Making the most of every dollar</p>
+								<p>Across our entire fully-insured business, we spend almost 86 cents of every premium dollar to pay for members’ health care costs. We use 10.7 cents to run our business and two cents to pay government fees and taxes. Just 1.4 cents goes to our overall margin, which is used to invest in our company and ensure we have adequate reserves for the future.</p>		
+							</div>
+							<div class="col-md-7">
+								<div class="infographic text-center infographic-animate">
+									<img class="donut-chart center-block img-hd" src="<%= config.assetPath %>img/ceo/donut-graph-2x.png" alt="" />
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="arrow-down gray" aria-hidden="true"></div>
+			</div>
+
+			<div class="section-predictability">
+				<div class="section-content-container">
+					<div class="container-fluid">
+						<h2 class="section-title alt section-title-animate" aria-label="Predictability">
+							<span aria-hidden="true">Predict<span class="ability">ability</span></span>
+						</h2>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="center-block text-center content-guesswork">
+									<img class="iconography img-hd predict-iconography-animate" src="<%= config.assetPath %>img/ceo/iconography/blue-simplicity@2x.png" alt="" />
+									<h3 id="predictabilityHeader1">No more guesswork</h3>
+									<p>Members asked for predictable costs and greater control.</p>
+									<button type="button" class="btn btn-link light learn-more" data-toggle="modal" data-target="#bs-modal" aria-describedby="predictabilityHeader1">
+										Learn More
+									</button>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="center-block text-center content-shop-compare last">
+									<img class="iconography img-hd predict-iconography-animate" src="<%= config.assetPath %>img/ceo/iconography/care-finder@2x.png" alt="" />
+									<h3 id="predictabilityHeader2">Shop and compare</h3>
+									<p>Transparency can help shape the future of health care.</p>
+									<button type="button" class="btn btn-link light learn-more" data-toggle="modal" data-target="#care-finder-modal" aria-describedby="predictabilityHeader2">
+										Learn More
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="arrow-down" aria-hidden="true"></div>
+			</div>
+
+			<div class="section-outside-hc">
+				<img src="<%= config.assetPath %>img/ceo/outside-hc-system.jpg" alt="" />
+				<div class="card">
+					<h2 class="section-title" aria-label="Outside the Health Care System">
+						<span aria-hidden="true">Outside the<br /> Health Care System</span>
+					</h2>
+				</div>
+				<div class="arrow-down" aria-hidden="true"></div>
+			</div>
+
+			<div class="section-improvability">
+				<div class="section-content-container">
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-7">
+								<div class="section-improvability-copy">
+									<h2 class="section-title section-title-animate" aria-label="Improvability">
+										<span aria-hidden="true">Improv<span class="ability">ability</span></span>
+									</h2>
+									<p class="section-subtitle">Making your hometown an even better place to live</p>
+									<p>Research proves our behaviors and environment make up 70 percent of the factors influencing our overall health. In Iowa and South Dakota, experts estimate that by 2030, 1 in 4 people will have heart disease, and 1 in 8 will be diabetic. It’s time to do something about it.</p>
+									<p>Enter Healthy Hometown<sup>SM</sup> Powered By Wellmark—a program that makes your hometown an even better place to live. It offers proven tools for communities to make long-lasting changes, transforming their environments and making the healthy choice the easy choice.</p>
+									<p>Iowa communities can start their journey toward even better living at <a href="http://www.iowahealthieststate.com/" target="_blank">IowaHealthiestState.com<span class="sr-only">External Site</span></a><span class="icon-wmkExternalLinkSmall" aria-hidden="true"></span>.</p>
+									<p>In South Dakota, look for more information soon!</p>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<img class="center-block logo-healthy-hometown img-hd infographic-animate" src="<%= config.assetPath %>img/ceo/healthy-hometown@2x.png" alt="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="arrow-down gray" aria-hidden="true"></div>
+			</div>
+
+			<div class="section-outro">
+				<img src="<%= config.assetPath %>img/ceo/river-flow.jpg" alt="" />
+				<div class="card">
+					<h2 class="section-title">What sets us apart</h2>
+					<p>We are a mutual insurance company. We answer to our members, not investors. We’re here and listening—always improving the system and clearing the way to quality, affordable health care.</p>
+				</div>
+			</div>
+
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<!-- Modals -->
+<div id="letter-modal" class="modal fade newsletter-modal newsletter-modal-letter" tabindex="-1" role="dialog" aria-labelledby="letter-modal-label" aria-describedby="letter-modal-description" aria-live="polite" aria-relevant="all" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="sr-only" id="letter-modal-description">Beginning of dialog</div>
+		<div class="modal-content">
+			<button type="button" class="btn close" data-dismiss="modal">
+				<span class="sr-only">Close</span><span class="icon-wmkCircleClose" aria-hidden="true"></span>
+			</button>
+			<div class="modal-body">
+				<div class="">
+					<h3 id="letter-modal-label" class="modal-heading">A message from our Chairman and CEO</h3>
+					<p>Building and maintaining a sustainable health care system is our most important initiative. It’s the shortest path to healthy members living in healthy communities over the long term. Working both inside and outside the system, we’ve taken significant steps toward that goal. Here are a few examples every Wellmark member and employee should feel proud of:</p>
+					<ul>
+						<li>13 Accountable Care Organizations (ACOs) saved more than $35 million, and over 13,000 additional members saw a primary care physician and 763 more kids received well-child visits.</li>
+						<li>Over a three-year period ending in 2016, we spent nearly 86 cents of every premium dollar on member health care services.</li>
+						<li>We introduced the BlueSimplicity<sup>SM</sup> plans because members wanted more predictable costs and greater control of their care.</li>
+						<li>Our Blue Distinction Centers are on average 20 percent more cost-efficient than other health care centers but also allow fewer complications and re-admissions.</li>
+					</ul>
+					<p>For 2017, we’ll take two more big steps toward sustainability with two new health insurance companies, formed with Mercy Health Network and the University of Iowa Health System. These new organizations help us bring more care options to our membership.</p>
+					<p>I continue to believe we are the best-positioned health plan in the country. Iowans and South Dakotans count on our unique ability to bring more value to their health care investment. That won’t change and nor will we. I am very confident in the future of our company.</p>
+					<img class="signature img-hd" src="<%= config.assetPath %>img/ceo/ceo-signature@2x.png" alt="" />
+					<div class="byline">John Forsyth</div>
+					<div class="title">Chairman &amp; CEO</div>
+				</div>
+				<span class="sr-only">End of dialog</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="aco-modal" class="modal fade newsletter-modal newsletter-modal-aco" tabindex="-1" role="dialog" aria-labelledby="aco-modal-label" aria-describedby="aco-modal-description" aria-live="polite" aria-relevant="all" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="sr-only" id="aco-modal-description">Beginning of dialog</div>
+		<div class="modal-content">
+			<button type="button" class="btn close" data-dismiss="modal">
+				<span class="sr-only">Close</span><span class="icon-wmkCircleClose" aria-hidden="true"></span>
+			</button>
+			<div class="modal-body">
+				<div class="">
+					<img class="iconography img-hd" src="<%= config.assetPath %>img/ceo/iconography/accountable-care-organizations@2x.png" alt="" />
+					<h3 id="aco-modal-label" class="modal-heading">Wellmark Accountable Care Organizations</h3>
+					<p>Iowans are receiving better care at a lower cost, according to Wellmark’s Accountable Care Organization (ACO) Shared Savings results.</p>
+					<p>The ACO relationship between Wellmark and participating health care provider organizations puts the patient at the center of the health care system, using data to identify and improve the way patients receive care. The 13 ACOs have improved their overall quality scores by more than 4 percent and achieved savings equal to almost $200 per member per year—or $35 million in total.</p>
+					<p>To achieve these savings, the ACOs reduced hospital readmissions by more than 22 percent, inpatient admissions by almost 8 percent, and emergency department visits by nearly 4 percent. Quality of care also improved because preventive care services increased. Including:</p>
+					<ul>
+						<li><strong>13,254</strong> additional members visiting a primary care physician (4 percent increase)</li>
+						<li><strong>995</strong> more women receiving mammograms (2 percent increase)</li>
+						<li><strong>763</strong> additional children receiving well-child visits (6 percent increase)</li>
+						<li><strong>243</strong> more members receiving color cancer screening (2 percent increase)</li>
+					</ul>
+					<p>In 2017, employees of Wellmark’s self-funded employer group customers have the opportunity to join the ACOs’ 179,000-member population and reap the benefits of better care at lower cost across the country.</p>
+				</div>
+				<span class="sr-only">End of dialog</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="bdc-modal" class="modal fade newsletter-modal newsletter-modal-bdc" tabindex="-1" role="dialog" aria-labelledby="bdc-modal-label" aria-describedby="bdc-modal-description" aria-live="polite" aria-relevant="all" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="sr-only" id="bdc-modal-description">Beginning of dialog</div>
+		<div class="modal-content">
+			<button type="button" class="btn close" data-dismiss="modal">
+				<span class="sr-only">Close</span><span class="icon-wmkCircleClose" aria-hidden="true"></span>
+			</button>
+			<div class="modal-body">
+				<div class="">
+					<img class="iconography img-hd" src="<%= config.assetPath %>img/ceo/iconography/blue-distinction-centers@2x.png" alt="" />
+					<h3 id="bdc-modal-label" class="modal-heading">Blue Distinction Centers</h3>
+					<p>Blue Distinction Centers (BDCs) are nationally designated health care facilities shown to deliver improved specialty patient safety and better health outcomes. On average, these recognized facilities are 20 percent more cost-efficient and have a proven track record of fewer complications and readmissions.</p>
+					<p>Wellmark’s network of providers currently feature 81 facilities with this designation:</p>
+					<div class="two-column-list">
+						<ul>
+							<li>Maternity care: 33</li>
+							<li>Knee and hip replacement: 20</li>
+							<li>Spine surgery: 10</li>
+							<li>Cardiac care: 8</li>
+						</ul>
+						<ul>
+							<li>Bariatric surgery: 7</li>
+							<li>Complex/rare cancer: 2</li>
+							<li>Transplants: 1</li>
+						</ul>
+					</div>
+					<p>Our members can be confident in these centers because of their proven expertise, high quality care and patient results. Employers can structure certain plan benefits for their employees to incentivize the use of Blue Distinction Centers.</p>
+					<img class="logo-bdc img-hd" src="<%= config.assetPath %>img/ceo/logo-bdc@2x.png" alt="" />
+					<img class="logo-bdc-plus img-hd" src="<%= config.assetPath %>img/ceo/logo-bdc-plus-2x.png" alt="" />
+				</div>
+				<span class="sr-only">End of dialog</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="jv-modal" class="modal fade newsletter-modal newsletter-modal-jv" tabindex="-1" role="dialog" aria-labelledby="jv-modal-label" aria-describedby="jv-modal-description" aria-live="polite" aria-relevant="all" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="sr-only" id="jv-modal-description">Beginning of dialog</div>
+		<div class="modal-content">
+			<button type="button" class="btn close" data-dismiss="modal">
+				<span class="sr-only">Close</span><span class="icon-wmkCircleClose" aria-hidden="true"></span>
+			</button>
+			<div class="modal-body">
+				<div class="">
+					<img class="iconography img-hd" src="<%= config.assetPath %>img/ceo/iconography/joint-ventures@2x.png" alt="" />
+					<h3 id="jv-modal-label" class="modal-heading">Collaboration with Providers</h3>
+					<p>For 2017 we collaborated with Mercy Health Network and the University of Iowa Health System to create two new health insurance companies committed to managing the care of our members. These new health insurance companies serve 44 Iowa counties and allow us to offer high quality insurance products with select provider networks.  Quality care is delivered more effectively through a carefully managed network, all with the goal of reducing the total cost of care.</p>
+					<img class="logo-realestate-vhp img-hd" src="<%= config.assetPath %>img/ceo/logo-realestate-vhp@2x.png" alt="" />
+					<img class="logo-realestate-sh img-hd" src="<%= config.assetPath %>img/ceo/logo-realestate-sh@2x.png" alt="" />
+				</div>
+				<span class="sr-only">End of dialog</span>
+			</div>
+		</div>
+	</div>
+</div> 
+
+<div id="bs-modal" class="modal fade newsletter-modal newsletter-modal-bs" tabindex="-1" role="dialog" aria-labelledby="bs-modal-label" aria-describedby="bs-modal-description" aria-live="polite" aria-relevant="all" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="sr-only" id="bs-modal-description">Beginning of dialog</div>
+		<div class="modal-content">
+			<button type="button" class="btn close" data-dismiss="modal">
+				<span class="sr-only">Close</span><span class="icon-wmkCircleClose" aria-hidden="true"></span>
+			</button>
+			<div class="modal-body">
+				<div class="">
+					<img class="iconography img-hd" src="<%= config.assetPath %>img/ceo/iconography/blue-simplicity@2x.png" alt="" />
+					<h3 id="bs-modal-label" class="modal-heading">BlueSimplicity<sup>SM</sup></h3>
+					<p>Members asked for easier-to-understand plans, predictable costs and value from their policies. Our all-new BlueSimplicity<sup>SM</sup> plans delivered. Plan members now know the maximum they’ll pay before visiting the doctor. There’s only a copay and no more guesswork about deductibles or coinsurance.</p>
+					<ul>
+						<li>Medical services are broken out into levels—ranging from free, preventive exams to hospitalization.</li>
+						<li>Prescription drugs are also based on levels—graded by safety, effectiveness and cost.</li>
+					</ul>
+				</div>
+				<span class="sr-only">End of dialog</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="care-finder-modal" class="modal fade newsletter-modal newsletter-modal-care-finder" tabindex="-1" role="dialog" aria-labelledby="care-finder-modal-label" aria-describedby="care-finder-modal-description" aria-live="polite" aria-relevant="all" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="sr-only" id="care-finder-modal-description">Beginning of dialog</div>
+		<div class="modal-content">
+			<button type="button" class="btn close" data-dismiss="modal">
+				<span class="sr-only">Close</span><span class="icon-wmkCircleClose" aria-hidden="true"></span>
+			</button>
+			<div class="modal-body">
+				<div>
+					<img class="iconography img-hd" src="<%= config.assetPath %>img/ceo/iconography/care-finder@2x.png" alt="" />
+					<h3 id="care-finder-modal-label" class="modal-heading">myWellmark&reg; Care Finder</h3>
+					<p>Transparency can help shape the future of health care. And, with the new myWellmark® Care Finder, members can shop and compare doctors and facilities online—based on both cost and quality—before their next health care service.</p>
+					<p>Using real-time information about the member’s health insurance plan, the myWellmark&reg; Care Finder shows out-of-pocket costs for more than 260 common health services and procedures. Members can also see quality scores for more than 1,400 doctors and patient reviews for the entire network.</p>
+				</div>
+				<span class="sr-only">End of dialog</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+
+<% include ../../includes/mag/global-navigation-modal.html.ejs %>
+<% include ../../includes/mag/search-modal.html.ejs %>
+<% include ../../includes/video-modal.html.ejs %>
+<% include ../../includes/preloader-page.html.ejs %>
+
+<div id="leave-modal" class="modal fade" tabindex="-1" role="dialog"
+		 aria-labelledby="leave-modal-label" aria-describedby="leave-modal-description" aria-live="polite" aria-relevant="all" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="sr-only" id="leave-modal-description">Beginning of dialog</div>
+		<div class="sr-only" id="leave-modal-label">You are now leaving RealEstate.com</div>
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn btn-close" data-dismiss="modal">
+					<span class="text">Close</span>
+					<span class="icon-wmkCircleClose" aria-hidden="true"></span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h3>You are now leaving RealEstate.com</h3>
+				<p>Thank you for visiting.</p>
+				<a class="btn btn-lg btn-primary btn-continue" target="_blank">Continue to new site</a>
+				<a href="#" class="cancel" data-dismiss="modal">Cancel</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Global -->
+<script type="text/javascript" src="<%= config.assetPath %>js/app/mainmag.js"></script>
+
+<% if (pageScriptExists) { %>
+<!-- Page -->
+<script type="text/javascript" src="<%= config.assetPath %>js/page/<%= pageId %>.js"></script>
+<% } %>
+
+<!-- Video track -->
+<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>

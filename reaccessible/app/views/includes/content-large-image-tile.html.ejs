@@ -1,0 +1,37 @@
+<%
+guid = uuid();
+guid_2 = uuid();
+%>
+<div class="content-large-image-tile">
+	<h3>Tile Title</h3>
+
+	<p>Title paragraph text...</p>
+
+	<div class="infographic">
+		<%
+		// Picture element
+		// Reference: http://www.html5rocks.com/en/tutorials/responsive/picture-element/
+		// http://caniuse.com/#feat=picture
+		%>
+		<picture>
+			<source
+				media="(max-width: 767px)"
+				srcset="http://fpoimg.com/275x961?bg_color=cccccc&text_color=666666&text=Large%20Image%20Mobile%20FPO">
+			<source
+				media="(min-width: 768px)"
+				srcset="http://fpoimg.com/632x676?bg_color=cccccc&text_color=666666&text=Large%20Image%20FPO">
+			<img src="http://fpoimg.com/632x676?bg_color=cccccc&text_color=666666&text=Large%20Image%20FPO" alt="" />
+		</picture>
+
+		<button id="<%= guid_2 %>" class="btn btn-link" type="button" aria-expanded="false" aria-controls="<%= guid %>" data-toggle="collapse" data-target="#<%= guid %>">Image Description<span class="sr-only">for Some Image</span></button>
+		<div id="<%= guid %>" class="infographic-decscription collapse" role="region" aria-labelledby="<%= guid_2 %>">
+			Large image description goes here
+		</div>
+	</div>
+
+	<!-- Optional Text -->
+	<!--
+	<p>Source: RealEstate, Inc. 2018-2014 Fully RealEstate Business<sup>1</sup></p>
+
+	-->
+</div>

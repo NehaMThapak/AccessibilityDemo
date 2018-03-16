@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../includes/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/header.html.ejs %>
+
+	<%
+	var contentRichText = 'Instructions';
+	%>
+
+	<!-- Main Content -->
+	<main id="global-content">
+		<div class="container-fluid">
+
+			<% rowType = 'primary'; %>
+			<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+				<div class="col-xs-12">
+					<div class="page-header">
+						<h1>
+							User Id &amp; Password Help
+						</h1>
+					</div>
+				</div>
+			</div>
+
+			<% rowType = 'alt'; %>
+			<div class="row<%= (rowType)? (' ' + rowType) : '' %>">
+				<div class="col-xs-12">
+					<div class="content-tile">
+						<div class="row">
+							<div class="col-xs-12 col-md-7">
+								<h3>If you are:</h3>
+								<% contentRichText = '<div><strong>Member</strong></div><ul><li>A person covered by Wellmark insurance</li><li>Have wellness services with Wellmark through your employer</li></ul>'; %>
+								<% include ../includes/content-rich-text-tile.html.ejs %>
+							</div>
+							<div class="col-xs-12 col-md-5">
+								<h3>You Can:</h3>
+								<% contentRichText = '<div><a href="#">Retrieve your User ID</a></div><div><a href="#">Reset your password</a></div><div style="margin-top:25px">Note: If you need to retrieve both your User ID and password, begin with the <a href="#">retrieve User ID</a> process.</div>'; %>
+								<% include ../includes/content-rich-text-tile.html.ejs %>
+							</div>
+
+							<div class="col-xs-12 col-md-7">
+								<h3 class="visible-xs-block visible-sm-block">If you are:</h3>
+								<% contentRichText = '<div><strong>Provider</strong></div><div><strong>Broker</strong></div><div><strong>Agent</strong></div><div><strong>Employer Group Administrator</strong></div><ul><li>Contact the Designated Security Coordinator (DSC) of your organization for assistance</li></ul>'; %>
+								<% include ../includes/content-rich-text-tile.html.ejs %>
+							</div>
+							<div class="col-xs-12 col-md-5">
+								<h3 class="visible-xs-block visible-sm-block">You Can:</h3>
+								<% contentRichText = '<div><a href="#">Recover your User ID</a></div><div><a href="#">Recover your password</a></div>'; %>
+								<% include ../includes/content-rich-text-tile.html.ejs %>
+							</div>
+
+							<div class="col-xs-12 col-md-7">
+								<h3 class="visible-xs-block visible-sm-block">If you are:</h3>
+								<% contentRichText = '<div><strong>Other</strong></div><ul><li>Started an online application to buy insurance</li><li>Have a secure e-mail account with us</li></ul>'; %>
+								<% include ../includes/content-rich-text-tile.html.ejs %>
+							</div>
+							<div class="col-xs-12 col-md-5">
+								<h3 class="visible-xs-block visible-sm-block">You Can:</h3>
+								<% contentRichText = '<div><a href="#">Recover your User ID</a></div><div><a href="#">Recover your password</a></div>'; %>
+								<% include ../includes/content-rich-text-tile.html.ejs %>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<% include ../includes/footer.html.ejs %>
+</div>
+
+<% include ../includes/foot.html.ejs %>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+@import "bower_components/bootstrap/less/modals.less";
+
+//
+// Modals
+// --------------------------------------------------
+
+html.modal-open {
+	&,
+	body,
+	#page {
+		width: 100%; height: 100%; overflow: hidden;
+	}
+}
+
+.modal {
+// 	overflow: hidden;
+
+// 	&.fade {
+//     	.opacity(0);
+//     	.transition(opacity 0.3s ease-out);
+//     }
+
+//     &.in {
+//     	.opacity(1);
+//     }
+// }
+
+// // set a default max-width for modals that mobile views will not extend beyond
+// .modal-dialog {
+// 	width: 100%; max-width: 100%; height: 100%;
+// 	margin: 0 auto;
+
+// 	.modal-content {
+// 		width: 100%; height: 100%; overflow-y: auto; -webkit-overflow-scrolling: touch;
+// 		border:0 none; .border-radius(0);
+// 		.box-shadow(none);
+
+// 		// IMPORTANT: This is required for overflow scrolling to work properly on iOS
+// 		// and not completely demolish functionality of our website on iPhone.
+// 		// http://stackoverflow.com/questions/7808110/css3-property-webkit-overflow-scrollingtouch-error
+// 		> * {
+// 			.transform(translateZ(0));
+// 		}
+
+// 		// .modal-header {
+// 		// 	position: relative;
+// 		// 	min-height: 52px;
+// 		// 	margin: 0; border: 0 none; padding: @pad-sm @pad-xl;
+
+// 		// 	.modal-title {
+// 		// 		text-align: center;
+
+// 		// 		h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+// 		// 			margin-top: 0;
+// 		// 		}
+// 		// 	}
+
+// 		// 	.glyphicon-remove {
+// 		// 		position: absolute;
+// 		// 		top: 0; right: 0; z-index: 20;
+// 		// 		margin: 0; padding: @pad-md;
+// 		// 		cursor: pointer;
+// 		// 	}
+// 		// }
+
+// 		// .modal-body {
+// 		// 	position: relative;
+// 		// 	margin: 0; border: 0 none; padding: 0;
+// 		//  }
+
+// 		// .modal-footer {
+// 		// 	position: relative;
+// 		// 	padding: @pad-md @pad-md-lg;
+// 		// 	text-align: left;
+// 		// }
+// 	}
+}
+
+// Small devices (tablets, 768px and up)
+@media screen and (min-width: @screen-sm-min) {
+	.modal,
+	.modal-backdrop {
+		top: @navbar-height-large;
+		// overflow: auto; overflow-y: scroll; -webkit-overflow-scrolling: touch;
+	}
+}
+
+// Push Page styles
+// ------------------------------
+
+html.push-page {
+	// &,
+	// body,
+	// #page {
+	// 	width: 100%; height: 100%; overflow: hidden;
+	// }
+
+	body {
+		padding-top: 0;
+	}
+
+	#page {
+		position: relative;
+		left: -47px;
+		padding-top: @navbar-height;
+		.translate(100%, 0);
+		.transition-transform(0.3s);
+	}
+
+	.modal-backdrop {
+		top: @navbar-height;
+	}
+
+	@media screen and (min-width: @screen-sm-min) {
+		.modal-backdrop {
+			top: @navbar-height-large;
+		}
+	}
+
+	// Medium devices (desktops, 992px and up)
+	@media screen and (min-width: @screen-md-min) {
+		#page {
+			left: 0;
+			padding-top: @navbar-height-large;
+			.translate(0, 0);
+			.transition-transform(0s);
+		}
+
+
+	}
+}
+
+// Animate the modal in
+.modal[data-push-page].fade {
+	top: 0; right: 47px;
+	width: auto;
+	.transition(none);
+	.transition-transform(0);
+
+	.modal-dialog {
+		width: 100%;
+		.transform(initial);
+		.transition(none);
+	}
+
+	&.in {
+		.transition(none);
+
+		.modal-dialog {
+			.transition(none);
+		}
+	}
+
+	// Medium devices (desktops, 992px and up)
+	@media screen and (min-width: @screen-md-min) {
+		top: @navbar-height-large; right: 0;
+		width: 100%;
+	}
+}
+

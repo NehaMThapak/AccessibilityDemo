@@ -1,0 +1,55 @@
+
+<% include ../includes/global-navigation-modal.html.ejs %>
+<% include ../includes/login-modal.html.ejs %>
+<% include ../includes/search-modal.html.ejs %>
+<% include ../includes/video-modal.html.ejs %>
+<% include ../includes/preloader-page.html.ejs %>
+
+<div id="leave-modal" class="modal fade" tabindex="-1" role="dialog"
+		 aria-labelledby="leave-modal-label" aria-describedby="leave-modal-description" aria-live="polite" aria-relevant="all" aria-hidden="true">
+	<div class="modal-dialog" role="document">
+		<div class="sr-only" id="leave-modal-description">Beginning of dialog</div>
+		<div class="sr-only" id="leave-modal-label">You are now leaving RealEstate.com</div>
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="btn btn-close" data-dismiss="modal">
+					<span class="text">Close</span>
+					<span class="icon-wmkCircleClose" aria-hidden="true"></span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<h3>You are now leaving RealEstate.com</h3>
+				<p>Thank you for visiting.</p>
+				<a class="btn btn-lg btn-primary btn-continue" target="_blank">Continue to new site</a>
+				<a href="#" class="cancel" data-dismiss="modal">Cancel</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Templates -->
+<script type="text/template" class="glossary">
+<% include ../includes/glossary-popover-template.html.ejs %>
+</script>
+
+<!-- Config Data -->
+<script type="text/javascript">window.appData={"config":<%-JSON.stringify(config)%>,"glossary":{"coinsurance":{"term":"Coinsurance","definition":"Your share of the costs of a covered health care service, calculated as a percentage (for example, 20%) of the allowed amount for the service. You pay coinsurance after you've met your deductible. For example, if the health insurance plan's allowed amount for an office visit......."},"item2":{"term":"Item 2","definition":"This is item 2"}}}</script>
+
+<!-- Global -->
+<script type="text/javascript" src="<%= config.assetPath %>js/app/main.js"></script>
+
+<% 
+if (extraJS && Array.isArray(extraJS)) {
+	for(var i=0; i<extraJS.length; i++) {
+%>
+<script type="text/javascript" src="<%= config.assetPath %>js/extras/<%= extraJS[i] %>.js"></script>
+<% 
+	} 
+} %>
+<% if (pageScriptExists) { %>
+<!-- Page -->
+<script type="text/javascript" src="<%= config.assetPath %>js/page/<%= pageId %>.js"></script>
+<% } %>
+
+<!-- Video track -->
+<script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>

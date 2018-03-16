@@ -1,0 +1,229 @@
+@import "../appmag/bootstrap/variables.less";
+@import "../app/bootstrap/mixins.less";
+@import "../app/bootstrap/type.less";
+
+// .landing-feat-1 {
+
+// 	img {
+// 		width: 100%;
+// 	}
+
+// 	.img-block {
+// 		padding: 0;
+// 	}
+
+// 	.txt-block {
+// 		text-align: center;
+// 		padding-top: 30px;
+// 		padding-bottom: 20px;
+// 		p {font-size: 18px;}
+// 	}
+
+// 	h2 {
+// 		font-size: 16px;
+// 		font-weight: @font-weight-sans-serif-condensed-bold;
+// 		display: inline-block;
+// 		padding-bottom: 8px;
+// 		border-bottom: 1px solid @text-color;
+// 		margin: 0 0 24px;
+// 	}
+
+// 	.subhead {
+// 		display: block;
+// 		.h3();
+// 		text-decoration: none;
+// 		font-size: 36px;
+// 		font-weight: @font-weight-sans-serif-condensed-heavy;
+// 		text-transform: none;
+// 		color: @brand-primary;
+// 		margin: 0 0 18px;
+// 	}
+
+// 	@media (min-width: @screen-md-min) {
+// 		max-width: 960px;
+// 		margin: -70px auto 0;
+
+// 		.row {
+// 			background-color: #fff;
+// 			margin-bottom: 16px;
+// 		}
+
+// 		.img-block {
+// 			padding: 0;
+// 		}
+
+// 		.txt-block {
+// 			// padding: 0;
+// 			min-height: 320px;
+// 		}
+// 	}
+// }
+
+.landing-feat-2 {
+	// padding-top: 15px;
+	padding: 40px;
+	margin-bottom: 44px;
+	background-color: @brand-primary;
+
+	.imgtxt-block {
+		text-align: center;
+		margin-bottom: 50px;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		a {
+			display: inline-block;
+			width: 100%;
+		}
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.category {
+		font-size: 16px;
+		font-weight: @font-weight-sans-serif-condensed-bold;
+		text-transform: uppercase;
+		display: inline-block;
+		line-height: 1.1;
+		padding-bottom: 8px;
+		color: @nav-text-color;
+		border-bottom: 2px solid rgba(255,255,255,0.3);
+		margin: 20px 0;
+	}
+
+	.title {
+		display: block;
+		.h3();
+
+		font-size: 26px;
+		font-weight: @font-weight-sans-serif-condensed-heavy;
+		text-transform: none;
+		color: @nav-text-color;
+		margin: 0;
+
+		a {
+			color: @nav-text-color;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	@media (min-width: @screen-md-min) {
+		padding: 50px 30px 40px;
+		margin-bottom: 32px;
+
+		.imgtxt-block {
+			margin-bottom: 0;
+		}
+
+	}
+
+	@media (min-width: @screen-md-min) {
+		max-width: 960px;
+		margin-bottom: 64px;
+	}
+}
+
+.landing-feat-3 {
+	text-align: center;
+
+	h2 {
+		font-size: 36px;
+		text-transform: none;
+		margin: 0 auto 14px;
+	}
+
+	.row {
+		.imgtxt-block {
+			background-color: #fff;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+
+			height: 256px;
+
+			&.bg-ltgray 		{ background-color: @bluemag-ltgray; 		}
+			&.bg-gray 			{ background-color: @bluemag-gray; 			}
+			&.bg-purple 		{ background-color: @bluemag-purple; 		}
+			&.bg-orange 		{ background-color: @bluemag-orange; 		}
+			&.bg-ltblue			{ background-color: @bluemag-ltblue;  	}
+			&.bg-blue 			{ background-color: @bluemag-blue;    	}
+			&.bg-dkblue 		{ background-color: @bluemag-dkblue;  	}
+			&.bg-dkrblue 		{ background-color: @bluemag-dkrblue; 	}
+			&.bg-dkstblue   { background-color: @bluemag-dkstblue;  }
+			&.bg-turquoise 	{ background-color: @bluemag-turquoise; }
+			&.bg-ltgreen 		{ background-color: @bluemag-ltgreen; 	}
+			&.bg-green 			{ background-color: @bluemag-green; 		}
+			&.bg-dkgreen 		{ background-color: @bluemag-dkgreen; 	}
+			&.bg-brown 			{ background-color: @bluemag-brown;   	}
+
+			&.txt-white {
+				color: @nav-text-color;
+				h3,
+				h3 a,
+				a[href*="tel:"] { color: @nav-text-color; }
+			}
+
+			> div {
+				position: relative;
+				top: 50%;
+				.transform(translateY(-50%));
+			}
+
+			a {
+				color: @text-color;
+				text-decoration: none;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			a.btn {
+				font-size: 16px;
+				display: inline-block;
+			}
+			a.btn-primary {
+				color: @nav-text-color;
+			}
+			a.btn-inverse {
+				color: @bluemag-blue;
+			}
+
+			h3 {
+				margin-top: 0;
+				font-size: 26px;
+				text-decoration: none;
+				text-transform: none;
+				color: @text-color;
+				+ a.btn {
+					margin-top: 10px;
+				}
+			}
+			img {
+				display: block;
+				margin: 30px auto 0;
+			}
+			p {
+				font-size: 18px;
+				margin: 0 30px 15px;
+			}
+		}
+	}
+	@media (min-width: @screen-md-min) {
+		h2 {
+			font-size: 60px;
+		}
+
+		.row {
+			.imgtxt-block {
+				height: 300px;
+				h3 {
+					font-size: 36px;
+				}
+			}
+		}
+	}
+}

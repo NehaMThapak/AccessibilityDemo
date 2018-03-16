@@ -1,0 +1,172 @@
+<!doctype html>
+<html class="no-js" lang="">
+<% include ../includes/mag/head.html.ejs %>
+<body>
+
+<div id="page">
+	<% include ../includes/mag/skipContent.html.ejs %>
+
+	<% include ../includes/browseHappy.html.ejs %>
+
+	<% include ../includes/mag/header.html.ejs %>
+
+	<!-- Main Content -->
+	<main id="global-content">
+		<% include ../includes/mag/magMainHeading.html.ejs %>
+
+		<div tabindex="-1" id="skip-to-content"></div>
+
+		<div class="container-fluid mag-feat-1 landing-feat-1">
+			<% [
+					{
+						category: "Nutrition",
+						title: "Iowa Girl Eats",
+						text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus voluptatum iure corrupti ratione dolorum excepturi labore.",
+					},
+					{
+						category: "Fitness",
+						title: "Stack up on Good Habits",
+						text: "Nullam vel sapien nec elit ullamcorper iaculis non in nunc. Proin tincidunt semper urna, blandit tristique lectus congue sed. Etiam laoreet urna et.",
+					},
+					{
+						category: "Healthy Living",
+						title: "Desperate for Shut-Eye?",
+						text: "Deleniti commodi omnis repudiandae. Iusto cupiditate nemo temporibus culpa rem, ullam provident, quos magnam!",
+					}
+				].forEach(function (el) {
+			%>
+			<div class="row">
+				<div class="col-xs-12 col-md-6 img-block">
+					<a href="#" tabindex="-1" aria-hidden="true"><img src="http://fpoimg.com/480x320?bg_color=4e4e4e&text_color=ffffff&text=FPO" alt="" /></a>
+				</div>
+				<div class="col-xs-12 col-md-6 txt-block">
+					<div class="txt-block-inner">
+						<header>
+							<span class="category"><%- el.category %></span>
+							<div class="h2 title"><a href="#"><%- el.title %></a></div>
+						</header>
+						<p><%- el.text %></p>
+					</div>
+				</div>
+			</div>
+			<%
+			});
+			%>
+		</div>
+
+		<div class="container-fluid landing-feat-2">
+			<div class="row">
+				<% [
+						{
+							category: "Fitness",
+							title: "Make it Stick"
+						},
+						{
+							category: "Recipes",
+							title: "Fluffy Almond Flour Pancakes"
+						},
+						{
+							category: "Healthcare 101",
+							title: "How to Get the Right Care"
+						}
+					].forEach(function (el) {
+				%>
+				<div class="col-xs-12 col-sm-4 imgtxt-block">
+					<a href="#" tabindex="-1" aria-hidden="true"><img src="http://fpoimg.com/300x200?bg_color=4e4e4e&text_color=ffffff&text=FPO" alt="" /></a>
+					<header>
+						<span class="category"><%- el.category %></span>
+						<div class="h2 title"><a href="#"><%- el.title %></a></div>
+					</header>
+				</div>
+				<%
+				});
+				%>
+			</div>
+		</div>
+
+		<div class="container-fluid landing-feat-3">
+			<h2>More from Blue</h2>
+			<div class="row">
+
+				<% [
+						{
+							head: 'Healthy Living',
+							content: '<img src="'+config.assetPath+'img/icon-bluemag-heart.png" width="104" height="92" alt="" />'
+						},
+						{
+							head: 'Fitness',
+							content: '<img src="'+config.assetPath+'img/icon-bluemag-dmbwater.png" width="96" height="88" alt="" />',
+							classes: ['bg-ltgray']
+						},
+						{
+							head: 'Subscribe',
+							content: '<p>Stay Inspired and informed. Look forward to Blue Magazine for your healthy lifestyle.</p><a href="#" class="btn btn-primary btn-lg">Sign Up</a>',
+							classes: ['bg-ltblue']
+						},
+						{
+							head: 'Health Insurance 101',
+							content: '<img src="'+config.assetPath+'img/icon-bluemag-easel.png" width="86" height="79" alt="" />',
+							classes: ['bg-gray', 'txt-white']
+						},
+						{
+							head: 'Healthy Holidays',
+							content: '<p>Collection of holiday recipes and articles about eating right and staying active during the holidays.</p>',
+							classes: ['bg-brown', 'txt-white']
+						},
+						{
+							style: 'background-image: url(http://fpoimg.com/300x200?bg_color=4e4e4e&text_color=ffffff&text=FPO);',
+							content: ' '
+						},
+						{
+							head: 'Lorem Ipsum',
+							content: '<p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Lorem ipsum dolor</p>',
+							classes: ['bg-ltgreen', 'txt-white']
+						},
+						{
+							head: 'Be Well 24/7',
+							content: '<p><strong>Real People. Real Help.</strong> Let us help you to guide you and help you.</p><p>1-844-84-BeWell<br/>(1-844-842-3935)</p>',
+							classes: ['bg-blue', 'txt-white']
+						},
+						{
+							head: 'Tell Us What You Think',
+							content: '<a href="#" class="btn btn-inverse btn-lg">Take the Survey</a>',
+							classes: ['bg-dkblue', 'txt-white']
+						},
+						{
+							style: 'background-image: url(http://fpoimg.com/300x200?bg_color=4e4e4e&text_color=ffffff&text=FPO);',
+							content: ' ',
+							classes: ['bg-dkstblue', 'tile-filler', 'visible-sm']
+						},
+					].forEach(function (el) {
+						var aClasses = "";
+						if (typeof el.classes !== 'undefined') {
+							aClasses = ' ' + el.classes.join(' ');
+						}
+				%>
+				<div
+					class="col-xs-12 col-sm-6 col-md-4 imgtxt-block<%- aClasses %>"
+					<% if (typeof el.style !== 'undefined') { %>
+					style="<%- el.style %>"
+					<% } %>
+					>
+					<div>
+						<% if (typeof el.head !== 'undefined') { %>
+						<h3><a href="#"><%- el.head %></a></h3>
+						<% } %>
+						<%- el.content %>
+					</div>
+				</div>
+				<%
+				});
+				%>
+			</div>
+		</div>
+
+	</main>
+	<% include ../includes/mag/footer.html.ejs %>
+</div>
+
+<% include ../includes/mag/foot.html.ejs %>
+
+</body>
+</html>
