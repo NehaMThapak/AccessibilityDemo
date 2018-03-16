@@ -3,7 +3,7 @@
   "version": "0.0.0-1",
   "private": true,
   "description": "RealEstate accessibility Website",
-  "homepage": "https://reaccessible.com",
+  "homepage": "localhost:3009",
   "main": "server.js",
   "author": "Neha",
   "contributors": [
