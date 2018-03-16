@@ -91,9 +91,6 @@
 			// Search
 			'search',
 
-			// UserID / Password Help
-			'login-help',
-
 			// Error
 			'error/404',
 			'error/500',
@@ -104,7 +101,6 @@
 			//blue
 			'blue',
 			'blue/article',
-			'blue/recipe',
 			'blue/category',
 			'blue/tags',
 			'blue/search'

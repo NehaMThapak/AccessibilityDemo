@@ -31,7 +31,6 @@ controllerMethods = [
 	'companyInformation',
 	'contact',
 	'directorsOfficers',
-	'events',
 	'findJob',
 	'forms',
 	'healthImprovement',

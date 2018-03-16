@@ -1,7 +1,7 @@
 <nav class="magsubnav" aria-label="Sub Section Navigation">
 
 	<%
-    if (param('cat') === 'recipe' || param('cat') === undefined) {
+    if (param('cat') === undefined) {
 			var links = ["All", "Main Dishes", "Appetizers", "Breakfast", "Salads & Sides", "Smoothies & Drinks", "Snacks", "Desserts"]
 		} else if (param('cat') ===  'article') {
 			var links = ["All", "Subcat 1", "Subcat 2", "Subcat 3", "Subcat 4", "Subcat 5", "Subcat 6", "Subcat 7"]
@@ -22,7 +22,7 @@
 	<ul>
 		<% links.forEach(function (el) { %>
 			<!-- <li><a href="#" class="<%= (el === 'All') ? 'active' : '' %>"><%- el %><span class="icon" aria-hidden="true"></span></a></li> -->
-			<li><a href="#" <%= (pageId === 'recipe' && el === 'All') ? 'class=active ' : '' %>><%- el %><% if (pageId === 'recipe' && el === 'All') { %><span class="sr-only">Current</span><% } %><span class="icon" aria-hidden="true"></span></a></li>
+			<li><a href="#" <%= (el === 'All') ? 'class=active ' : '' %>><%- el %><% if (el === 'All') { %><span class="sr-only">Current</span><% } %><span class="icon" aria-hidden="true"></span></a></li>
 		<% }); %>
 	</ul>
 

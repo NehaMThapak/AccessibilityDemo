@@ -1,8 +1,8 @@
 <nav class="magnav" aria-label="Section Navigation">
 	<ul>
-		<% ["Fitness", "Nutrition", "Recipes", "Health Insurance 101", "Healthy Living", "Medicare Supplement", "Take Me To RealEstate.com "].forEach(function (el) {
+		<% ["Fitness", "Nutrition", "Health Insurance 101", "Healthy Living", "Medicare Supplement", "Take Me To RealEstate.com "].forEach(function (el) {
 		%>
-			<li><a href="#" <%= (pageId === 'recipe' && el === 'Recipes') ? 'class=active ' : '' %>><%- el %><% if (pageId === 'recipe' && el === 'Recipes') { %><span class="sr-only">Current</span><% } %><span class="icon" aria-hidden="true"></span></a></li>
+			<li><a href="#" <%= (el === 'Recipes') ? 'class=active ' : '' %>><%- el %><% if (el === 'Recipes') { %><span class="sr-only">Current</span><% } %><span class="icon" aria-hidden="true"></span></a></li>
 		<%
 		});
 		%>

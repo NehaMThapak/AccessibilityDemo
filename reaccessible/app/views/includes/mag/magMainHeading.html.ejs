@@ -1,6 +1,6 @@
 		<div id="adbCurrentSection">Current Section</div>
 		<div id="adbCurrentSubSection">Current Sub-section</div>
-		<div class="mag-main-heading <%= (pageId === 'category') ? 'cat-heading' : '' %> <%= ( (pageId === 'category' && param('subcat') === '1') || (pageId === 'article' && param('subcat') === '1') || (pageId === 'recipe') ) ? 'has-magsubnav' : '' %> <%= ( (pageId === 'article' && param('subcat') === '1') || (pageId === 'recipe' && (param('subcat') === '1' || param('subcat') === undefined) ) || (pageId === 'search') ) ? 'no-header' : '' %>">
+		<div class="mag-main-heading <%= (pageId === 'category') ? 'cat-heading' : '' %> <%= ( (pageId === 'category' && param('subcat') === '1') || (pageId === 'article' && param('subcat') === '1')) ? 'has-magsubnav' : '' %> <%= ( (pageId === 'article' && param('subcat') === '1') || ((param('subcat') === '1' || param('subcat') === undefined) ) || (pageId === 'search') ) ? 'no-header' : '' %>">
 			<% include ../../includes/mag/magnav.html.ejs %>
 
 			<% if (pageId === 'index') {%>
@@ -16,7 +16,7 @@
 			</header>
 			<% } %>
 
-			<% if ( (pageId === 'category' && param('subcat') === '1') || (pageId === 'article' && param('subcat') === '1') || (pageId === 'recipe') ) { %>
+			<% if ( (pageId === 'category' && param('subcat') === '1') || (pageId === 'article' && param('subcat') === '1')) ) { %>
 				<% include ../../includes/mag/magsubnav.html.ejs %>
 			<% } %>
 

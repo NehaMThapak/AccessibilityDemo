@@ -1,7 +1,53 @@
 <div class="segment-menu container-fluid" role="navigation">
 	<div class="row">
 
-		<!-- Segment one: First Time Home Buyers -->
+		<!-- Segment One: Find your first dream home on RealEstate.com -->
+		<div class="segment-four col-xs-12 col-md-3">
+				<div class="menu-item-container">
+	
+					<a id="segment-four-opener" href="#segment-four" role="button" aria-expanded="false" class="collapsed"
+						aria-controls="segment-four"
+						data-toggle="collapse" data-href="/provider">
+						<h2 style="background-image:url(<%= config.assetPath %>img/re-logo-mark.png)">
+							<span><small>search</small> Your Dream Home</span></h2>
+	
+						<span class="icon" aria-hidden="true">
+							<span class="icon-reaCaretDown"></span>
+						</span>
+					</a>
+	
+					<button type="button" class="close-button">
+						<span class="sr-only">Close</span>
+						<span class="icon-wmkCircleClose" aria-hidden="true"></span></button>
+	
+					<div class="segment-menu-submenu collapse" role="region" aria-labelledby="segment-four-opener" id="segment-four">
+						<ul class="list-unstyled">
+							<li class="segment-item">
+								<a href="#"><span>Find By City</span></a>
+							</li>
+							<li class="segment-item">
+								<a href="#"><span>Find By Budget</span></a>
+							</li>
+							<li class="segment-item">
+								<a href="#"><span>Find By Category 1</span></a>
+							</li>
+							<li class="segment-item">
+								<a href="#"><span>Find By Category 2</span></a>
+							</li>
+							<li class="action">
+								<img src="<%= config.assetPath %>img/re-logo-full.png" alt="" />
+								<p>
+									Find your way home.
+								</p>
+								<a href="#" class="btn btn-segment-four btn-lg">Register</a>
+							</li>
+						</ul>
+					</div>
+	
+				</div>
+			</div>
+
+		<!-- Segment Two: First Time Home Buyers -->
 		<div class="segment-one col-xs-12 col-md-3">
 			<div class="menu-item-container">
 
@@ -47,7 +93,7 @@
 			</div>
 		</div>
 
-		<!-- Segment Two: Veterans -->
+		<!-- Segment Three: Veterans -->
 		<div class="segment-two col-xs-12 col-md-3">
 			<div class="menu-item-container">
 
@@ -93,7 +139,7 @@
 			</div>
 		</div>
 
-		<!-- Segment Three: RE:Find -->
+		<!-- Segment Four: RE:Find -->
 		<div class="segment-three col-xs-12 col-md-3">
 			<div class="menu-item-container">
 
@@ -130,52 +176,6 @@
 							<img src="<%= config.assetPath %>img/re-logo-full.png" alt="" />
 							
 							<a href="#" class="btn btn-segment-three btn-lg">Register</a>
-						</li>
-					</ul>
-				</div>
-
-			</div>
-		</div>
-
-		<!-- Segment Four: Find your first dream home on RealEstate.com -->
-		<div class="segment-four col-xs-12 col-md-3">
-			<div class="menu-item-container">
-
-				<a id="segment-four-opener" href="#segment-four" role="button" aria-expanded="false" class="collapsed"
-					aria-controls="segment-four"
-					data-toggle="collapse" data-href="/provider">
-					<h2 style="background-image:url(<%= config.assetPath %>img/re-logo-mark.png)">
-						<span><small>search</small> Your Dream Home</span></h2>
-
-					<span class="icon" aria-hidden="true">
-						<span class="icon-reaCaretDown"></span>
-					</span>
-				</a>
-
-				<button type="button" class="close-button">
-					<span class="sr-only">Close</span>
-					<span class="icon-wmkCircleClose" aria-hidden="true"></span></button>
-
-				<div class="segment-menu-submenu collapse" role="region" aria-labelledby="segment-four-opener" id="segment-four">
-					<ul class="list-unstyled">
-						<li class="segment-item">
-							<a href="#"><span>Find By City</span></a>
-						</li>
-						<li class="segment-item">
-							<a href="#"><span>Find By Budget</span></a>
-						</li>
-						<li class="segment-item">
-							<a href="#"><span>Find By Category 1</span></a>
-						</li>
-						<li class="segment-item">
-							<a href="#"><span>Find By Category 2</span></a>
-						</li>
-						<li class="action">
-							<img src="<%= config.assetPath %>img/re-logo-full.png" alt="" />
-							<p>
-								Find your way home.
-							</p>
-							<a href="#" class="btn btn-segment-four btn-lg">Register</a>
 						</li>
 					</ul>
 				</div>

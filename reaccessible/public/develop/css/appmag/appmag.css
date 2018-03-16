@@ -3624,7 +3624,7 @@ form.validator .errors > div {
   -moz-background-clip: padding-box;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  background-color: #d23432;
+  background-color:lightsalmon;
   color: #fff;
 }
 form[data-toggle="validator"] .errors.with-errors,

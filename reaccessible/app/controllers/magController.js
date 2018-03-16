@@ -17,7 +17,6 @@ controller = new locomotive.Controller();
 controllerMethods = [
 	'index',
 	'article',
-	'recipe',
 	'category',
 	'tags',
 	'search'
