@@ -44,20 +44,7 @@
 			'about/newsroom/article',
 			'about/privacy-legal',
 			'about/tables',
-
-			// Segment / Audience
-			//	Individual & Family
-			'individual-family',
-			'individual-family/individual-family-fpo',
-			'individual-family/individual-family-fpo/individual-family-fpo-one',
-			'individual-family/individual-family-fpo/individual-family-fpo-one',
-			'individual-family/individual-family-fpo/individual-family-fpo-two',
-			'individual-family/individual-family-fpo/individual-family-fpo-three',
-			'individual-family/individual-family-fpo/individual-family-fpo-three/individual-family-fpo-three-sub',
-			'individual-family/medicare-explained/request-medicareblue-kit',
-			'individual-family/medicare-explained/request-medicareblue-kit-sub',
-			'individual-family/i-buy-my-own/farm-bureau-agent-contact-form',
-			'individual-family/i-buy-my-own/farm-bureau-agent-contact-form-sub',
+			
 			//	Employer
 			'employer',
 			'employer/employer-fpo',

@@ -48,18 +48,6 @@ controllerMethods = [
 	'ventureCapital',
 	'who',
 
-	// Segment / Audience
-	//	Individual & Family
-	'individualFamily',
-	'individualFamilyFpo',
-	'individualFamilyFpoOne',
-	'individualFamilyFpoTwo',
-	'individualFamilyFpoThree',
-	'individualFamilyFpoThreeSub',
-	'requestMedicareblueKit',
-	'requestMedicareblueKitSub',
-	'farmBureauAgentContactForm',
-	'farmBureauAgentContactFormSub',
 	//	Employer
 	'employer',
 	'employerFpo',
@@ -113,9 +101,6 @@ controllerMethods.forEach(function (methodName) {
 		switch (pathPart) {
 			case ('about'):
 				segment = 'about';
-				break;
-			case ('individual-family'):
-				segment = 'segment-one';
 				break;
 			case ('employer'):
 				segment = 'segment-two';
